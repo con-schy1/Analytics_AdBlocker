@@ -1,0 +1,48 @@
+{
+   "name": "BlockRequest Test",
+   "description": "AdBlockTest",
+   "version": "0.0.1.0",
+   "manifest_version": 3,
+   "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+   "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+         "16": "/images/Globemallow_Icon_16_SQ.png",
+         "32": "/images/Globemallow_Icon_32_SQ.png",
+         "48": "/images/Globemallow_Icon_48_SQ.png",
+         "128": "/images/Globemallow_Icon_128_SQ.png"
+      }
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "*://*/*"
+         ],
+         "js": [
+            "performance.js",
+            "Chart.js"
+         ],
+         "run_at": "document_start"
+      }
+   ],
+   "background": {
+      "service_worker": "background.js"
+   },
+   "permissions": [
+      "storage",
+      "activeTab",
+      "declarativeNetRequest"
+   ],
+   "icons": {
+      "16": "/images/Globemallow_Icon_16_SQ.png",
+      "32": "/images/Globemallow_Icon_32_SQ.png",
+      "48": "/images/Globemallow_Icon_48_SQ.png",
+      "128": "/images/Globemallow_Icon_128_SQ.png"
+   }
+}

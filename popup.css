@@ -1,0 +1,242 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 13px;
+  width: 370px;
+  height: 200px;
+  background-color:  #f2f2f2;
+}
+
+.topLine{
+  display: flex;
+  width: 100%;
+}
+
+#icon{
+  padding-left: 130px;
+  padding-top: 10px;
+}
+
+#title{
+  padding-bottom: 0px;
+  font-size: 32px;
+  line-height:0px;
+}
+
+.grade{
+    font-size:14px;
+}
+
+
+.ScoreGraph{
+     /* For button text center */
+    position: absolute;          /* Position absolute */
+    left: 27%;
+    padding-top: 5%;
+}
+    .item {
+        position: relative;
+        float: left;
+    }
+
+    .item h2 {
+        text-align:center;
+        position: absolute;
+        line-height: 130px;
+        width: 100%;
+    }
+
+#scoreHTML{
+  font-size: 26px;
+}
+
+#factoids{
+  padding-top: 45%;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;   
+}
+
+#fact{
+ font-weight: bold;
+ font-size:14px;
+}
+
+#actualFact{
+  padding-left:6px;
+  padding-top: 2px;
+}
+
+#emissionsLine{
+  padding-top: 10px;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;   
+}
+
+#kwhID{
+  padding-top: 2px;
+  display: flex;
+  bottom: 0;
+  height: 2.5rem;   
+}
+
+#kwhScore{
+ font-weight: bold;
+}
+
+#kwhTotal{
+  padding-left:6px;
+  display: flex;
+}
+
+#co2ID{
+  padding-top: 2px;
+  display: flex;
+  bottom: 0;
+  height: 2.5rem;
+}
+
+
+#co2Score{
+   padding-left: 80px;
+   font-weight: bold;
+}
+
+#co2Total{
+  padding-left: 6px;
+}
+
+#footer{
+  padding-top: 10px;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;   
+}
+
+#Guess{
+    padding-top: 5px;
+    font-size: 12px;
+}
+/*#donate{
+  padding-left: 268px;
+}*/
+
+
+.grade {
+  position: relative;
+  display: inline-block;
+
+}
+
+.grade .tooltiptextGrade {
+  visibility: hidden;
+  width: 240px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.grade .tooltiptextGrade::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent transparent;
+}
+
+.grade:hover .tooltiptextGrade {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltiptextGrade {
+  font-size:12px;
+  font-family: Tahoma, sans-serif;
+}
+
+
+
+/* This is all for the toggle button
+
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+^^HTML- Put this in the HTML Portion when needed^^
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} */
+
+/* Above This is all for the toggle button */
+
