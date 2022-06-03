@@ -391,5 +391,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://pixel.adsafeprotected.com/", 
     "resourceTypes": ["image"] }
+  },
+     {
+    "id": 58,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://fastlane.rubiconproject.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 59,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://fastlane.rubiconproject.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }
     ]
