@@ -406,4 +406,264 @@
     "condition": {"urlFilter": "https://fastlane.rubiconproject.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   }
+    ,
+     {
+    "id": 60,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://connect.facebook.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 61,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://connect.facebook.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 62,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://use.typekit.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 63,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://use.typekit.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 64,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.criteo.net", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 65,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.criteo.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 66,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.criteo.net", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 67,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.criteo.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 68,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://acdn.adnxs.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 69,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://use.typekit.net/", 
+    "resourceTypes": ["font"] }
+  },
+    {
+    "id": 70,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ib.adnxs.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 71,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://google-analytics.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 72,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://api.segment.io/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 73,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://api.segment.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 74,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.segment.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 75,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.segment.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 76,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ad-delivery.net/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 77,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pix.pub", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 78,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pix.pub", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 79,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://bat.bing.com/bat.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 80,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://bat.bing.com/bat.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 81,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://bam.nr-data.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 82,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://bam.nr-data.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 83,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://js-agent.newrelic.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 84,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://js-agent.newrelic.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 85,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.yimg.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 86,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.yimg.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 87,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://c.lytics.io/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 88,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://c.lytics.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 89,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://secure-us.imrworldwide.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 90,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://assets.adobedtm.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 91,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://assets.adobedtm.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 92,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://js-sec.indexww.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 93,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://js-sec.indexww.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 94,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://p1.parsely.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 95,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://p1.parsely.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 96,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://p1.parsely.com/", 
+    "resourceTypes": ["image"] }
+  }
     ]
