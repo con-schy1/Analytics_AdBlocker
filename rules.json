@@ -1806,5 +1806,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://d.adroll.com/", 
     "resourceTypes": ["image"] }
+  },
+     {
+    "id": 260,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/b/ss/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 261,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/b/ss/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 262,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/b/ss/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 263,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/b/ss/", 
+    "resourceTypes": ["ping"] }
   }          
     ]
