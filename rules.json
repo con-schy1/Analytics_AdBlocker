@@ -665,5 +665,453 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://p1.parsely.com/", 
     "resourceTypes": ["image"] }
-  }
+  },
+    {
+    "id": 97,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s2.go-mpulse.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 98,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s2.go-mpulse.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 99,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mboxedge35.tt.omtrdc.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 100,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mboxedge35.tt.omtrdc.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 101,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://edge.curalate.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 102,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://edge.curalate.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 103,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://recs.richrelevance.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 104,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://recs.richrelevance.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 105,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.cquotient.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 106,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.cquotient.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 107,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://munchkin.marketo.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 108,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://munchkin.marketo.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 109,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://event.api.drift.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 110,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://event.api.drift.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 111,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.appdynamics.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 112,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.appdynamics.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 113,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pixel.wp.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 114,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s7.addthis.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 115,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://m.addthis.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 116,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://m.addthis.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 117,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://statse.webtrendslive.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 118,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.googleoptimize.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 119,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://collector-pxj770cp7y.px-cloud.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 120,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://lptag-cdn.liveperson.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 121,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://lptag-cdn.liveperson.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 122,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://fls.doubleclick.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 123,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://fls.doubleclick.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 124,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://siteintercept.qualtrics.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 125,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://siteintercept.qualtrics.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 126,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn3.forter.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 127,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn3.forter.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 128,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn0.forter.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 129,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn0.forter.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 130,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://googleads.g.doubleclick.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 131,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://googleads.g.doubleclick.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 132,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://r.3gl.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 133,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://r.3gl.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 134,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://r.3gl.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 135,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://r.3gl.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 136,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d.btttag.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 137,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d.btttag.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 138,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tags.crwdcntrl.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 139,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tags.crwdcntrl.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 140,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://loadus.exelator.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 141,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://loadus.exelator.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 142,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://beacon-v2.helpscout.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 143,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://beacon-v2.helpscout.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 144,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://platform.twitter.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 145,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sb.scorecardresearch.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 146,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://px.ads.linkedin.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 147,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.linkedin.com/li/track", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 148,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://px.ads.linkedin.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 149,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://collector-12209.tvsquared.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 150,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://collector-12209.tvsquared.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 151,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://rs.fullstory.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 152,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://edge.fullstory.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 153,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://rr2---sn-cxoqcc-gqhl.googlevideo.com/", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 154,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://rr2---sn-cxoqcc-gqhl.googlevideo.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 155,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.mouseflow.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 156,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.mouseflow.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 157,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://lptag.liveperson.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 158,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://lptag.liveperson.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 159,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://metrics.brightcove.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 160,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://metrics.brightcove.com/", 
+    "resourceTypes": ["image"] }
+  }   
     ]
