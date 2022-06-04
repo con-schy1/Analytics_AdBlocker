@@ -9,7 +9,7 @@
     "id": 2,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.google-analytics.com", 
+    "condition": {"urlFilter": "https://www.google-analytics.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
 {
@@ -40,7 +40,7 @@
     "id": 7,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.google-analytics.com", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "https://www.google-analytics.com/", "resourceTypes": ["script"] }
   },
      {
     "id": 8,
@@ -1834,5 +1834,159 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".com/b/ss/", 
     "resourceTypes": ["ping"] }
-  }          
+  },
+     {
+    "id": 264,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".tt.omtrdc.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 265,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".tt.omtrdc.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 266,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".quantummetric.com/?", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 267,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".quantummetric.com/?", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 268,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/wt.pl?", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 269,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/wt.pl?", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 270,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/wt.pl?", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 271,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".demdex.net/event", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 272,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".demdex.net/event", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 273,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/glassbox/reporting/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 274,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/glassbox/reporting/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 275,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".fls.doubleclick.net/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 276,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".fls.doubleclick.net/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 277,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.google-analytics.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 278,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/tracking/ga/gtag.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 279,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".doubleclick.net/pixel", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 280,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".doubleclick.net/pixel", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 281,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sp.analytics.yahoo.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 282,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sp.analytics.yahoo.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 283,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://service.maxymiser.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 284,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://service.maxymiser.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 285,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".demdex.net/event", 
+    "resourceTypes": ["image"] }
+  }            
     ]
