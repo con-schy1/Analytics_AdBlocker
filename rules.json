@@ -2128,5 +2128,425 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://ssl.google-analytics.com/", 
     "resourceTypes": ["xmlhttprequest"] }
-  }             
+  },
+    {
+    "id": 306,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d.monetate.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 307,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.optimizely.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 308,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.optimizely.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 309,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.narrativ.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 310,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.narrativ.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 311,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://api.permutive.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 312,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://api.permutive.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 313,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pt.ispot.tv/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 314,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pt.ispot.tv/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 315,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dcf.espn.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 316,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dcf.espn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 317,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.bluecore.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 318,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.bluecore.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 319,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://stags.bluekai.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 320,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://yjtag.yahoo.co", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 321,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://yjtag.yahoo.co", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 322,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".net/b/ss/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 323,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".net/b/ss/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 324,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".net/b/ss/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 325,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/dynjs/ruxitagentjs", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 326,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/dynjs/ruxitagentjs", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 327,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://smetrics.", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 328,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://smetrics.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 329,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://plausible.io/js/script", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 330,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://plausible.io/js/script", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 331,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://stags.bluekai.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 332,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ei.rlcdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 333,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ei.rlcdn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 334,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ei.rlcdn.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 335,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ums.acuityplatform.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 336,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ums.acuityplatform.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 337,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudfront.net/form-serialize", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 338,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudfront.net/form-serialize", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 339,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mr.homedepot.com/v1/p", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 340,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mr.homedepot.com/v1/t", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 341,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mr.homedepot.com/v1/p", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 342,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mr.homedepot.com/v1/p", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 343,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://r.3gl.net/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 344,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://r.3gl.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 345,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/static/js/t.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 346,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/static/js/t.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 347,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tags.bluekai.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 348,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://secure-dcr.imrworldwide.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 349,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://secure-dcr.imrworldwide.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 350,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.taboola.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 351,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.taboola.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 352,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "chartbeat.net/ping", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 353,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "chartbeat.net/ping", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 354,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "chartbeat.net/ping", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 355,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sb.scorecardresearch.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 356,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://secure-dcr.imrworldwide.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 357,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://metrics.brightcove.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 358,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hb.omtrdc.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 359,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hb.omtrdc.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 360,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://vidstat.taboola.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 361,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://vidstat.taboola.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 362,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mb.moatads.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 363,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://mb.moatads.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 364,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.instagram.com/static/bundles/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 365,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.instagram.com/static/bundles/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                     
     ]
