@@ -9,7 +9,7 @@
     "id": 2,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.google-analytics.com/", 
+    "condition": {"urlFilter": "https://www.google-analytics.com", 
     "resourceTypes": ["xmlhttprequest"] }
   },
 {
@@ -40,7 +40,7 @@
     "id": 7,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.google-analytics.com/", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "https://www.google-analytics.com", "resourceTypes": ["script"] }
   },
      {
     "id": 8,
@@ -488,7 +488,7 @@
     "id": 71,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://google-analytics.com/", 
+    "condition": {"urlFilter": "https://google-analytics.com", 
     "resourceTypes": ["image"] }
   },
     {
@@ -1930,7 +1930,7 @@
     "id": 277,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.google-analytics.com/", 
+    "condition": {"urlFilter": "https://www.google-analytics.com", 
     "resourceTypes": ["sub_frame"] }
   },
     {
@@ -2539,14 +2539,14 @@
     "id": 364,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.instagram.com/static/bundles/", 
+    "condition": {"urlFilter": "https://ping.chartbeat.net/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 365,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.instagram.com/static/bundles/", 
+    "condition": {"urlFilter": "https://ping.chartbeat.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -2646,5 +2646,264 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/common/metrics/boomerang.js", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                     
+  },
+    {
+    "id": 380,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".techlab-cdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 381,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".techlab-cdn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 382,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "3lift.com/sync", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 383,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "3lift.com/sync", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 384,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.adroll.com/j/roundtrip.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 385,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.adroll.com/j/roundtrip.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 386,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.google-analytics.com", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 387,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pi.pardot.com/analytics", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 388,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://pi.pardot.com/analytics", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 389,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "g.doubleclick.net/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 390,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "g.doubleclick.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 391,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "gtag.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 392,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "gtag.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 393,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/media/js/tealeaf-", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 394,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/media/js/tealeaf-", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 395,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "richrelevance.com/rrserver", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 396,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "richrelevance.com/rrserver", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 397,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dev.appboy.com/api", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 398,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dev.appboy.com/api", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 399,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://l.sharethis.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 400,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://l.sharethis.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 401,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.bizible.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 402,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.bizible.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 403,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "getclicky.com/js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 404,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "getclicky.com/js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 405,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://track.securedvisit.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 406,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://track.securedvisit.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 407,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "online-metrix.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 408,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "online-metrix.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 409,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "dynamicyield.com/st", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 410,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "dynamicyield.com/st", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 411,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "dynamicyield.com/st", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 412,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yottaa.net/log", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 413,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yottaa.net/log", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 414,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yottaa.net/log", 
+    "resourceTypes": ["xmlhttprequest"] }
+  } ,
+    {
+    "id": 415,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.atgsvcs.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 416,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://static.atgsvcs.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                   
     ]
