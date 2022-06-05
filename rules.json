@@ -1988,5 +1988,145 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".demdex.net/event", 
     "resourceTypes": ["image"] }
-  }            
+  },
+    {
+    "id": 286,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dev.visualwebsiteoptimizer.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 287,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dev.visualwebsiteoptimizer.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 288,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dev.visualwebsiteoptimizer.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 289,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://match.adsrvr.org/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 290,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://match.adsrvr.org/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 291,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cms.analytics.yahoo.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 292,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cms.analytics.yahoo.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 293,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.googleadservices.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 294,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.googleadservices.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 295,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".demdex.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 296,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".demdex.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 297,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".demdex.net/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 298,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ads.stickyadstv.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 299,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ads.stickyadstv.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 300,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.branch.io/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 301,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.evgnet.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 302,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.res-x.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 303,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.res-x.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 304,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ssl.google-analytics.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 305,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ssl.google-analytics.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }             
     ]
