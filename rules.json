@@ -3178,5 +3178,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://s.thebrighttag.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 456,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tags.bluekai.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 457,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://px.owneriq.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 458,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://px.owneriq.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 459,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dp.shoprunner.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 460,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://dp.shoprunner.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 461,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.yimg.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 462,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.yimg.com/", 
+    "resourceTypes": ["image"] }
   }                 
     ]
