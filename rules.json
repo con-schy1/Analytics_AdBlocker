@@ -1272,14 +1272,14 @@
     "id": 183,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://f.monetate.net/", 
+    "condition": {"urlFilter": ".monetate.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 184,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://f.monetate.net/", 
+    "condition": {"urlFilter": ".monetate.net/", 
     "resourceTypes": ["script"] }
   },
      {
@@ -2133,7 +2133,7 @@
     "id": 306,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://d.monetate.net/", 
+    "condition": {"urlFilter": ".amazon-adsystem.com/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -3227,5 +3227,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://s.yimg.com/", 
     "resourceTypes": ["image"] }
-  }                 
+  },
+    {
+    "id": 463,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.yimg.com/", 
+    "resourceTypes": ["other"] }
+  },
+    {
+    "id": 464,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "betrad.com/pub/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 465,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "betrad.com/pub/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 466,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://comcluster.cxense.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 467,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://comcluster.cxense.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 468,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cmp.osano.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 469,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cmp.osano.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 470,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".amazon-adsystem.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 471,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".amazon-adsystem.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 472,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".amazon-adsystem.com/", 
+    "resourceTypes": ["media"] }
+  }                  
     ]
