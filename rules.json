@@ -1188,14 +1188,14 @@
     "id": 171,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://js.adsrvr.org/", 
+    "condition": {"urlFilter": ".adsrvr.org/", 
     "resourceTypes": ["script"] }
   },
      {
     "id": 172,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://js.adsrvr.org/", 
+    "condition": {"urlFilter": ".adsrvr.org/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -2014,15 +2014,15 @@
     "id": 289,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://match.adsrvr.org/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".adsrvr.org/", 
+    "resourceTypes": ["ping"] }
   },
     {
     "id": 290,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://match.adsrvr.org/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".adsrvr.org/", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 291,
@@ -2315,21 +2315,21 @@
     "id": 332,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://.rlcdn.com/", 
+    "condition": {"urlFilter": ".rlcdn.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 333,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://.rlcdn.com/", 
+    "condition": {"urlFilter": ".rlcdn.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 334,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://.rlcdn.com/", 
+    "condition": {"urlFilter": ".rlcdn.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -3066,5 +3066,117 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "tt.omtrdc.net/rest/v1/delivery", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                    
+  },
+    {
+    "id": 440,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://intljs.rmtag.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 441,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://intljs.rmtag.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 442,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.pdst.fm/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 443,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.pdst.fm/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 444,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sgtm.", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 445,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sgtm.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 446,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tapestry.tapad.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 447,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tapestry.tapad.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 448,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://beacon.krxd.net/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 449,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://beacon.krxd.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 450,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d9.flashtalking.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 451,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d9.flashtalking.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 452,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d9.flashtalking.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 453,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://servedby.flashtalking.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 454,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.thebrighttag.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 455,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.thebrighttag.com/", 
+    "resourceTypes": ["script"] }
+  }                 
     ]
