@@ -1258,8 +1258,8 @@
     "id": 181,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://s.pinimg.com/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".tvpixel.com/i", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 182,
@@ -3297,5 +3297,173 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".amazon-adsystem.com/", 
     "resourceTypes": ["media"] }
-  }                  
+  },
+    {
+    "id": 473,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdns.gigya.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 474,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdns.gigya.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 475,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://log.pinterest.com/?", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 476,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://log.pinterest.com/?", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 477,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/utag.js?", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 478,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/utag.js?", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 479,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://track.hubspot.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 480,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://track.hubspot.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 481,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.pinimg.com/ct/core.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 482,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.pinimg.com/ct/core.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 483,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/com.snowplowanalytics.", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 484,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/com.snowplowanalytics.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 485,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/com.snowplowanalytics.", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 486,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/images/integrations/opinionlab/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 487,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/images/integrations/opinionlab/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 488,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdns.brsrvr.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 489,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdns.brsrvr.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 490,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/merkle_track.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 491,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/merkle_track.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 492,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://nexus.ensighten.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 493,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://nexus.ensighten.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 494,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://nexus.ensighten.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 495,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 496,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                   
     ]
