@@ -1811,28 +1811,28 @@
     "id": 260,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".com/b/ss/", 
+    "condition": {"urlFilter": "/b/ss/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 261,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".com/b/ss/", 
+    "condition": {"urlFilter": "/b/ss/", 
     "resourceTypes": ["script"] }
   },
      {
     "id": 262,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".com/b/ss/", 
+    "condition": {"urlFilter": "/b/ss/", 
     "resourceTypes": ["image"] }
   },
      {
     "id": 263,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".com/b/ss/", 
+    "condition": {"urlFilter": "/b/ss/", 
     "resourceTypes": ["ping"] }
   },
      {
@@ -2169,14 +2169,14 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "//api.permutive.com/", 
-    "resourceTypes": ["script"] }
+    "resourceTypes": ["ping"] }
   },
     {
     "id": 312,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//api.permutive.com/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".pubmatic.com/AdServer/", 
+    "resourceTypes": ["script"] }
   },
     {
     "id": 313,
@@ -2525,14 +2525,14 @@
     "id": 362,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//mb.moatads.com/", 
+    "condition": {"urlFilter": ".moatads.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 363,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//mb.moatads.com/", 
+    "condition": {"urlFilter": ".moatads.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -3687,14 +3687,14 @@
     "id": 528,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "pubmatic.com/AdServer/", 
+    "condition": {"urlFilter": ".pubmatic.com/AdServer/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 529,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "pubmatic.com/AdServer/", 
+    "condition": {"urlFilter": ".pubmatic.com/AdServer/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -3878,5 +3878,12 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "//cdn.heapanalytics.com/", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 556,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".moatads.com/", 
+    "resourceTypes": ["image"] }
   }                       
     ]
