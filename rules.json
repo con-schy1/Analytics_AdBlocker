@@ -81,14 +81,14 @@
     "id": 13,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.go-mpulse.net/", 
+    "condition": {"urlFilter": ".go-mpulse.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 14,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.go-mpulse.net/", 
+    "condition": {"urlFilter": ".go-mpulse.net/", 
     "resourceTypes": ["script"] }
   },
      {
@@ -312,43 +312,43 @@
     "id": 46,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//ad.doubleclick.net/", 
+    "condition": {"urlFilter": ".doubleclick.net/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 47,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//ad.doubleclick.net/", 
+    "condition": {"urlFilter": ".doubleclick.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 48,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//securepubads.g.doubleclick.net/", 
+    "condition": {"urlFilter": ".doubleclick.net/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 49,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//securepubads.g.doubleclick.net/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".doubleclick.net/", 
+    "resourceTypes": ["ping"] }
   },
      {
     "id": 50,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pubads.g.doubleclick.net/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".doubleclick.net/", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 51,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pubads.g.doubleclick.net/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "sc-static.net/", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 52,
@@ -670,8 +670,8 @@
     "id": 97,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s2.go-mpulse.net/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".go-mpulse.net/", 
+    "resourceTypes": ["ping"] }
   },
     {
     "id": 98,
@@ -845,15 +845,15 @@
     "id": 122,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//fls.doubleclick.net/", 
+    "condition": {"urlFilter": "sc-static.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 123,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//fls.doubleclick.net/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "www.tamgrt.com/RT", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 124,
@@ -1685,14 +1685,14 @@
     "id": 242,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tags.bluekai.com/", 
+    "condition": {"urlFilter": ".bluekai.com/", 
     "resourceTypes": ["script"] }
   },
      {
     "id": 243,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tags.bluekai.com/", 
+    "condition": {"urlFilter": ".bluekai.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -2224,7 +2224,7 @@
     "id": 319,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//stags.bluekai.com/", 
+    "condition": {"urlFilter": ".bluekai.com/", 
     "resourceTypes": ["sub_frame"] }
   },
     {
@@ -2308,7 +2308,7 @@
     "id": 331,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//stags.bluekai.com/", 
+    "condition": {"urlFilter": "www.jscache.com/static/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -2420,8 +2420,8 @@
     "id": 347,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tags.bluekai.com/", 
-    "resourceTypes": ["sub_frame"] }
+    "condition": {"urlFilter": "www.jscache.com/static/", 
+    "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 348,
@@ -3183,7 +3183,7 @@
     "id": 456,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tags.bluekai.com/", 
+    "condition": {"urlFilter": ".bluekai.com/", 
     "resourceTypes": ["image"] }
   },
     {
