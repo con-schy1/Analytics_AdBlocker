@@ -3682,5 +3682,152 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://s.yimg.com/", 
     "resourceTypes": ["sub_frame"] }
-  }                     
+  },
+    {
+    "id": 528,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pubmatic.com/AdServer/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 529,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pubmatic.com/AdServer/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 530,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://ads.stickyadstv.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 531,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "search.spotxchange.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 532,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "search.spotxchange.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 533,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".bluekai.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 534,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "omnitagjs.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 535,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "omnitagjs.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 536,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yandex.ru/metrik/a", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 537,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yandex.ru/metrika/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 538,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/evidon-sitenotice-tag.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 539,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/evidon-sitenotice-tag.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 540,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://login.dotomi.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 541,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://login.dotomi.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 542,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d.turn.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 543,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://d.turn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 544,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".lijit.com/merge", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 545,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".lijit.com/merge", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 546,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".lijit.com/merge", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 547,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".bluecava.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 548,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".bluecava.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                       
     ]
