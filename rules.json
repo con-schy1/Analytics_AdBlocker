@@ -3834,14 +3834,49 @@
     "id": 549,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://pixel.wp.com/", 
+    "condition": {"urlFilter": "//data.pendo.io", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 550,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://pixel.wp.com/", 
+    "condition": {"urlFilter": "//data.pendo.io", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 551,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//l.sharethis.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 552,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//data.pendo.io", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 553,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//heapanalytics.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 554,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//cdn.pendo.io/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 555,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//cdn.heapanalytics.com/", 
     "resourceTypes": ["script"] }
   }                       
     ]
