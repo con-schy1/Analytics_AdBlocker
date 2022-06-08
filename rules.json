@@ -172,14 +172,14 @@
     "id": 26,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://analytics.yahoo.com/", 
+    "condition": {"urlFilter": "analytics.yahoo.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 27,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://analytics.yahoo.com/", 
+    "condition": {"urlFilter": "analytics.yahoo.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -1958,15 +1958,15 @@
     "id": 281,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://sp.analytics.yahoo.com/", 
+    "condition": {"urlFilter": "analytics.yahoo.com/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 282,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://sp.analytics.yahoo.com/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "analytics.yahoo.com/", 
+    "resourceTypes": ["ping"] }
   },
     {
     "id": 283,
@@ -2028,15 +2028,15 @@
     "id": 291,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://cms.analytics.yahoo.com/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "analytics.yahoo.com/", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 292,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://cms.analytics.yahoo.com/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "https://d.turn.com/", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 293,
@@ -3598,5 +3598,89 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://cdn.keywee.co/", 
     "resourceTypes": ["script"] }
-  }                    
+  },
+    {
+    "id": 516,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.innovid.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 517,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.innovid.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 518,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.bizographics.com/collect/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 519,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.bizographics.com/collect/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 520,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://www.bizographics.com/collect/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 521,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://p.adsymptotic.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 522,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://p.adsymptotic.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 523,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".agkn.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 524,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".agkn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 525,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yahoo.com/admax/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 526,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yahoo.com/admax/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 527,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://s.yimg.com/", 
+    "resourceTypes": ["sub_frame"] }
+  }                     
     ]
