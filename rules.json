@@ -123,21 +123,21 @@
     "id": 19,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://lax1-ib.adnxs.com/", 
+    "condition": {"urlFilter": ".adnxs.com/", 
     "resourceTypes": ["script"] }
   },
      {
     "id": 20,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://ib.adnxs.com/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".adnxs.com/", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 21,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://ib.adnxs.com/", 
+    "condition": {"urlFilter": ".adnxs.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -2665,14 +2665,14 @@
     "id": 382,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "3lift.com/sync", 
+    "condition": {"urlFilter": ".3lift.com/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 383,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "3lift.com/sync", 
+    "condition": {"urlFilter": ".3lift.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -3465,5 +3465,138 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "alexametrics.com/atrk.js", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                   
+  },
+    {
+    "id": 497,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 498,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 499,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://bat.bing.com/action", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 500,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://bat.bing.com/action", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 501,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tr.snapchat.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 502,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://tr.snapchat.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 503,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://trc.taboola.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 504,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://trc.taboola.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 505,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://c.msn.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 506,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://c.msn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 507,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://c.msn.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 508,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://c.msn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 509,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".3lift.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 510,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".3lift.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 511,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".advertising.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 512,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".advertising.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 513,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.optimizely.com/", 
+    "resourceTypes": ["other"] }
+  },
+    {
+    "id": 514,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.keywee.co/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 515,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://cdn.keywee.co/", 
+    "resourceTypes": ["script"] }
+  }                    
     ]
