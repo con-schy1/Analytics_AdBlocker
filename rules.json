@@ -4074,5 +4074,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/piwik.js", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 584,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.cxense.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 585,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.cxense.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                       
     ]
