@@ -200,14 +200,14 @@
     "id": 30,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//sb.scorecardresearch.com/", 
+    "condition": {"urlFilter": ".scorecardresearch.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 31,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//sb.scorecardresearch.com/", 
+    "condition": {"urlFilter": ".scorecardresearch.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -901,14 +901,14 @@
     "id": 130,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//googleads.g.doubleclick.net/", 
+    "condition": {"urlFilter": ".piwik.pro/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 131,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//googleads.g.doubleclick.net/", 
+    "condition": {"urlFilter": ".piwik.pro/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -1006,7 +1006,7 @@
     "id": 145,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//sb.scorecardresearch.com/", 
+    "condition": {"urlFilter": ".scorecardresearch.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -1146,8 +1146,8 @@
     "id": 165,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//securepubads.g.doubleclick.net/", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": ".mathtag.com/", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 166,
@@ -1251,7 +1251,7 @@
     "id": 180,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//p.teads.tv/", 
+    "condition": {"urlFilter": ".teads.tv/", 
     "resourceTypes": ["script"] }
   },
      {
@@ -1916,15 +1916,15 @@
     "id": 275,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".fls.doubleclick.net/", 
-    "resourceTypes": ["ping"] }
+    "condition": {"urlFilter": ".mathtag.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 276,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".fls.doubleclick.net/", 
-    "resourceTypes": ["sub_frame"] }
+    "condition": {"urlFilter": ".mathtag.com/", 
+    "resourceTypes": ["ping"] }
   },
     {
     "id": 277,
@@ -1944,15 +1944,15 @@
     "id": 279,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".doubleclick.net/pixel", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": "/plugins/like.php", 
+    "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 280,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".doubleclick.net/pixel", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "/plugins/like.php", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 281,
@@ -2266,14 +2266,14 @@
     "id": 325,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "/dynjs/ruxitagentjs", 
+    "condition": {"urlFilter": "/ruxitagentjs", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 326,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "/dynjs/ruxitagentjs", 
+    "condition": {"urlFilter": "/ruxitagentjs", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -2476,7 +2476,7 @@
     "id": 355,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//sb.scorecardresearch.com/", 
+    "condition": {"urlFilter": ".scorecardresearch.com/", 
     "resourceTypes": ["ping"] }
   },
     {
@@ -2602,22 +2602,22 @@
     "id": 373,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//googleads.g.doubleclick.net/", 
+    "condition": {"urlFilter": "apis.google.com/js/plusone.js", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 374,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//googleads.g.doubleclick.net/", 
+    "condition": {"urlFilter": "apis.google.com/js/plusone.js", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 375,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//googleads.g.doubleclick.net/", 
-    "resourceTypes": ["sub_frame"] }
+    "condition": {"urlFilter": ".kaltura.com/", 
+    "resourceTypes": ["script"] }
   },
     {
     "id": 376,
@@ -2714,14 +2714,14 @@
     "id": 389,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "g.doubleclick.net/", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": ".cdn.searchiq.co/", 
+    "resourceTypes": ["script"] }
   },
     {
     "id": 390,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "g.doubleclick.net/", 
+    "condition": {"urlFilter": ".cdn.searchiq.co/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -3885,5 +3885,194 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".moatads.com/", 
     "resourceTypes": ["image"] }
+  },
+    {
+    "id": 557,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//www.res-x.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 558,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//www.res-x.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 559,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".certona.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 560,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".certona.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 561,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sail-horizon.com/spm", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 562,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sail-horizon.com/spm", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 563,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gumgum.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 564,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gumgum.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 565,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".33across.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 566,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".33across.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 567,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mathtag.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 568,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".33across.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 569,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "jssdks.mparticle.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 570,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "jssdks.mparticle.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 571,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".privy.com/collect", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 572,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".privy.com/collect", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 573,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".abtasty.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 574,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".abtasty.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 575,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "www.dwin1.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 576,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "www.dwin1.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 577,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//productreviews.shopifycdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 578,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//productreviews.shopifycdn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 579,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//cdn.uplift-platform.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 580,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//cdn.uplift-platform.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 581,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "online-metrix.net/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 582,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/piwik.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 583,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/piwik.js", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                       
     ]
