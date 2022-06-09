@@ -3,7 +3,7 @@
     "id": 1,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//dpm.demdex.net/", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".demdex.net/", "resourceTypes": ["script"] }
   },
  {
     "id": 2,
@@ -46,7 +46,7 @@
     "id": 8,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//dpm.demdex.net/", 
+    "condition": {"urlFilter": ".demdex.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -1699,14 +1699,14 @@
     "id": 244,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pixel.tapad.com/", 
+    "condition": {"urlFilter": ".tapad.com/", 
     "resourceTypes": ["image"] }
   },
      {
     "id": 245,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pixel.tapad.com/", 
+    "condition": {"urlFilter": ".tapad.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -1888,15 +1888,15 @@
     "id": 271,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".demdex.net/event", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "search.spotxchange.com/", 
+    "resourceTypes": ["image"] }
   },
      {
     "id": 272,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".demdex.net/event", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".mookie1.com/", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 273,
@@ -1986,7 +1986,7 @@
     "id": 285,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".demdex.net/event", 
+    "condition": {"urlFilter": ".demdex.net/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -2056,15 +2056,15 @@
     "id": 295,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".demdex.net/", 
+    "condition": {"urlFilter": ".mookie1.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 296,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".demdex.net/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".mookie1.com/", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 297,
@@ -3113,15 +3113,15 @@
     "id": 446,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tapestry.tapad.com/", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": ".tapad.com/", 
+    "resourceTypes": ["ping"] }
   },
      {
     "id": 447,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tapestry.tapad.com/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".tapad.com/", 
+    "resourceTypes": ["sub_frame"] }
   },
      {
     "id": 448,
@@ -4088,5 +4088,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "api.cxense.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 586,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "i.w55c.net/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 587,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "i.w55c.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 588,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "search.spotxchange.com/", 
+    "resourceTypes": ["ping"] }
   }                       
     ]
