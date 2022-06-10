@@ -1741,35 +1741,35 @@
     "id": 250,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "-sec.casalemedia.com/", 
+    "condition": {"urlFilter": ".casalemedia.com/", 
     "resourceTypes": ["image"] }
   },
      {
     "id": 251,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "-sec.casalemedia.com/", 
+    "condition": {"urlFilter": ".casalemedia.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 252,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".casalemedia.com/rum", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": ".casalemedia.com/", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 253,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".casalemedia.com/rum", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".casalemedia.com/", 
+    "resourceTypes": ["ping"] }
   },
      {
     "id": 254,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "-sec.casalemedia.com/", 
+    "condition": {"urlFilter": ".casalemedia.com/", 
     "resourceTypes": ["sub_frame"] }
   },
      {
@@ -1783,14 +1783,14 @@
     "id": 256,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//htlb.casalemedia.com/", 
-    "resourceTypes": ["sub_frame"] }
+    "condition": {"urlFilter": ".xg4ken.com/js", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 257,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//htlb.casalemedia.com/", 
+    "condition": {"urlFilter": ".xg4ken.com/js", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -4109,5 +4109,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "search.spotxchange.com/", 
     "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 589,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//fw.adsafeprotected.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 590,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".33across.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 591,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".liadm.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 592,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".liadm.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 593,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gumgum.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 594,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sddan.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 595,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sddan.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 596,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sundaysky.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 597,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sundaysky.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 598,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sddan.com/", 
+    "resourceTypes": ["image"] }
   }                       
     ]
