@@ -4207,5 +4207,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".crazyegg.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 603,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "://kinesis.", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 604,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "://kinesis.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 605,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "i.w55c.net/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 606,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "i.w55c.net/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 607,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.zdassets.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 608,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.zdassets.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 609,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".rfihub.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 610,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".rfihub.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                       
     ]
