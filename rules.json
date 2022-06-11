@@ -439,36 +439,36 @@
     "id": 64,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//static.criteo.net", 
+    "condition": {"urlFilter": ".criteo.net", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 65,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//static.criteo.net", 
+    "condition": {"urlFilter": ".criteo.net", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 66,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//static.criteo.net", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".criteo.net", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 67,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//static.criteo.net", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".criteo.net", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 68,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//acdn.adnxs.com/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".adnxs.com/", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 69,
@@ -481,14 +481,14 @@
     "id": 70,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//ib.adnxs.com/", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": ".adnxs.com/", 
+    "resourceTypes": ["ping"] }
   },
     {
     "id": 71,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//google-analytics.com", 
+    "condition": {"urlFilter": "//www.google-analytics.com", 
     "resourceTypes": ["image"] }
   },
     {
@@ -4262,6 +4262,41 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": ".rfihub.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 611,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".33across.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 612,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ad.360yield.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 613,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ad.360yield.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 614,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//ad.wsod.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 615,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//ad.wsod.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   }                       
     ]
