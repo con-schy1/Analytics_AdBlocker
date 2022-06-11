@@ -3456,29 +3456,29 @@
     "id": 495,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
+    "condition": {"urlFilter": "alexametrics.com/atrk", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 496,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
+    "condition": {"urlFilter": "alexametrics.com/atrk", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 497,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "alexametrics.com/atrk", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 498,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "alexametrics.com/atrk.js", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "alexametrics.com/atrk", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 499,
@@ -3589,14 +3589,14 @@
     "id": 514,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdn.keywee.co/", 
+    "condition": {"urlFilter": ".keywee.co/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 515,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdn.keywee.co/", 
+    "condition": {"urlFilter": ".keywee.co/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -4179,5 +4179,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".sddan.com/", 
     "resourceTypes": ["image"] }
+  },
+    {
+    "id": 599,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".keywee.co/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 600,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudfront.net/atrk.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 601,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".crazyegg.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 602,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".crazyegg.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                       
     ]
