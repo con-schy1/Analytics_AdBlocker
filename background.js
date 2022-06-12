@@ -12,16 +12,16 @@ chrome.runtime.onMessage.addListener((request, sender) => {
     chrome.storage.local.set({["tab"+sender.tab.id]:request}); 
     chrome.storage.local.get("tab"+sender.tab.id).then(dat => {
         
-        if (request.finalScore >= 92){
+        if (request.scrptCount >= 20){
             var colorString = "#32a852";
             }
-        else if (request.finalScore >= 78){
+        else if (request.scrptCount >= 15){
                 var colorString = "#8ECA2E";
         }
-        else if (request.finalScore >= 67){
+        else if (request.scrptCount >= 10){
                 var colorString = "#f4e03a";
         }
-        else if (request.finalScore >= 55){
+        else if (request.scrptCount >= 5){
                 var colorString = "#f18931";
         }
         else {
@@ -33,7 +33,7 @@ chrome.runtime.onMessage.addListener((request, sender) => {
             tabId: sender.tab.id
         });
         chrome.action.setBadgeText({
-            text: request.finalGrade,
+            text: request.scriptStr,
             tabId: sender.tab.id
         });
     });

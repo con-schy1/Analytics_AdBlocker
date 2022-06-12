@@ -4298,5 +4298,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "//ad.wsod.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 616,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.ex.co/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 617,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.ex.co/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                       
     ]
