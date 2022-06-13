@@ -13,10 +13,9 @@
    "action": {
       "default_popup": "popup.html",
       "default_icon": {
-         "16": "/images/Globemallow_Icon_16_SQ.png",
-         "32": "/images/Globemallow_Icon_32_SQ.png",
-         "48": "/images/Globemallow_Icon_48_SQ.png",
-         "128": "/images/Globemallow_Icon_128_SQ.png"
+         "16": "/images/16x16.png",
+         "32": "/images/32x32.png",
+         "128": "/images/128x128.png"
       }
    },
    "content_scripts": [
@@ -40,9 +39,8 @@
       "declarativeNetRequest"
    ],
    "icons": {
-      "16": "/images/Globemallow_Icon_16_SQ.png",
-      "32": "/images/Globemallow_Icon_32_SQ.png",
-      "48": "/images/Globemallow_Icon_48_SQ.png",
-      "128": "/images/Globemallow_Icon_128_SQ.png"
+      "16": "/images/16x16.png",
+      "32": "/images/32x32.png",
+      "128": "/images/128x128.png"
    }
 }
