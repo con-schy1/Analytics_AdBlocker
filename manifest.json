@@ -1,7 +1,7 @@
 {
    "name": "BlockRequest Test",
    "description": "AdBlockTest",
-   "version": "0.0.1.0",
+   "version": "0.0.0.1",
    "manifest_version": 3,
    "declarative_net_request": {
     "rule_resources": [{
