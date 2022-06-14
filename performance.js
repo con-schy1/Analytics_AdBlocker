@@ -30,6 +30,7 @@ const regex1List = [/google\-analytics/,/googletagmanager/,/marketo/,/doubleclic
 var scripts = document.head.getElementsByTagName("script");
 
 
+
 var scrptSrcs = [];
 var strInMatches;
 var foundArray = [];
@@ -43,15 +44,36 @@ var scrptCount = 0;
         foundArray.push(strInMatches);
         scrptCount += foundArray[i].length;
     }
+//var scriptStr = scrptCount.toString();    
     
+////////////////////////////////////////
+// Image
+
+var imgs = document.getElementsByTagName("img");
+
+var imgSrcs = [];
+var strImgMatches;
+var foundImgArray = [];
+var imgCount = 0;
+
+    for (var i = 0; i < imgs.length; i++) {
+        imgSrcs.push(imgs[i].src);
+    }
+    for (var i = 0; i < regex1List.length; i++) {
+        strImgMatches = imgSrcs.filter(element => regex1List[i].test(element));
+        foundImgArray.push(strImgMatches);
+        imgCount += foundImgArray[i].length;
+    }
     
-    var scriptStr = scrptCount.toString();
+ var total = scrptCount+imgCount;
+    
+var totalString = total.toString()
        
     /*console.log(count);
     console.log(foundArray); */
     
 
-var counts = {scrptCount, scriptStr}
+var counts = {total, totalString}
 
 chrome.runtime.sendMessage(counts);
     

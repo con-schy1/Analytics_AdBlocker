@@ -8,9 +8,9 @@ chrome.tabs.query({
  var x = data["tab"+tab.id];
             
             
-document.getElementById("scoreHTML").innerHTML = x.scrptCount;
+document.getElementById("scoreHTML").innerHTML = x.total;
     
-var scriptNum = x.scrptCount;     
+var scriptNum = x.total;     
 
 switch (scriptNum >= 0){
     
