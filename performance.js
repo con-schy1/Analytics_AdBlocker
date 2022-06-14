@@ -65,7 +65,28 @@ var imgCount = 0;
         imgCount += foundImgArray[i].length;
     }
     
- var total = scrptCount+imgCount;
+////////////////////////////////////////
+// Sub Frame
+
+var iframes = document.getElementsByTagName("iframe");
+
+var iframeSrcs = [];
+var strIframeMatches;
+var foundIframeArray = [];
+var iframeCount = 0;
+
+    for (var i = 0; i < iframes.length; i++) {
+        iframeSrcs.push(iframes[i].src);
+    }
+    for (var i = 0; i < regex1List.length; i++) {
+        strIframeMatches = iframeSrcs.filter(element => regex1List[i].test(element));
+        foundIframeArray.push(strIframeMatches);
+        iframeCount += foundIframeArray[i].length;
+    }
+    
+    
+    
+ var total = scrptCount+imgCount+iframeCount;
     
 var totalString = total.toString()
        
