@@ -1,9 +1,9 @@
 body {
   font-family: veranda, sans-serif;
   font-size: 13px;
-  width: 380px;
-  height: 300px;
-  background-color:  #f2f2f2;
+  width: 350px;
+  height: 295px;
+  background-color: #f2f2f2;
   margin: 0; /*new*/
   padding: 0; /*new*/
 }
@@ -11,7 +11,7 @@ body {
 .topLine{
   display: flex;
   width: 100%;
-  background-color: #F77616;
+  background-color: #08B2FF;
   line-height: 0px;
   height: 50px;
   border-bottom-left-radius: 5px;
@@ -36,17 +36,19 @@ body {
   width: 100%;
   float: left;
   padding-left: 5px;
+  padding-top: 3px;
 }
 
 .grade{
     font-size:14px;
+    font-weight: 550;
 }
 
 
 .ScoreGraph{
      /* For button text center */
     position: absolute;          /* Position absolute */
-    left: 23%;
+    left: 20%;
     padding-top: 14%;
 }
     .item {
@@ -120,7 +122,7 @@ body {
     padding-top: 200px;
     width: 100%;
     text-align: center;
-    font-size: 26px;
+    font-size: 28px;
     letter-spacing: 0.1em;
     font-weight: 550;
 }
@@ -130,7 +132,7 @@ body {
   display: flex;
   bottom: 0;
   width: 100%;
-  height: 2rem;   
+  height: 2rem;
 }
 
 #donate{
@@ -144,7 +146,7 @@ body {
 }
 
 #uaFlag{
-    padding-left: 145px;
+    padding-left: 117px;
     padding-right: 5px;
 }
 
