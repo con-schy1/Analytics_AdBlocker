@@ -9,51 +9,6 @@ chrome.tabs.query({
             
             
 document.getElementById("scoreHTML").innerHTML = x.scrptCount;
-            
-    
-// CO2 + KWH Calculations - used from https://github.com/carbonalyser/Carbonalyser
-    
-const defaultCarbonIntensityFactorIngCO2PerKWh = 519;
-const kWhPerByteDataCenter = 0.000000000072;
-const kWhPerByteNetwork = 0.000000000152;
-const kWhPerMinuteDevice = 0.00021;
-
-var kwhDCT = 0;
-var GESDCT = 0;
-var kwhNT = 0;
-var GESNT = 0;
-var kwhDT = 0;
-var GESDT = 0;
-
-/*kwhDCT = x.decodedBodySizeChart*kWhPerByteDataCenter;
-GESDCT = kwhDCT*defaultCarbonIntensityFactorIngCO2PerKWh;
-kwhNT = x.decodedBodySizeChart*kWhPerByteNetwork;
-GESNT = kwhNT*defaultCarbonIntensityFactorIngCO2PerKWh;
-kwhDT = x.duration*kWhPerMinuteDevice;
-GESDT = kwhDT*493;
-
-var kwhTotal = 0;
-var co2Total = 0;
-
-kwhTotal = (((1000*(kwhDCT+kwhNT+kwhDT))/1000)/2);
-co2Total = ((GESDCT+GESNT+GESDT)/2).toPrecision(1);*/
-
-kwhDCT = x.transferSizeChart*kWhPerByteDataCenter;
-GESDCT = kwhDCT*defaultCarbonIntensityFactorIngCO2PerKWh;
-kwhNT = x.transferSizeChart*kWhPerByteNetwork;
-GESNT = kwhNT*defaultCarbonIntensityFactorIngCO2PerKWh;
-kwhDT = x.duration*kWhPerMinuteDevice;
-GESDT = kwhDT*493;
-
-var kwhTotal = 0;
-var co2Total = 0;
-
-kwhTotal = (((1000 * (kwhDCT + kwhNT + kwhDT)) / 1000) / 2);
-co2Total = ((GESDCT + GESNT + GESDT) / 2).toPrecision(1);
-    
-document.getElementById("co2Total").innerHTML = co2Total + "g";
-
-document.getElementById("kwhTotal").innerHTML = kwhTotal.toPrecision(2);
     
 var scriptNum = x.scrptCount;     
 
@@ -260,6 +215,16 @@ var barColors = [
     break;
 
 case scriptNum == 1:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [0 , 100];
+var barColors = [
+  "#ff0d21",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 0:
 var ctx = document.getElementById('myChart').getContext('2d');
 var yValues = [0 , 100];
 var barColors = [
