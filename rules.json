@@ -4319,5 +4319,152 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".mathtag.com/", 
     "resourceTypes": ["other"] }
-  }                       
+  },
+    {
+    "id": 619,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlesyndication.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 620,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlesyndication.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 621,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 622,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 623,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/player/ad_break", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 624,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/player/ad_break", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 625,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/api/stats/ads", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 626,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/api/stats/ads", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 627,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlesyndication.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 628,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/player/ad_break", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 629,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sprinklr.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 630,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sprinklr.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 631,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".impact-ad.jp/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 632,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".impact-ad.jp/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 633,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ctnsnet.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 634,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ctnsnet.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 635,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pubmatic.com/AdServer/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 636,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".impact-ad.jp/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 637,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "widget.criteo.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 638,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "widget.criteo.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 639,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "widget.criteo.com/", 
+    "resourceTypes": ["image"] }
+  }                        
     ]
