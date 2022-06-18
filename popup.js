@@ -13,12 +13,212 @@ document.getElementById("scoreHTML").innerHTML = x.total;
 var scriptNum = x.total;     
 
 switch (scriptNum >= 0){
-    
-case scriptNum >= 20:
+        
+case scriptNum >= 40:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [100, 0];
+var yValues = [40, 0];
 var barColors = [
-  "#32a852",
+  "#ff0d21",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 39:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [39, 1];
+var barColors = [
+  "#ff0d21",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 38:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [38, 2];
+var barColors = [
+  "#ff0d21",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 37:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [37, 3];
+var barColors = [
+  "#ff0d21",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 36:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [36, 4];
+var barColors = [
+  "#ff0d21",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 35:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [35, 5];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 34:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [34, 6];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 33:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [33, 7];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 32:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [32, 8];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 31:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [31, 9];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 30:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [30, 10];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 29:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [29 , 11];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 28:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [28 , 12];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 27:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [27 , 13];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 26:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 14];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 25:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 15];
+var barColors = [
+  "#f18931",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 24:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 16];
+var barColors = [
+  "#ebdc3d",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 23:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 17];
+var barColors = [
+  "#ebdc3d",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 22:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 18];
+var barColors = [
+  "#ebdc3d",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 21:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 19];
+var barColors = [
+  "#ebdc3d",
+  "#f2f2f2",
+
+];
+    break;
+        
+case scriptNum == 20:
+var ctx = document.getElementById('myChart').getContext('2d');
+var yValues = [scriptNum , 20];
+var barColors = [
+  "#ebdc3d",
   "#f2f2f2",
 
 ];
@@ -26,9 +226,9 @@ var barColors = [
         
 case scriptNum == 19:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [95, 5];
+var yValues = [scriptNum , 21];
 var barColors = [
-  "#8ECA2E",
+  "#ebdc3d",
   "#f2f2f2",
 
 ];
@@ -36,19 +236,19 @@ var barColors = [
         
 case scriptNum == 18:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [90, 10];
+var yValues = [scriptNum , 22];
 var barColors = [
-  "#8ECA2E",
+  "#ebdc3d",
   "#f2f2f2",
 
 ];
     break;
- 
+        
 case scriptNum == 17:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [85, 15];
+var yValues = [scriptNum , 23];
 var barColors = [
-  "#8ECA2E",
+  "#ebdc3d",
   "#f2f2f2",
 
 ];
@@ -56,17 +256,17 @@ var barColors = [
         
 case scriptNum == 16:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [80, 20];
+var yValues = [scriptNum , 24];
 var barColors = [
   "#ebdc3d",
   "#f2f2f2",
 
 ];
     break;
-
+        
 case scriptNum == 15:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [7 , 3];
+var yValues = [scriptNum , 25];
 var barColors = [
   "#ebdc3d",
   "#f2f2f2",
@@ -76,19 +276,19 @@ var barColors = [
         
 case scriptNum == 14:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [7 , 3];
+var yValues = [scriptNum , 26];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
-    break;  
-
+    break;
+        
 case scriptNum == 13:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [65 , 5];
+var yValues = [scriptNum , 27];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -96,9 +296,9 @@ var barColors = [
         
 case scriptNum == 12:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [60 , 40];
+var yValues = [scriptNum , 28];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -106,9 +306,9 @@ var barColors = [
         
 case scriptNum == 11:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [55 , 45];
+var yValues = [scriptNum , 29];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -116,9 +316,9 @@ var barColors = [
         
 case scriptNum == 10:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [50 , 50];
+var yValues = [scriptNum , 30];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -126,9 +326,9 @@ var barColors = [
         
 case scriptNum == 9:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [45 , 45];
+var yValues = [scriptNum , 31];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -136,9 +336,9 @@ var barColors = [
         
 case scriptNum == 8:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [40 , 60];
+var yValues = [scriptNum , 32];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -146,9 +346,9 @@ var barColors = [
         
 case scriptNum == 7:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [35 , 65];
+var yValues = [scriptNum , 33];
 var barColors = [
-  "#ebdc3d",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -156,19 +356,9 @@ var barColors = [
         
 case scriptNum == 6:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [30 , 70];
+var yValues = [scriptNum , 34];
 var barColors = [
-  "#ebdc3d",
-  "#f2f2f2",
-
-];
-    break;
-        
-case scriptNum == 6:
-var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [25 , 75];
-var barColors = [
-  "#f18931",
+  "#8ECA2E",
   "#f2f2f2",
 
 ];
@@ -176,9 +366,9 @@ var barColors = [
         
 case scriptNum == 5:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [20 , 80];
+var yValues = [scriptNum , 35];
 var barColors = [
-  "#f18931",
+  "#32a852",
   "#f2f2f2",
 
 ];
@@ -186,9 +376,9 @@ var barColors = [
         
 case scriptNum == 4:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [15 , 85];
+var yValues = [scriptNum , 36];
 var barColors = [
-  "#f18931",
+  "#32a852",
   "#f2f2f2",
 
 ];
@@ -196,9 +386,9 @@ var barColors = [
         
 case scriptNum == 3:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [10 , 90];
+var yValues = [scriptNum , 37];
 var barColors = [
-  "#f18931",
+  "#32a852",
   "#f2f2f2",
 
 ];
@@ -206,19 +396,19 @@ var barColors = [
         
 case scriptNum == 2:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [5 , 95];
+var yValues = [scriptNum , 37];
 var barColors = [
-  "#ff0d21",
+  "#32a852",
   "#f2f2f2",
 
 ];
     break;
-
+        
 case scriptNum == 1:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [0 , 100];
+var yValues = [scriptNum , 38];
 var barColors = [
-  "#ff0d21",
+  "#32a852",
   "#f2f2f2",
 
 ];
@@ -226,9 +416,9 @@ var barColors = [
         
 case scriptNum == 0:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [0 , 100];
+var yValues = [40 , 0];
 var barColors = [
-  "#ff0d21",
+  "#32a852",
   "#f2f2f2",
 
 ];
@@ -239,6 +429,7 @@ var barColors = [
 new Chart(ctx, {
   type: "doughnut",
   data: {
+    labels: ['Analytics', 'Ads'],
     datasets: [{
       backgroundColor: barColors,
       data: yValues
