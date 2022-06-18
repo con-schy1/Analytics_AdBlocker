@@ -4466,5 +4466,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "widget.criteo.com/", 
     "resourceTypes": ["image"] }
-  }                        
+  },
+    {
+    "id": 640,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ki.js/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 641,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ki.js/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 642,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlesyndication.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 643,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "resourceTypes": ["media"] }
+  }                         
     ]
