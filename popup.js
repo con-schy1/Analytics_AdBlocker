@@ -8,23 +8,23 @@ chrome.tabs.query({
  var x = data["tab"+tab.id];
             
             
-document.getElementById("scoreHTML").innerHTML = x.total;
+document.getElementById("scoreHTML").innerHTML = x.totalString;
     
-var scriptNum = x.total;     
+var scriptNum = x.totalTot;     
 
 switch (scriptNum >= 0){
         
-case scriptNum >= 40:
+case scriptNum >= 0:
 var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [40, 0];
+var yValues = [x.totalAnal, x.totalAd];
 var barColors = [
+  "#32a852",
   "#ff0d21",
-  "#f2f2f2",
 
 ];
     break;
         
-case scriptNum == 39:
+/*case scriptNum == 39:
 var ctx = document.getElementById('myChart').getContext('2d');
 var yValues = [39, 1];
 var barColors = [
@@ -422,7 +422,7 @@ var barColors = [
   "#f2f2f2",
 
 ];
-    break;
+    break;*/
 
 }
             
@@ -437,8 +437,8 @@ new Chart(ctx, {
   },
   options:{
      tooltips:{
-         enabled: false,
-     } 
+         enabled: true,
+     }
   }
 });
     

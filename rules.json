@@ -4494,5 +4494,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "//www.youtube.com/pagead/", 
     "resourceTypes": ["media"] }
+  },
+    {
+    "id": 644,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/id?d_visid_ver", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 645,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/id?d_visid_ver", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 646,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/launch/launch-", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 647,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/launch/launch-", 
+    "resourceTypes": ["script"] }
   }                         
     ]
