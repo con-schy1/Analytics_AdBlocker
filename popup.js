@@ -426,19 +426,26 @@ var barColors = [
 
 }
             
+var analLab = x.totalAnal.toString() + " Analytics"; 
+var adLab = x.totalAd.toString() + " Ads";
+            
 new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ['Analytics', 'Ads'],
+    labels: [' Analytics', ' Ads'],
+    //labels: [analLab, adLab],
     datasets: [{
       backgroundColor: barColors,
       data: yValues
     }]
   },
   options:{
+    responsive: true,
+    plugins:{
      tooltips:{
-         enabled: true,
+         enabled: false
      }
+  }
   }
 });
     
