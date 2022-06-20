@@ -12,16 +12,16 @@ chrome.runtime.onMessage.addListener((request, sender) => {
     chrome.storage.local.set({["tab"+sender.tab.id]:request}); 
     chrome.storage.local.get("tab"+sender.tab.id).then(dat => {
         
-        if (request.total <= 5){
+        if (request.totalTot <= 5){
             var colorString = "#32a852";
             }
-        else if (request.total <= 14){
+        else if (request.totalTot <= 14){
                 var colorString = "#8ECA2E";
         }
-        else if (request.total <= 24){
+        else if (request.totalTot <= 24){
                 var colorString = "#f4e03a";
         }
-        else if (request.total <= 35){
+        else if (request.totalTot <= 35){
                 var colorString = "#f18931";
         }
         else {

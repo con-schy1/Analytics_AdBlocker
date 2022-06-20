@@ -18,8 +18,8 @@ case scriptNum >= 0:
 var ctx = document.getElementById('myChart').getContext('2d');
 var yValues = [x.totalAnal, x.totalAd];
 var barColors = [
-  "#32a852",
-  "#ff0d21",
+  "#f18931",
+  "#ebdc3d",
 
 ];
     break;
@@ -440,10 +440,9 @@ new Chart(ctx, {
     }]
   },
   options:{
-    responsive: true,
     plugins:{
      tooltips:{
-         enabled: false
+         yAlign: 'top'
      }
   }
   }
