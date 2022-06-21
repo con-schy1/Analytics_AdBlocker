@@ -4522,5 +4522,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/launch/launch-", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 648,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 649,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/ptracking", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 650,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/pcs/parallelactiveview", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                         
     ]
