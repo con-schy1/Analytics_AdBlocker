@@ -4543,5 +4543,124 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "youtube.com/pcs/parallelactiveview", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                         
+  },
+    {
+    "id": 651,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/pcs/parallelactiveview", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 652,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/api/stats/playback", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 653,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/api/stats/playback", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 654,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/pcs/activeview", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 655,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/pcs/activeview", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 656,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/api/stats/qoe", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 657,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/api/stats/qoe", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 658,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/youtubei/v1/log_event", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 659,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googleusercontent.com/proxy/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 660,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googlevideo.com/generate_204", 
+    "resourceTypes": ["other"] }
+  },
+    {
+    "id": 661,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/generate_204", 
+    "resourceTypes": ["other"] }
+  },
+    {
+    "id": 662,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.amplitude.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 663,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googleadservices.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 664,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googleadservices.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 665,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googleadservices.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 666,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "simpleanalyticscdn.com/simple", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 667,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "simpleanalyticscdn.com/simple", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                            
     ]
