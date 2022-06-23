@@ -1,6 +1,6 @@
 {
-   "name": "BlockRequest Test",
-   "description": "AdBlockTest",
+   "name": "Analytics & Ad Blocker by Globemallow.io",
+   "description": "A simple analytics & 3rd party advertisements blocker.",
    "version": "0.0.0.1",
    "manifest_version": 3,
    "declarative_net_request": {
@@ -15,6 +15,7 @@
       "default_icon": {
          "16": "/images/16x16.png",
          "32": "/images/32x32.png",
+         "48": "/images/48x48.png",
          "128": "/images/128x128.png"
       }
    },
@@ -40,7 +41,8 @@
    ],
    "icons": {
       "16": "/images/16x16.png",
-      "32": "/images/32x32.png",
-      "128": "/images/128x128.png"
+       "32": "/images/32x32.png",
+       "48": "/images/48x48.png",
+       "128": "/images/128x128.png"
    }
 }
