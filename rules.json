@@ -16,13 +16,15 @@
     "id": 3,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://static.olark.com", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "cdn.yottaa.com/rapid", 
+    "resourceTypes": ["script"] }
   },
 {
     "id": 4,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "https://www.intercom.com/", "resourceTypes": ["main_frame"] }
+    "condition": {"urlFilter": ".adgrx.com/",
+    "resourceTypes": ["image"] }
   },
 {
     "id": 5,
@@ -4662,5 +4664,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "simpleanalyticscdn.com/simple", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                            
+  },
+{
+    "id": 668,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".adgrx.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 669,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.matomo.",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 670,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.matomo.",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 671,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.matomo.",
+    "resourceTypes": ["image"] }
+  },
+{
+    "id": 672,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.pbbl.co",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 673,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.pbbl.co",
+    "resourceTypes": ["xmlhttprequest"] }
+  }                             
     ]
