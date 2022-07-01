@@ -39,6 +39,11 @@ body {
   padding-top: 3px;
 }
 
+#menu{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
 .grade{
     font-size:14px;
     font-weight: 550;
@@ -152,4 +157,3 @@ body {
 #supportText{
     padding-top: 8px;
 }
-
