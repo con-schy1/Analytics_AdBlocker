@@ -4032,14 +4032,14 @@
     "id": 577,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//productreviews.shopifycdn.com/", 
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".oracleinfinity.io/", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 578,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//productreviews.shopifycdn.com/", 
+    "condition": {"urlFilter": ".oracleinfinity.io/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -4706,5 +4706,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.pbbl.co",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 674,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//productreviews.shopifycdn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 675,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//cdn.uplift-platform.com/", 
+    "resourceTypes": ["script"] }
   }                             
     ]
