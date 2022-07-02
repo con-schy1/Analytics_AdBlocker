@@ -4720,5 +4720,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "//cdn.uplift-platform.com/", 
     "resourceTypes": ["script"] }
-  }                             
+  },
+{
+    "id": 676,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".shopifycloud.com/v1/event.gif",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 677,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".shopifycloud.com/v1/event.gif",
+    "resourceTypes": ["image"] }
+  },
+{
+    "id": 678,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "paypalobjects.com/muse/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 679,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "paypalobjects.com/muse/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 680,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "t.paypal.com/ts",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 681,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "t.paypal.com/ts",
+    "resourceTypes": ["image"] }
+  }                              
     ]
