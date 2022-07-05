@@ -4818,5 +4818,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "matomo.js",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 690,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ntv.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 691,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ntv.io/",
+    "resourceTypes": ["script"] }
   }                               
     ]

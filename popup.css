@@ -199,6 +199,7 @@ body {
   width: 300px;
   border-style: solid;
   border-width: .25px;
+  color: #4d4b4b;
   
 }
 
@@ -210,6 +211,10 @@ body {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /*.dropdown:hover .dropbtn {background: radial-gradient(circle at center, white 1%, transparent 95%);}*/
+
+.item:hover #scoreHTML { 
+  opacity: .45;
+}
 
 
 
