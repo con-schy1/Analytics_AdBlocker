@@ -4762,5 +4762,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "t.paypal.com/ts",
     "resourceTypes": ["image"] }
+  },
+{
+    "id": 682,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.onthe.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 683,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.onthe.io/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 684,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.adthrive.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 685,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.adthrive.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 686,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "s.skimresources.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 687,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "s.skimresources.com/",
+    "resourceTypes": ["script"] }
   }                              
     ]
