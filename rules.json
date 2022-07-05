@@ -4804,5 +4804,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "s.skimresources.com/",
     "resourceTypes": ["script"] }
-  }                              
+  },
+{
+    "id": 688,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "matomo.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 689,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "matomo.js",
+    "resourceTypes": ["script"] }
+  }                               
     ]
