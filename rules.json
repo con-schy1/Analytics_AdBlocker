@@ -4832,5 +4832,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".ntv.io/",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 692,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "imasdk.googleapis.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 693,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "imasdk.googleapis.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 694,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.taplytics.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 695,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.taplytics.com/",
+    "resourceTypes": ["script"] }
   }                               
     ]
