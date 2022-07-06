@@ -2,7 +2,7 @@ body {
   font-family: veranda, sans-serif;
   font-size: 13px;
   width: 350px;
-  height: 295px;
+  height: 275px;
   background-color: #f2f2f2;
   margin: 0; /*new*/
   padding: 0; /*new*/
@@ -28,7 +28,7 @@ body {
 
 #title{
   padding-bottom: 2px;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 0px;
   color: #FFFFFF;
   letter-spacing: 0.1em;
