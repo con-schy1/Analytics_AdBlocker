@@ -3745,7 +3745,7 @@
     "id": 536,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "yandex.ru/metrik/a", 
+    "condition": {"urlFilter": "yandex.ru/metrik/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -4860,5 +4860,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "js.taplytics.com/",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 696,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//webanalytics.",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 697,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//webanalytics.",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 698,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mail-ads.google.com/mail",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
