@@ -4655,14 +4655,14 @@
     "id": 666,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "simpleanalyticscdn.com/simple", 
+    "condition": {"urlFilter": "simpleanalyticscdn.com/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 667,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "simpleanalyticscdn.com/simple", 
+    "condition": {"urlFilter": "simpleanalyticscdn.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
 {
@@ -4909,5 +4909,82 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "bugherd.com/sidebarv2",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 703,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "simpleanalyticscdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 704,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.segmetrics.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 705,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.segmetrics.io/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 706,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pixel.condenastdigital.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 707,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pixel.condenastdigital.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 708,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "segment-data.zqtk.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 709,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "segment-data.zqtk.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 710,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cloudfront.net/p.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 711,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cloudfront.net/p.js", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 712,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "capture.condenastdigital.com/track",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 713,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "capture.condenastdigital.com/track",
+    "resourceTypes": ["image"] }
   }                               
     ]

@@ -73,6 +73,10 @@ body {
   margin-top: 113px;
 }
 
+.item:hover #scoreHTML { 
+  opacity: .40;
+}
+
 .grade {
   position: relative;
   display: inline-block;
@@ -211,10 +215,6 @@ body {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /*.dropdown:hover .dropbtn {background: radial-gradient(circle at center, white 1%, transparent 95%);}*/
-
-.item:hover #scoreHTML { 
-  opacity: .45;
-}
 
 
 
