@@ -4881,5 +4881,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "mail-ads.google.com/mail",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 699,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "edge.api.brightcove.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 700,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "edge.api.brightcove.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 701,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bugherd.com/sidebarv2",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 702,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bugherd.com/sidebarv2",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
