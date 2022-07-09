@@ -14,16 +14,6 @@ var scriptNum = x.totalTot;
 
 switch (scriptNum >= 0){
         
-/*case scriptNum == 0:
-var ctx = document.getElementById('myChart').getContext('2d');
-var yValues = [100, 0];
-var barColors = [
-  "#32a852",
-  "#ffffff",
-
-];
-    break;*/
-        
 case scriptNum >= 0:
 var ctx = document.getElementById('myChart').getContext('2d');
 var yValues = [x.totalAnal, x.totalAd];

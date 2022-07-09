@@ -5000,5 +5000,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "hotzones/src/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 716,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/nielsen.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 717,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/floodlight_global.js", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 718,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tags.bkrtx.com/js", 
+    "resourceTypes": ["script"] }
   }                               
     ]
