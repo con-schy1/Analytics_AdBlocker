@@ -4986,5 +4986,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "capture.condenastdigital.com/track",
     "resourceTypes": ["image"] }
+  },
+    {
+    "id": 714,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hotzones/src/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 715,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hotzones/src/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
