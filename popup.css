@@ -148,6 +148,8 @@ body {
   border-top: 1px solid gray;
   background-color: whitesmoke;
   height: 51px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   
 }
 
