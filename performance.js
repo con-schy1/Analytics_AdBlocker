@@ -1,17 +1,19 @@
 
 chrome.runtime.onMessage.addListener(msg=> {
+    
     if (document.readyState === 'complete') {
         blockerFunction();
-        setInterval(blockerFunction, 2000);
-    } else {
+        setTimeout(blockerFunction, 3000);
+    }
+
+     else {
         window.addEventListener('load', blockerFunction);
     }
 });
 
 
 function blockerFunction(){
-
-    
+   
 ///////////////////////////////////////////////////////
 //Analytics Tracker Checker    
 
@@ -117,8 +119,6 @@ var scrptAdCount = 0;
         scrptAdCount += foundAdArray[i].length;
     }
 
-/*console.log(foundAdArray);
-console.log(scrptAdCount);*/
     
 ////////////////////////////////////////
 // Image
@@ -254,16 +254,18 @@ var totalTot = totalAd+totalAnal;
     
     
 }
+    else{
+        //
+    }
 
     
-var totalString = totalTot.toString()
-       
-    /*console.log(count);
-    console.log(foundArray); */
+var totalString = totalTot.toString();
     
 
 var counts = {totalAd, totalAnal, totalString, totalTot}
 
 chrome.runtime.sendMessage(counts);
+
+
     
 }
