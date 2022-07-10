@@ -2,8 +2,7 @@ body {
   font-family: veranda, sans-serif;
   font-size: 13px;
   width: 350px;
-  height: 275px;
-  background-color: #f2f2f2;
+  height: 255px;
   margin: 0; /*new*/
   padding: 0; /*new*/
 }
@@ -43,6 +42,12 @@ body {
     padding-left: 10px;
     padding-top: 5px;
 }
+
+
+.bodyHTML{
+    background-color: white;
+}
+
 
 .grade{
     font-size:14px;
@@ -136,15 +141,20 @@ body {
 }
 
 #footer{
-  padding-top: 15px;
+  padding-top: 5px;
   display: flex;
   bottom: 0;
   width: 100%;
-  height: 1.25rem;
+  border-top: 1px solid gray;
+  background-color: whitesmoke;
+  height: 51px;
+  
 }
 
 #donate{
   padding-left: 12px;
+  padding-top: 7px;
+  padding-bottom: 3px;
 }
 
 /* Ukraine Donation */
@@ -154,12 +164,16 @@ body {
 }
 
 #uaFlag{
-    padding-left: 117px;
+    padding-left: 124px;
     padding-right: 5px;
+    padding-bottom: 3px;
 }
 
 #supportText{
-    padding-top: 8px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    
 }
 
 /*This is the hover menu*/

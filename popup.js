@@ -1,4 +1,3 @@
-
 chrome.tabs.query({
     active: true,currentWindow: true
 }).then(tabs => {
