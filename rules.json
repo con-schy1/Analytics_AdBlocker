@@ -5035,5 +5035,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".mmstat.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 721,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "www.google.com/gen_204?",
+    "resourceTypes": ["ping"] }
+  },
+{
+    "id": 722,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "www.google.com/gen_204?",
+    "resourceTypes": ["image"] }
   }                               
     ]
