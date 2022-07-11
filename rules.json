@@ -5119,5 +5119,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".myfonts.net/count/",
     "resourceTypes": ["stylesheet"] }
+  },
+    {
+    "id": 733,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.kampyle.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 734,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.kampyle.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 735,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".piano.io/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 736,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".piano.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 737,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".instana.io/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 738,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".instana.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 739,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/comscore.", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 740,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/comscore.",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 741,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".en25.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 742,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".en25.com/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
