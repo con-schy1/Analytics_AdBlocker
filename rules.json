@@ -5049,5 +5049,68 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "www.google.com/gen_204?",
     "resourceTypes": ["image"] }
+  },
+    {
+    "id": 723,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/analytics.min.js", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 724,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/analytics.min.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 725,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".refersion.com/tracker/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 726,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".refersion.com/tracker/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 727,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudfront.net/tag-manager/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 728,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudfront.net/tag-manager/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 729,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sessions.bugsnag.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 730,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sessions.bugsnag.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 731,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.ipstack.com/check",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
