@@ -5112,5 +5112,12 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "api.ipstack.com/check",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 732,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".myfonts.net/count/",
+    "resourceTypes": ["stylesheet"] }
   }                               
     ]
