@@ -71,8 +71,8 @@ for (var i = 0; i < analList.length; i++){
 
 }
     
-console.log(foundHTTPArray);
-console.log(foundHTTPADArray);
+/*console.log(foundHTTPArray);
+console.log(foundHTTPADArray);*/
     
  var totalAd = httpADCount;
     
