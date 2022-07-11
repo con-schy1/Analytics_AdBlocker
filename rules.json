@@ -5189,5 +5189,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".en25.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 743,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudflareinsights.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 744,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".cloudflareinsights.com/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
