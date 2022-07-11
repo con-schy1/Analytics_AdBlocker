@@ -17,22 +17,23 @@ function blockerFunction(){
 ///////////////////////////////////////////////////////
 //Analytics Tracker Checker    
 
-const analList = [/google\-analytics/,/googletagmanager/,/connect\.facebook\.net/,/clarity\.ms/,
-/go\-mpulse/,/analytics\.tiktok/,/quantcount/, /snap\.licdn/, /analytics\.similarweb/, /hotjar/, /pardot/,
-/newrelic/, /foresee/, /smetrics\./, /tms\./, /crazyegg/, /boomtrain/
-, /cdn\.turner/, /optimizely/, /bounceexchange/, /visualime/, /tags\.tiqcdn/, /tealiumiq/,
-/adobedtm/, /qualaroo/, /clicktale/, /funnelenvy/, /edge\.fullstory/, /tvsquared/, /heapanalytics/,
- /thebrighttag/, /s\.btstatic/, /raygun/, /ac\-target/, /demdex/, /utag/, /iperceptions/, /techtarget/, /bizible/,
- /6sc\.co/, /demandbase/, /engagio/, /akamai/, /qualtrics/, /rubiconproject/, /s\.yimg/,
-  /cdn\.segment/, /marinsm/, /googlesyndication/, /chartbeat/, /gstatic/, /rlcdn/, /sojern/,
-  /rmtag/, /impactradius\-event/, /bytedance/, /sprig/, /userleap/, /taboola/, /sleeknote/, /pushcrew/, /onesignal/, /amplify\-outbrain/, /dianomi/, /s\-onetag/, /crwdcntrl/, /redditstatic/, /quantserve/, /rubiconproject/, /mpulse/, /\.demex\.net\//, /gateway\.foresee\.com/, /\.scene7/, /googletagservices/, /analytics\.yahoo\.com/, /doubleverify/, /\.imrworldwide\./, /analytics\.twitter/, /bidswitch/, /widgets\-outbrain/, /connect\.facebook\.net/, /igodigital/, /api\-segment/, /pix\.pub/, /nr\-data/, /c\.lytics/, /indexww/, /p1\.parsely/, /omtrdc/, /curalate/, /richrelevance/, /cquotient/, /api\.drift/, /app\.dynamics/, /pixel\.wp/, /s7\.addthis/, /webtrendslive/, /googleoptimize/, /px\-cloud\.net/, /liveperson/, /tamgrt/, /\.forter/, /piwik/, /3gl\.net/, /btttag/, /crwdcntrl\.net/, /exelator/, /helpscout/, /platform\.twitter/, /linkedin\.com\/li\/track/, /tvsquared/, /fullstory/, /powerreviews/, /mouseflow/, /brightcove/, /beacon\.walmart\.com/, /mathtag/, /\/clickstream\//, /\/gauge\/link\//, /\/gauge\/pageview\//, /bs\.serving\-sys/, /dyntrace/, /custhelp/, /answerscloud/, /yotpo/, /kampyle/, /webcollage/, /salsify\-ecdn/, /ct\.pintrest/, /soptimize\.southwest/, /innovid/, /facebook\.com\/tr/, /everesttech/, /r\.turn/, /content\.mink/, /siteimproveanalytics/, /newscgp/, /permutive/, /js\+ssdomvar\.js\+generic/, /snowplowanalytics/, /6sc\.co/, /bluekai/, /usabilla/, /xg4ken/, /api\.amplitude/, /\/b\/ss\//, /quantummetric/, /\/wt\.pl\?/, /spotxchange/, /mookie1/, /\/glassbox\/reporting\//, /\/ga\/gtag\.js/, /\/plugins\/like\.php/, /maxymiser\.net\//, /visualwebsiteoptimizer/, /d\.turn/, /branch\.io/, /res\-x/, /narrativ/, /dcf\.espn/, /bluecore/, /yjtag\.yahoo/, /ruxitagent/, /plausible\.io\/js/, /jscache/, /acuityplatform/, /cloudfront\.net\/form\-serialize/, /mr\.homedepot/, /static\/js\/t\.js/, /dotmetrics\.net/, /hit\.xiti/, /plusone\.js/, /kaltura/, /tagcommander/, /boomerang\.js/, /techlab\-cdn/, /3lift/, /searchiq/, /\/js\/tealeaf/, /appboy\.com\/api/, /sharethis\.com/, /bizible/, /getclicky\.com\/js/, /track\.securedvisit/, /online\-metrix/, /dynamicyield/, /yottaa/, /atgvcs/, /agkn\.com/, /t\.co\//, /data\.microsoft/, /quantcast/, /cdn\.pdst/, /sgtm/, /owneriq/, /shoprunner/, /osano/, /gigya/, /log\.pinterest/, /hubspot/, /pinimg/, /\/opinionlab\//, /merkle\_track/, /ensighten/, /alexametrics/, /tr\.snapchat/, /c\.msn/, /keywee/, /bizographics\.com\/collect/, /omnitagjs/, /yandex\.ru\/metrika\//, /evidon\-sitenotice\-tag\.js/, /dotomi/, /lijit/, /bluecava/, /data\.pendo\.io/, /heapanalytics/, /certona/, /sail\-horizon\.com\/spm/, /\.gumgum\.com/, /mparticle/, /privy\.com\/collect/, /abtasty/, /dwin1/, /shopifycdn/, /uplift\-platform/, /w55c/, /liadm/, /sddan/, /sundaysky/, /\/atrk\.js/, /\/kinesis/, /zdassets/, /rfihub/, /ex\.co/, /\/launch\/launch\-/, /\.com\/id\?d\_visid\_ver/, /marketo/, /simpleanalyticscdn\.com/, /cdn\.amplitude/, /ki\.js/, /youtube.com\/ptracking/, /youtube\.com\/pcs\/parallelactiveview/, /youtube.com\/api\/stats\/playback\//, /youtube.com\/pcs\/activeview/, /googleusercontent.com\/proxy\//, /cdn\.yottaa\.com\/rapid/, /cdn\.matomo\./, /cdn\.pbbl\.co/, /oracleinfinity/, /t\.paypal\.com\/ts/, /paypalobjects\.com\/muse\//, /cdn\.onthe\.io\//, /matomo\.js/, /js\.taplytics/, /facebook.com\/tr/, /\/\/webanalytics\./, /bugherd\.com\/sidebarv2/, /tag\.segmetrics\.io/, /pixel\.condenastdigital\.com/, /segment\-data\.zqtk\.net/, /cloudfront\.net\/p\.js/, /capture\.condenastdigital\.com\/track/, /nielsen\.js/];
+const analList = [/google-analytics/,/googletagmanager/,/connect.facebook.net/,/clarity.ms/,
+/go-mpulse/,/analytics.tiktok/,/quantcount/, /snap.licdn/, /analytics.similarweb/, /hotjar/, /pardot/,
+/newrelic/, /foresee/, /smetrics./, /tms./, /crazyegg/, /boomtrain/
+, /cdn.turner/, /optimizely/, /bounceexchange/, /visualime/, /tags.tiqcdn/, /tealiumiq/,
+/adobedtm/, /qualaroo/, /clicktale/, /funnelenvy/, /edge.fullstory/, /tvsquared/, /heapanalytics/,
+ /thebrighttag/, /s.btstatic/, /raygun/, /ac\-target/, /demdex/, /utag/, /iperceptions/, /techtarget/, /bizible/,
+ /6sc.co/, /demandbase/, /engagio/, /akamai/, /qualtrics/, /rubiconproject/, /s.yimg/,
+  /cdn.segment/, /marinsm/, /googlesyndication/, /chartbeat/, /gstatic/, /rlcdn/, /sojern/,
+  /rmtag/, /impactradius\-event/, /bytedance/, /sprig/, /userleap/, /taboola/, /sleeknote/, /pushcrew/, /onesignal/, /amplify\-outbrain/, /dianomi/, /s\-onetag/, /crwdcntrl/, /redditstatic/, /quantserve/, /rubiconproject/, /mpulse/, /.demex.net\//, /gateway.foresee.com/, /.scene7/, /googletagservices/, /analytics.yahoo.com/, /doubleverify/, /.imrworldwide./, /analytics.twitter/, /bidswitch/, /widgets\-outbrain/, /connect.facebook.net/, /igodigital/, /api\-segment/, /pix.pub/, /nr\-data/, /c.lytics/, /indexww/, /p1.parsely/, /omtrdc/, /curalate/, /richrelevance/, /cquotient/, /api.drift/, /app.dynamics/, /pixel.wp/, /s7.addthis/, /webtrendslive/, /googleoptimize/, /px\-cloud.net/, /liveperson/, /tamgrt/, /.forter/, /piwik/, /3gl.net/, /btttag/, /crwdcntrl.net/, /exelator/, /helpscout/, /platform.twitter/, /linkedin.com\/li\/track/, /tvsquared/, /fullstory/, /powerreviews/, /mouseflow/, /brightcove/, /beacon.walmart.com/, /mathtag/, /\/clickstream\//, /\/gauge\/link\//, /\/gauge\/pageview\//, /bs.serving\-sys/, /dyntrace/, /custhelp/, /answerscloud/, /yotpo/, /kampyle/, /webcollage/, /salsify\-ecdn/, /ct.pintrest/, /soptimize.southwest/, /innovid/, /facebook.com\/tr/, /everesttech/, /r.turn/, /content.mink/, /siteimproveanalytics/, /newscgp/, /permutive/, /js\+ssdomvar.js\+generic/, /snowplowanalytics/, /6sc.co/, /bluekai/, /usabilla/, /xg4ken/, /api.amplitude/, /\/b\/ss\//, /quantummetric/, /\/wt.pl\?/, /spotxchange/, /mookie1/, /\/glassbox\/reporting\//, /\/ga\/gtag.js/, /\/plugins\/like.php/, /maxymiser.net\//, /visualwebsiteoptimizer/, /d.turn/, /branch.io/, /res\-x/, /narrativ/, /dcf.espn/, /bluecore/, /yjtag.yahoo/, /ruxitagent/, /plausible.io\/js/, /jscache/, /acuityplatform/, /cloudfront.net\/form\-serialize/, /mr.homedepot/, /static\/js\/t.js/, /dotmetrics.net/, /hit.xiti/, /plusone.js/, /kaltura/, /tagcommander/, /boomerang.js/, /techlab\-cdn/, /3lift/, /searchiq/, /\/js\/tealeaf/, /appboy.com\/api/, /sharethis.com/, /bizible/, /getclicky.com\/js/, /track.securedvisit/, /online\-metrix/, /dynamicyield/, /yottaa/, /atgvcs/, /agkn.com/, /t.co\//, /data.microsoft/, /quantcast/, /cdn.pdst/, /sgtm/, /owneriq/, /shoprunner/, /osano/, /gigya/, /log.pinterest/, /hubspot/, /pinimg/, /\/opinionlab\//, /merkle\_track/, /ensighten/, /alexametrics/, /tr.snapchat/, /c.msn/, /keywee/, /bizographics.com\/collect/, /omnitagjs/, /yandex.ru\/metrika\//, /evidon\-sitenotice\-tag.js/, /dotomi/, /lijit/, /bluecava/, /data.pendo.io/, /heapanalytics/, /certona/, /sail\-horizon.com\/spm/, /.gumgum.com/, /mparticle/, /privy.com\/collect/, /abtasty/, /dwin1/, /shopifycdn/, /uplift\-platform/, /w55c/, /liadm/, /sddan/, /sundaysky/, /\/atrk.js/, /\/kinesis/, /zdassets/, /rfihub/, /ex.co/, /\/launch\/launch\-/, /.com\/id\?d\_visid\_ver/, /marketo/, /simpleanalyticscdn.com/, /cdn.amplitude/, /ki.js/, /youtube.com\/ptracking/, /youtube.com\/pcs\/parallelactiveview/, /youtube.com\/api\/stats\/playback\//, /youtube.com\/pcs\/activeview/, /googleusercontent.com\/proxy\//, /cdn.yottaa.com\/rapid/, /cdn.matomo./, /cdn.pbbl.co/, /oracleinfinity/, /t.paypal.com\/ts/, /paypalobjects.com\/muse\//, /cdn.onthe.io\//, /matomo.js/, /js.taplytics/, /facebook.com\/tr/, /\/\/webanalytics./, /bugherd.com\/sidebarv2/, /tag.segmetrics.io/, /pixel.condenastdigital.com/, /segment\-data.zqtk.net/, /cloudfront.net\/p.js/, /capture.condenastdigital.com\/track/, /nielsen.js/];
     
     
-const adList = [/doubleclick/, /scorecardresearch/, /krxd\.net/, /adservice\.google/, /googleadservices/, /geoedge/, /ads\-twitter/, /amazon\-adsystem/, /ads\.pubmatic/, /adroll/, /adnxs/, /ads.\linkedin/, /moatads/, /criteo/, /adlightning/, /turner\.com\/ads/, /adsafeprotected/, /sc\-static/, /px\.ads\.linkedin/, /adsrvr/, /monetate/, /apps\.bazaarvoice/, /tapad/, /casalemedia/, /ads\.stickyadstv/, /pubmatic\.com\/AdServer/, /ispot\.tv/, /fwmrm\.net\/ad/, /cxense/, /adsymptotic/, /yahoo\.com\/admax/, /\.brsrvr/, /advertising/, /ad\.360yield/, /ad\.wsod/, /teads\.tv/, /tvpixel/, /www\.youtube\.com\/pagead/, /.impact\-ad./, /pubmatic.com\/AdServer\//, /\/player\/ad_break/, /\/api\/stats\/ads/, /33across/, /bat\.bing/, /ad\-delivery/, /\.adgrx\.com\//, /ads\.adthrive\.com\//, /s\.skimresources\.com\//, /\.ntv\.io/, /imasdk\.googleapis\.com\//, /pix\.pub/, /mail\-ads\.google\.com\/mail/, /edge\.api\.brightcove\.com/, /hotzones\/src\//, /floodlight\_global\.js/, /tags\.bkrtx/, /d9\.flashtalking/, /servedby\.flashtalking/];
+const adList = [/doubleclick/, /scorecardresearch/, /krxd.net/, /adservice.google/, /googleadservices/, /geoedge/, /ads\-twitter/, /amazon\-adsystem/, /ads.pubmatic/, /adroll/, /adnxs/, /ads.\linkedin/, /moatads/, /criteo/, /adlightning/, /turner.com\/ads/, /adsafeprotected/, /sc\-static/, /px.ads.linkedin/, /adsrvr/, /monetate/, /apps.bazaarvoice/, /tapad/, /casalemedia/, /ads.stickyadstv/, /pubmatic.com\/AdServer/, /ispot.tv/, /fwmrm.net\/ad/, /cxense/, /adsymptotic/, /yahoo.com\/admax/, /.brsrvr/, /advertising/, /ad.360yield/, /ad.wsod/, /teads.tv/, /tvpixel/, /www.youtube.com\/pagead/, /.impact\-ad./, /pubmatic.com\/AdServer\//, /\/player\/ad_break/, /\/api\/stats\/ads/, /33across/, /bat.bing/, /ad\-delivery/, /.adgrx.com\//, /ads.adthrive.com\//, /s.skimresources.com\//, /.ntv.io/, /imasdk.googleapis.com\//, /pix.pub/, /mail\-ads.google.com\/mail/, /edge.api.brightcove.com/, /hotzones\/src\//, /floodlight\_global.js/, /tags.bkrtx/, /d9.flashtalking/, /servedby.flashtalking/, /mmstat.com/];
 
 
     
-////////////////////////////////
+///////////////////////////////
+//This script looks at all nextwork requests
     
     
 var httpADSrcs = [];
@@ -70,6 +71,9 @@ for (var i = 0; i < analList.length; i++){
 
 }
     
+console.log(foundHTTPArray);
+console.log(foundHTTPADArray);
+    
  var totalAd = httpADCount;
     
 var totalAnal = httpCount;
@@ -81,9 +85,16 @@ var totalTot = totalAd+totalAnal;
     
     
 
+  
     
     
-if (totalTot == 0){
+    
+    
+    
+    
+    
+    
+//This script looks at script tags    
        
 
 var scripts = document.getElementsByTagName("script");
@@ -119,6 +130,12 @@ var scrptAdCount = 0;
         scrptAdCount += foundAdArray[i].length;
     }
 
+/*
+if (foundArray.sort().join(','==={
+    
+}  */  
+    
+    
     
 ////////////////////////////////////////
 // Image
@@ -191,72 +208,14 @@ var iframeAdCount = 0;
         iframeAdCount += foundiFrameAdArray[i].length;
     }
     
-////////////////////////////////////////////////////
-//xmlhttprequest Analytics
-    
-    
-var httpSrcs = [];
-var scrptSrcs = [];
-var strHTTPMatches;
-var foundHTTPArray = [];
-var httpCount = 0;
-
-const navAPI = performance.getEntriesByType('resource');
-    
-for (var i = 0; i < navAPI.length; i++) {
-    if ((navAPI[i].initiatorType == "xmlhttprequest")){
-        httpSrcs.push(navAPI[i].name);
-    }
-}
-
-for (var i = 0; i < analList.length; i++){
-    strHTTPMatches = httpSrcs.filter(element => analList[i].test(element));
-    foundHTTPArray.push(strHTTPMatches);
-    httpCount += foundHTTPArray[i].length;
-
-}   
-    
-    
-    
- ////////////////////////////////////////////////////
-//xmlhttprequest ADs
-    
-    
-var httpADSrcs = [];
-var scrptADSrcs = [];
-var strHTTPADMatches;
-var foundHTTPADArray = [];
-var httpADCount = 0;
-    
-for (var i = 0; i < navAPI.length; i++) {
-    if ((navAPI[i].initiatorType == "xmlhttprequest")){
-        httpADSrcs.push(navAPI[i].name);
-    }
-}
-
-for (var i = 0; i < adList.length; i++){
-    strHTTPADMatches = httpADSrcs.filter(element => adList[i].test(element));
-    foundHTTPADArray.push(strHTTPADMatches);
-    httpADCount += foundHTTPADArray[i].length;
-
-} 
-    
-
-
-
-var totalAd = iframeAdCount+imgAdCount+scrptAdCount+httpADCount;
+/*var totalAd = iframeAdCount+imgAdCount+scrptAdCount+httpADCount;
     
 var totalAnal = scrptCount+imgCount+iframeCount+httpCount;
 
     
-var totalTot = totalAd+totalAnal;
+var totalTot = totalAd+totalAnal;*/
     
     
-    
-}
-    else{
-        //
-    }
 
     
 var totalString = totalTot.toString();

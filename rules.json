@@ -5021,5 +5021,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "tags.bkrtx.com/js", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 719,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mmstat.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 720,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mmstat.com/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
