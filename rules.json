@@ -5203,5 +5203,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".cloudflareinsights.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 745,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gscontxt.net/?", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 746,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gscontxt.net/?",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 747,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mxpnl.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 748,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mxpnl.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 749,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/firebase-analytics.js", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 750,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/firebase-analytics.js",
+    "resourceTypes": ["xmlhttprequest"] }
   }                               
     ]
