@@ -5245,5 +5245,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/firebase-analytics.js",
     "resourceTypes": ["xmlhttprequest"] }
-  }                               
+  },
+    {
+    "id": 751,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.vidazoo.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 752,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.vidazoo.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 753,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".grapeshot.", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 754,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".grapeshot.",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 755,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "-advertising/tmg-", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 756,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "-advertising/tmg-",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 757,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.petametrics.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 758,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.petametrics.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 759,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".wistia.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 760,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".wistia.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  }                                
     ]
