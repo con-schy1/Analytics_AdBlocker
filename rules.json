@@ -5441,5 +5441,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "analytics.newscred.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 779,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".pxchk.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 780,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".pxchk.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 781,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".px-cloud.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 782,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".px-cloud.net/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                                
     ]
