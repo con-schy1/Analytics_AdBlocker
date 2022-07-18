@@ -5315,5 +5315,131 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".wistia.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 761,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.fastclick.net", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 762,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.fastclick.net",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 763,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.fastclick.net", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 764,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.fastclick.net",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 765,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "dianomi.com/js", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 766,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "dianomi.com/js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 767,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".pingdom.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 768,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".pingdom.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 769,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".blueconic.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 770,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".blueconic.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 771,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".hsadspixel.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 772,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".hsadspixel.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 773,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.hsleadflows.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 774,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.hsleadflows.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 775,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".hs-analytics.net/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 776,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".hs-analytics.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 777,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "analytics.newscred.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 778,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "analytics.newscred.com/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                                
     ]
