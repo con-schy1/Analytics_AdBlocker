@@ -5469,5 +5469,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".px-cloud.net/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 783,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.sophi.io/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 784,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.sophi.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 785,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "browser.sentry-cdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 786,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "browser.sentry-cdn.com/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                                
     ]
