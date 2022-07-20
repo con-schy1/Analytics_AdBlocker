@@ -5553,5 +5553,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "spf.js",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 795,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlevideo.com/generate_204",
+    "resourceTypes": ["other"] }
+  },
+{
+    "id": 796,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlevideo.com/videoplayback",
+    "resourceTypes": ["other"] }
+  },
+{
+    "id": 797,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/api/stats/atr",
+    "resourceTypes": ["other"] }
+  },
+{
+    "id": 798,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/desktop_polymer.js",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 799,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/generate_204",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 800,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlevideo.com/generate_204",
+    "resourceTypes": ["ping"] }
+  },
+{
+    "id": 801,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".googlevideo.com/generate_204",
+    "resourceTypes": ["image"] }
+  },
+{
+    "id": 802,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googlevideo.com/videoplayback",
+    "resourceTypes": ["other"] }
   }                                
     ]
