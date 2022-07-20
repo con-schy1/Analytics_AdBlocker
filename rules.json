@@ -5497,5 +5497,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "browser.sentry-cdn.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 787,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "i.ytimg.com/generate_204",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 788,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "i.ytimg.com/generate_204",
+    "resourceTypes": ["other"] }
+  },
+{
+    "id": 789,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "google.com/pagead/lvz",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 790,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googlevideo.com/generate_204",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 791,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googlevideo.com/generate_204",
+    "resourceTypes": ["other"] }
+  },
+{
+    "id": 792,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/s/player",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 793,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "play.google.com/log?",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 794,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "spf.js",
+    "resourceTypes": ["script"] }
   }                                
     ]
