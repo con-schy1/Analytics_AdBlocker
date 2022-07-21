@@ -4340,14 +4340,14 @@
     "id": 621,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "condition": {"urlFilter": "youtube.com/pagead/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 622,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "condition": {"urlFilter": "youtube.com/pagead/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -4494,7 +4494,7 @@
     "id": 643,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "condition": {"urlFilter": "youtube.com/pagead/", 
     "resourceTypes": ["media"] }
   },
     {
@@ -4529,7 +4529,7 @@
     "id": 648,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.youtube.com/pagead/", 
+    "condition": {"urlFilter": "youtube.com/pagead/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -5516,7 +5516,7 @@
     "id": 789,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "google.com/pagead/lvz",
+    "condition": {"urlFilter": "google.com/pagead/",
     "resourceTypes": ["xmlhttprequest"] }
   },
 {
@@ -5603,11 +5603,46 @@
     "condition": {"urlFilter": ".googlevideo.com/generate_204",
     "resourceTypes": ["image"] }
   },
-{
+    {
     "id": 802,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "googlevideo.com/videoplayback",
+    "condition": {"urlFilter": "adform.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 803,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adform.net/", 
+    "resourceTypes": ["media"] }
+  },
+    {
+    "id": 804,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "google.com/pagead/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 805,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/get_midroll_info", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 806,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/get_midroll_info", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 807,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "youtube.com/get_midroll_info", 
     "resourceTypes": ["other"] }
-  }                                
+  }                               
     ]
