@@ -3,7 +3,8 @@
     "id": 1,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".demdex.net/", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".demdex.net/", 
+    "resourceTypes": ["script"] }
   },
  {
     "id": 2,
@@ -30,19 +31,22 @@
     "id": 5,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.googletagmanager.com/", "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "//www.googletagmanager.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   },
 {
     "id": 6,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.googletagmanager.com/", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "//www.googletagmanager.com/", 
+    "resourceTypes": ["script"] }
   },
 {
     "id": 7,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//www.google-analytics.com", "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "//www.google-analytics.com", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 8,
@@ -5607,21 +5611,28 @@
     "id": 802,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "rr1---sn-",
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "googlevideo.com/generate_204",
+    "resourceTypes": ["image"] }
   },
 {
     "id": 803,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "googlevideo.com/generate_204",
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": "rr2---sn-",
+    "resourceTypes": ["xmlhttprequest"] }
   },
 {
     "id": 804,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "rr2---sn-",
+    "condition": {"urlFilter": "rr5---sn-",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 805,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "&ctier=L",
     "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
