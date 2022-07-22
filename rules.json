@@ -5625,13 +5625,6 @@
     "id": 804,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "rr5---sn-",
-    "resourceTypes": ["xmlhttprequest"] }
-  },
-{
-    "id": 805,
-    "priority": 1,
-    "action": { "type": "block" },
     "condition": {"urlFilter": "&ctier=L",
     "resourceTypes": ["xmlhttprequest"] }
   }                              
