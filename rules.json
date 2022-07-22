@@ -5531,118 +5531,97 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "googlevideo.com/generate_204",
-    "resourceTypes": ["other"] }
+    "resourceTypes": ["ping"] }
   },
 {
     "id": 792,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "youtube.com/s/player",
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": "play.google.com/log?",
+    "resourceTypes": ["xmlhttprequest"] }
   },
-{
+    {
     "id": 793,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "play.google.com/log?",
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "youtube.com/paged/adview", 
+    "resourceTypes": ["image"] }
   },
 {
     "id": 794,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "spf.js",
-    "resourceTypes": ["script"] }
+    "condition": {"urlFilter": ".googlevideo.com/generate_204",
+    "resourceTypes": ["media"] }
   },
 {
     "id": 795,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": ".googlevideo.com/generate_204",
-    "resourceTypes": ["other"] }
-  },
-{
-    "id": 796,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": ".googlevideo.com/videoplayback",
     "resourceTypes": ["other"] }
   },
 {
-    "id": 797,
+    "id": 796,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "youtube.com/api/stats/atr",
     "resourceTypes": ["other"] }
   },
-{
-    "id": 798,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "/desktop_polymer.js",
-    "resourceTypes": ["script"] }
-  },
-{
-    "id": 799,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "youtube.com/generate_204",
-    "resourceTypes": ["xmlhttprequest"] }
-  },
-{
-    "id": 800,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": ".googlevideo.com/generate_204",
-    "resourceTypes": ["ping"] }
-  },
-{
-    "id": 801,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": ".googlevideo.com/generate_204",
-    "resourceTypes": ["image"] }
-  },
     {
-    "id": 802,
+    "id": 797,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "adform.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
-    "id": 803,
+    "id": 798,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "adform.net/", 
     "resourceTypes": ["media"] }
   },
     {
-    "id": 804,
+    "id": 799,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "google.com/pagead/", 
     "resourceTypes": ["image"] }
   },
     {
-    "id": 805,
+    "id": 800,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "youtube.com/get_midroll_info", 
     "resourceTypes": ["xmlhttprequest"] }
   },
-    {
-    "id": 806,
+{
+    "id": 801,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "youtube.com/get_midroll_info", 
-    "resourceTypes": ["ping"] }
+    "condition": {"urlFilter": "youtube.com/generate_204",
+    "resourceTypes": ["xmlhttprequest"] }
   },
-    {
-    "id": 807,
+{
+    "id": 802,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "youtube.com/get_midroll_info", 
-    "resourceTypes": ["other"] }
-  }                               
+    "condition": {"urlFilter": "rr1---sn-",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 803,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googlevideo.com/generate_204",
+    "resourceTypes": ["image"] }
+  },
+{
+    "id": 804,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rr2---sn-",
+    "resourceTypes": ["xmlhttprequest"] }
+  }                              
     ]
