@@ -2559,14 +2559,14 @@
     "id": 366,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "v.fwmrm.net/ad/", 
+    "condition": {"urlFilter": ".fwmrm.net/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 367,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "v.fwmrm.net/ad/", 
+    "condition": {"urlFilter": ".fwmrm.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -5627,5 +5627,40 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "&ctier=L",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 805,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".litix.io/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 806,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".litix.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 807,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".adsales.snidigital.com/", 
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 808,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".adsales.snidigital.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 809,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "vitals.vercel-insights",
+    "resourceTypes": ["ping"] }
   }                              
     ]
