@@ -5662,5 +5662,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "vitals.vercel-insights",
     "resourceTypes": ["ping"] }
+  },
+{
+    "id": 810,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.apxlv.com/tag",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 811,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.apxlv.com/tag",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 812,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mutinycdn.com/personalize/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 813,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mutinycdn.com/personalize/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 814,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "reveal.clearbit.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 815,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "reveal.clearbit.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 816,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "javascripts/adwords.js",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 817,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "javascripts/adwords.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 818,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.vox-cdn.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 819,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.vox-cdn.com/",
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
