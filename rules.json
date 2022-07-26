@@ -5732,5 +5732,166 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.vox-cdn.com/",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 820,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.instapagemetrics.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 821,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.instapagemetrics.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 822,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ctracking.g2crowd.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 823,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracking.g2crowd.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 824,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".akamaihd.net/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 825,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".akamaihd.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 826,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.sitesearch360.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 827,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.sitesearch360.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 828,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.ipdata.co/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 829,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.ipdata.co/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 830,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/analytics/preloadInit.js",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 831,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/analytics/preloadInit.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 832,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/analytics/segment/init-production.js",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 833,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/analytics/segment/init-production.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 834,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.dynamicyield.com/api",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 835,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.dynamicyield.com/api",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 836,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".browser-intake-datadoghq.com/api",
+    "resourceTypes": ["ping"] }
+  },
+{
+    "id": 837,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".browser-intake-datadoghq.com/api",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 838,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracker.affirm.com",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 839,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.rollbar.com/rollbarjs",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 840,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.rollbar.com/rollbarjs",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 841,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ingest.sentry.io/api",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 842,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ingest.sentry.io/api",
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
