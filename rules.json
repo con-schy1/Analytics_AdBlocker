@@ -5871,7 +5871,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.rollbar.com/rollbarjs",
-    "resourceTypes": ["xmlhttprequest"] }
+    "resourceTypes": ["script"] }
   },
 {
     "id": 840,
@@ -5893,5 +5893,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".ingest.sentry.io/api",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 843,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "web-assets.zendesk.com/js/analytics",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 844,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "web-assets.zendesk.com/js/analytics",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 845,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".levexis.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 846,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".levexis.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 847,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mybluemix.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 848,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mybluemix.net/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 849,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "igodigital.com/collect",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 850,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "igodigital.com/collect",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 851,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "igodigital.com/collect",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 852,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "igodigital.com/collect",
+    "resourceTypes": ["script"] }
   }                              
     ]
