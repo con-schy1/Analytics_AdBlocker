@@ -2146,14 +2146,14 @@
     "id": 307,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdn.optimizely.com/", 
+    "condition": {"urlFilter": "optimizely.com/js", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 308,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdn.optimizely.com/", 
+    "condition": {"urlFilter": "optimizely.com/js", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -3588,7 +3588,7 @@
     "id": 513,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdn.optimizely.com/", 
+    "condition": {"urlFilter": "optimizely.com/js", 
     "resourceTypes": ["other"] }
   },
     {
@@ -5962,6 +5962,41 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "igodigital.com/collect",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 853,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rr1---sn-vggsk",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 854,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hs-analytics.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 855,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hs-analytics.net/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 856,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.hsadspixel.net/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 857,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.hsadspixel.net/",
     "resourceTypes": ["script"] }
   }                              
     ]
