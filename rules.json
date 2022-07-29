@@ -5998,5 +5998,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "js.hsadspixel.net/",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 858,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "google.com/adsense/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 859,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "google.com/adsense/",
+    "resourceTypes": ["script"] }
   }                              
     ]
