@@ -6075,5 +6075,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".avalon.perfdrive.com/",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 869,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/at.js",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 870,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/at.js",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 871,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sstats.adobe.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 872,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "xp.apple.com/",
+    "resourceTypes": ["ping"] }
+  },
+{
+    "id": 873,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "xp.apple.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 874,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "supportmetrics.apple.",
+    "resourceTypes": ["ping"] }
+  },
+{
+    "id": 875,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "supportmetrics.apple.",
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
