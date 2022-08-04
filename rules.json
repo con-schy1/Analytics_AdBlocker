@@ -6012,5 +6012,68 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "google.com/adsense/",
     "resourceTypes": ["script"] }
+  },
+{
+    "id": 860,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "widget.beop.io/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 861,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "widget.beop.io/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 862,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//radar.cedexis.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 863,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//radar.cedexis.com/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 864,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//unagi.amazon.",
+    "resourceTypes": ["sub_frame"] }
+  },
+{
+    "id": 865,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//unagi.amazon.",
+    "resourceTypes": ["ping"] }
+  },
+{
+    "id": 866,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ns1p.net/",
+    "resourceTypes": ["script"] }
+  },
+{
+    "id": 867,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".avalon.perfdrive.com/",
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+{
+    "id": 868,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".avalon.perfdrive.com/",
+    "resourceTypes": ["script"] }
   }                              
     ]
