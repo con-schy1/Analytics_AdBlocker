@@ -230,12 +230,31 @@ if (totalTot === 0 && iframes.length >= 1){
         textCount += foundTextAr[i].length;
     }
     
+   var iframeTextArAd = [];
+   var foundTextMatAd;
+   var foundTextArAd = [];
+   var textCountAd = 0;
+        
+    var iframeOuterHTML = document.getElementsByTagName('iframe')[0].contentWindow.document.head.outerHTML;
+        
+    iframeTextArAd.push(iframeOuterHTML);
+    
+    for (var i = 0; i < adList.length; i++) {
+        foundTextMatAd = iframeTextArAd.filter(element => adList[i].test(element));
+        foundTextArAd.push(foundTextMatAd);
+        textCountAd += foundTextArAd[i].length;
+    } 
+    
+    
     console.log(iframeOuterHTML);
     console.log(foundTextAr);
+     console.log(foundTextArAd);
     
-    totalAnal = totalAd + textCount;
+    totalAd = totalAd + textCountAd;
     
-    totalTot = totalTot + textCount;
+    totalAnal = totalAnal + textCount;
+    
+    totalTot = totalTot + textCount + totalAd;
         
     }
     
