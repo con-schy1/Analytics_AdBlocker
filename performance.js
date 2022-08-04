@@ -204,12 +204,44 @@ var totalAnal = scrptCount+imgCount+iframeCount+httpCount;
 
     
 var totalTot = totalAd+totalAnal;
+    
+    
 }
     else{
         //
     }
     
+var iframes = document.getElementsByTagName("iframe");
     
+if (totalTot === 0 && iframes.length >= 1){
+    
+   var iframeTextAr = [];
+   var foundTextMat;
+   var foundTextAr = [];
+   var textCount = 0;
+        
+    var iframeOuterHTML = document.getElementsByTagName('iframe')[0].contentWindow.document.head.outerHTML;
+        
+    iframeTextAr.push(iframeOuterHTML);
+    
+    for (var i = 0; i < analList.length; i++) {
+        foundTextMat = iframeTextAr.filter(element => analList[i].test(element));
+        foundTextAr.push(foundTextMat);
+        textCount += foundTextAr[i].length;
+    }
+    
+    console.log(iframeOuterHTML);
+    console.log(foundTextAr);
+    
+    totalAnal = totalAd + textCount;
+    
+    totalTot = totalTot + textCount;
+        
+    }
+    
+    else{
+        //
+    }   
 
     
 var totalString = totalTot.toString();
