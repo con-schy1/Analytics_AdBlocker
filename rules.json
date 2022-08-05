@@ -6285,5 +6285,68 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".uicdn.com", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 899,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".bfops.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 900,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".bfops.io/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 901,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".yieldlab.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 902,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".yieldlab.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 903,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".360yield.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 904,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".360yield.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 905,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".teads.tv/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 906,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ioam.de/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 907,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ioam.de/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
