@@ -6124,5 +6124,166 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "supportmetrics.apple.",
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 876,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "c2.taboola.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 877,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "c2.taboola.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 878,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mxcdn.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 879,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mxcdn.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 880,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".heatmap.it/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 881,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".heatmap.it/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 882,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".t-online.de/api/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 883,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".t-online.de/api/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 884,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn-a.yieldlove.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 885,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn-a.yieldlove.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 886,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.speedcurve.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 887,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.speedcurve.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 888,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".nativendo.de", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 889,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".nativendo.de", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 890,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".uimserv.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 891,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".uimserv.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 892,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ysucej.com/image", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 893,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ysucej.com/image", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 894,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ysucej.com/image", 
+    "resourceTypes": ["other"] }
+  },
+    {
+    "id": 895,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "united-infos.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 896,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "united-infos.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 897,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".uicdn.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 898,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".uicdn.com", 
+    "resourceTypes": ["script"] }
   }                              
     ]
