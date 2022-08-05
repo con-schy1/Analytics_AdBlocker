@@ -5884,15 +5884,15 @@
     "id": 841,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".ingest.sentry.io/api",
+    "condition": {"urlFilter": ".sentry.io/api",
     "resourceTypes": ["xmlhttprequest"] }
   },
 {
     "id": 842,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".ingest.sentry.io/api",
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": ".sentry.io/api",
+    "resourceTypes": ["ping"] }
   },
 {
     "id": 843,
@@ -6347,6 +6347,118 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": ".ioam.de/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 908,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "improving.duckduckgo", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 909,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "improving.duckduckgo", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 910,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "metrics.roblox.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 911,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ioam.de/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 912,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".ioam.de/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 913,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "c.bing.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 914,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "c.bing.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 915,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "c.bing.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 916,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".revcontent.com/master/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 917,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".revcontent.com/master/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 918,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".amagi.tv/beacon", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 919,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".jwpltx.com/v1", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 920,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "geoedge.be/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 921,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "geoedge.be/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 922,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "nytimes.com/ads/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 923,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "nytimes.com/ads/", 
     "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
