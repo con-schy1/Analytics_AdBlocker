@@ -3224,22 +3224,22 @@
     "id": 461,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.yimg.com/", 
-    "resourceTypes": ["ping"] }
+    "condition": {"urlFilter": "yahoo.com/info/p.gif", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 462,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.yimg.com/", 
+    "condition": {"urlFilter": ".adtechus.com/images", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 463,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.yimg.com/", 
-    "resourceTypes": ["other"] }
+    "condition": {"urlFilter": "yahoodns.net/", 
+    "resourceTypes": ["image"] }
   },
     {
     "id": 464,
@@ -6459,6 +6459,69 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "nytimes.com/ads/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 924,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "countess.twitch.tv", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 925,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hide_ads%22%3Afalse%2C", 
+    "resourceTypes": ["other"] }
+  },
+     {
+    "id": 926,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".sea01.hls.ttvnw.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 927,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".akamaized.net/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 928,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".akamaized.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 929,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "llnwd.net", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 930,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "llnwd.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 931,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "twitchcdn.net/assets/features.video-player.components.video-ads", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 932,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "serving-sys.com/adServingData/", 
     "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
