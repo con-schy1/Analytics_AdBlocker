@@ -6803,5 +6803,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.netmera-web.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 973,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gemius.pl", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 974,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".gemius.pl", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 975,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ngastatic.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 976,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ngastatic.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
