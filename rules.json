@@ -6479,7 +6479,7 @@
     "id": 926,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".sea01.hls.ttvnw.net/", 
+    "condition": {"urlFilter": "analytics.shareaholic.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -6522,6 +6522,62 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "serving-sys.com/adServingData/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 933,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "analytics.shareaholic.com/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 934,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "partner.shareaholic.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 935,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "partner.shareaholic.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 936,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "shareaholic.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 937,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracking.klaviyo.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 938,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracking.klaviyo.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 939,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loomi-prod.xyz/analytics", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 940,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loomi-prod.xyz/analytics", 
     "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
