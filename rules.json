@@ -3336,14 +3336,14 @@
     "id": 477,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "/utag.js?", 
+    "condition": {"urlFilter": "/utag.js", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 478,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "/utag.js?", 
+    "condition": {"urlFilter": "/utag.js", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -6592,6 +6592,118 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "api.omappapi.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 943,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "nflximg.net/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 944,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "nflximg.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 945,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "clarity.ms/tag/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 946,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "clarity.ms/tag/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 947,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "msecnd.net/scripts/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 948,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "msecnd.net/scripts/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 949,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.navdmp.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 950,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.navdmp.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 951,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tags.t.tailtarget.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 952,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tags.t.tailtarget.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 953,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.ravenjs.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 954,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.ravenjs.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 955,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "aswpsdkus.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 956,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "aswpsdkus.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 957,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "horizon-track.globo.com/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 958,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "horizon-track.globo.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
