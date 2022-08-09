@@ -6579,5 +6579,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "loomi-prod.xyz/analytics", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 941,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.omappapi.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 942,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.omappapi.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
