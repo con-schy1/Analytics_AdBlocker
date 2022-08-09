@@ -592,7 +592,7 @@
     "id": 85,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.yimg.com/", 
+    "condition": {"urlFilter": "widget.surveymonkey.com/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -6830,6 +6830,188 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "ngastatic.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 977,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/js_tracking", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 978,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/js_tracking", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 979,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "geo.yahoo.com", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 980,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "geo.yahoo.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 981,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "udc.yahoo.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 982,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yahoo.com/lib/metro/g/myy/advertisement", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 983,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "windows.net", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 984,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "windows.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 985,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "jixie.media", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 986,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "jixie.media", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 987,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "r2b2.io", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 988,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "r2b2.io", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 989,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "r2b2.io", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 990,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "r2b2.io", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 991,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "eyeota.net", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 992,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "eyeota.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 993,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "eyeotadtk.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 994,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "eyeotadtk.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 995,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.insurads.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 996,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.insurads.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 997,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.unblockia.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 998,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.unblockia.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 999,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".rvapps.io", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1000,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".rvapps.io", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1001,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".tradedoubler.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 1002,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".tradedoubler.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
