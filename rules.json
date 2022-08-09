@@ -2951,7 +2951,7 @@
     "id": 422,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//d.agkn.com/", 
+    "condition": {"urlFilter": "slack.com/clog/track/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -3665,7 +3665,7 @@
     "id": 524,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".agkn.com/", 
+    "condition": {"urlFilter": "slack.com/beacon/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
