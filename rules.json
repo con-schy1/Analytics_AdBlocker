@@ -6705,5 +6705,103 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "horizon-track.globo.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 959,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "prod.adspsp.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 960,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "prod.adspsp.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 961,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cohesionapps.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 962,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cohesionapps.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 963,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "px-cdn.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 964,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "px-cdn.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 965,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".medyanetads.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 966,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".medyanetads.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 967,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "btloader.com/tag", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 968,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "btloader.com/tag", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 969,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "clicks.hurriyet", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 970,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "clicks.hurriyet", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 971,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.netmera-web.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 972,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.netmera-web.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
