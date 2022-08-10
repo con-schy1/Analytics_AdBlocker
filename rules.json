@@ -7013,5 +7013,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".tradedoubler.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1003,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "page-script.creabl.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1004,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.vidible.tv/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1005,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.vidible.tv/", 
+    "resourceTypes": ["script"] }
   }                              
     ]
