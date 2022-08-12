@@ -7048,5 +7048,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.carbonads.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1008,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".servedby-buysellads.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1009,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".servedby-buysellads.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1010,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ip-api.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1011,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ip-api.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1012,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.klaviyo.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1013,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.klaviyo.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1014,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.brandmetrics.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1015,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.brandmetrics.com/", 
+    "resourceTypes": ["script"] }
   }                              
     ]
