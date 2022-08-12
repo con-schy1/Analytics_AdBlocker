@@ -7104,5 +7104,89 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.brandmetrics.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1016,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.aticdn.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1017,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tag.aticdn.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1018,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.polyfill.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1019,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.polyfill.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1020,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bugsnag.min.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1021,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bugsnag.min.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1022,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.thesun.ie/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1023,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.thesun.ie/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1024,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/sessioncam.recorder.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1025,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/sessioncam.recorder.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1026,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".joshuarms.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1027,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".joshuarms.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
