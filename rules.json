@@ -7188,5 +7188,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".joshuarms.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1028,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "app.launchdarkly", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1029,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "events.launchdarkly", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1030,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "evidon.com/geo/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1031,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "evidon.com/geo/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
