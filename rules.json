@@ -7216,5 +7216,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "evidon.com/geo/", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                              
+  },
+     {
+    "id": 1032,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracker.metricool.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1033,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracker.metricool.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1034,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "snigelweb.com/adengine ", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1035,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "snigelweb.com/adengine ", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1036,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "stats.wp.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1037,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "stats.wp.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1038,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/zeus/main.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1039,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/zeus/main.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                             
     ]
