@@ -1593,14 +1593,14 @@
     "id": 228,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pixel.quantserve.com/", 
+    "condition": {"urlFilter": ".quantserve.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 229,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pixel.quantserve.com/", 
+    "condition": {"urlFilter": ".quantserve.com/", 
     "resourceTypes": ["image"] }
   },
      {
@@ -3777,14 +3777,14 @@
     "id": 540,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//login.dotomi.com/", 
+    "condition": {"urlFilter": ".dotomi.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 541,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//login.dotomi.com/", 
+    "condition": {"urlFilter": ".dotomi.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -3805,21 +3805,21 @@
     "id": 544,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".lijit.com/merge", 
+    "condition": {"urlFilter": ".lijit.com/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 545,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".lijit.com/merge", 
+    "condition": {"urlFilter": ".lijit.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 546,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".lijit.com/merge", 
+    "condition": {"urlFilter": ".lijit.com/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -7272,5 +7272,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/zeus/main.js", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1040,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "lr-ingest.io", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1041,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "lr-ingest.io", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1042,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".dotomi.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1043,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".carambo.la", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1044,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".carambo.la", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1045,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "track.dictionary.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1046,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "track.dictionary.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1047,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".dotomi.com/", 
+    "resourceTypes": ["other"] }
   }                             
     ]
