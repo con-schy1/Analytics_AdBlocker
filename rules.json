@@ -7328,5 +7328,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".dotomi.com/", 
     "resourceTypes": ["other"] }
+  },
+     {
+    "id": 1048,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "track.thesaurus.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1049,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "track.thesaurus.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1050,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".hsleadflows.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1051,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".hsleadflows.net", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1052,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adpeeps.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1053,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adpeeps.com", 
+    "resourceTypes": ["script"] }
   }                             
     ]
