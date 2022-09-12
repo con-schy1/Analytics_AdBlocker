@@ -7510,5 +7510,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "ayads.co", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1074,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".dmpxs.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1075,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".dmpxs.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1076,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "newsnationnow.com/wp-content", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1077,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "newsnationnow.com/wp-content", 
+    "resourceTypes": ["script"] }
   }                             
     ]
