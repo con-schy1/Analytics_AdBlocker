@@ -7538,5 +7538,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "newsnationnow.com/wp-content", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1078,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "metrics.api.drift.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1079,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "metrics.api.drift.com/", 
+    "resourceTypes": ["script"] }
   }                             
     ]
