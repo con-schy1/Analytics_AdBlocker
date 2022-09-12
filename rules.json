@@ -7370,5 +7370,145 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "adpeeps.com", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1054,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "xapads.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1055,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "xapads.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1056,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "webleads-tracker", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1057,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "webleads-tracker", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1058,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "webads.nl", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1059,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "webads.nl", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1060,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".vrtzads.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1061,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".vrtzads.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1062,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.vertoz", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1063,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.vertoz", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1064,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.brand.net", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1065,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.brand.net", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1066,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "switchads.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1067,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "switchads.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1068,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "switchadhub.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1069,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "switchadhub.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1070,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "myswitchads.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1071,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "myswitchads.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1072,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ayads.co", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1073,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ayads.co", 
+    "resourceTypes": ["script"] }
   }                             
     ]
