@@ -7552,5 +7552,89 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "metrics.api.drift.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1080,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hs-scripts.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1081,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "hs-scripts.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1082,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "load.sumo.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1083,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "load.sumo.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1084,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "onetag.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1085,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "onetag.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1086,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/optimizelyjs/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1087,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/optimizelyjs/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1088,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".clicktripz.com/api/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1089,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".clicktripz.com/api/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1090,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tripadvisor.com/PageMoniker", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1091,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tripadvisor.com/PageMoniker", 
+    "resourceTypes": ["sub_frame"] }
   }                             
     ]
