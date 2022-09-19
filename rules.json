@@ -7636,5 +7636,152 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "tripadvisor.com/PageMoniker", 
     "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 1092,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "p.smartertravel.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1093,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "p.smartertravel.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 1094,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tm.hdmtools.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 1095,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tm.hdmtools.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1096,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".visualstudio.com/v2/track", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1097,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".brilliantcollector.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 1098,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".brilliantcollector.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 1099,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ytc.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2000,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "-geo.yahoo.com/p", 
+    "resourceTypes": ["other"] }
+  },
+     {
+    "id": 2001,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".atwola.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 2002,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".atwola.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2003,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.adtechus.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2004,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.adtechus.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2005,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.adtechus.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 2006,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/moatad.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2007,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/moatad.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2008,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yahoo.com/v2/ads/js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2009,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yahoo.com/v2/ads/js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2010,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "-geo.yahoo.com/p", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 2011,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/advertising.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2012,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/advertising.js", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
