@@ -7783,5 +7783,89 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/advertising.js", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2013,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/tru.am/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2014,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/tru.am/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2015,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.scroll.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2016,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.scroll.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2017,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "monitor.azure.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2018,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "monitor.azure.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2019,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.sentry-cdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2020,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js.sentry-cdn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2021,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.cleverpush.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2022,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.cleverpush.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2023,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "srv.buysellads.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2024,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "srv.buysellads.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
