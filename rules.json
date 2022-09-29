@@ -7867,5 +7867,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "srv.buysellads.com/", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                             
+  },
+     {
+    "id": 2025,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/tag.aspx?", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2026,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/tag.aspx?", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2027,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "user-stats.rbl.ms/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 2028,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pages-stats.rbl.ms/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 2029,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "user-stats.rbl.ms/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2030,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pages-stats.rbl.ms/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2031,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.salesloft.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2032,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.salesloft.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2033,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "track.cbdatatracker.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2034,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "track.cbdatatracker.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  }                              
     ]
