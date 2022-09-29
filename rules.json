@@ -7937,5 +7937,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "track.cbdatatracker.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2035,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adtech.redventures.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2036,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adtech.redventures.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2037,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "confiant-integrations.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2038,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "confiant-integrations.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2039,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "web-sdk.urbanairship.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2040,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "web-sdk.urbanairship.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2041,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".admantx.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2042,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".admantx.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
