@@ -8140,5 +8140,89 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/adw.heraldm.com/cgi-bin", 
     "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 2064,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.priel.co", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2065,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.priel.co", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2066,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".andbeyond.media/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2067,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".andbeyond.media/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2068,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".interworksmedia.co.kr", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2069,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".interworksmedia.co.kr", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2070,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rum.beusable.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2071,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rum.beusable.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2072,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.dable.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2073,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "static.dable.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2074,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//ad.yonhapnews.co", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2075,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//ad.yonhapnews.co", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
