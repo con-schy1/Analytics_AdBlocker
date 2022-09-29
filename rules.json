@@ -8035,5 +8035,110 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "api.radar.cloudflare.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2049,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".naver.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2050,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".naver.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2051,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/cgi-bin/PelicanC.dll", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2052,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/cgi-bin/PelicanC.dll", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2053,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracker.adbinead.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 2054,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracker.adbinead.com/", 
+    "resourceTypes": ["stylesheet"] }
+  },
+     {
+    "id": 2055,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//acelogger.", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 2056,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//acelogger.", 
+    "resourceTypes": ["stylesheet"] }
+  },
+     {
+    "id": 2057,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/logger/logger.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2058,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/logger/logger.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2059,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//adw.heraldm.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2060,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "//adw.heraldm.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2061,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/logger/logger.fada", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2062,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/logger/logger.fada", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2063,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/adw.heraldm.com/cgi-bin", 
+    "resourceTypes": ["sub_frame"] }
   }                              
     ]
