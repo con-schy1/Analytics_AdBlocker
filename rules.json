@@ -8224,5 +8224,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "//ad.yonhapnews.co", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2076,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".adswizz.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2077,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".adswizz.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2078,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "viglink.com/images/pixel", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2079,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "viglink.com/images/pixel", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 2080,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".rezync.com/pixel", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 2081,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pippio.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 2082,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/io.narrative.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2083,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/io.narrative.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
