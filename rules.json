@@ -7993,5 +7993,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".admantx.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2043,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/gtm.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2044,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".com/gtm.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2045,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tr.www.cloudflare.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2046,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tr.www.cloudflare.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2047,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.radar.cloudflare.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2048,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.radar.cloudflare.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
