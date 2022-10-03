@@ -8280,5 +8280,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/io.narrative.io/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2084,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/static/ads.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2085,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "display.ad.daum.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
