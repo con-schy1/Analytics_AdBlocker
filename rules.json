@@ -8294,5 +8294,89 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "display.ad.daum.net/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2086,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.revjet.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2087,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.revjet.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2088,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".btttag.com/btt.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2089,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".btttag.com/btt.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2090,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.blogherads.", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2091,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.blogherads.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2092,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".trackonomics.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2093,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".trackonomics.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2094,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rfpx1.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2095,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rfpx1.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2096,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.permutive.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2097,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.permutive.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
