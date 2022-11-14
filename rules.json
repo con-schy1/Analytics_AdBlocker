@@ -3308,14 +3308,14 @@
     "id": 473,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdns.gigya.com/", 
+    "condition": {"urlFilter": ".gigya.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 474,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdns.gigya.com/", 
+    "condition": {"urlFilter": ".gigya.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -8378,5 +8378,117 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.permutive.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 2098,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ads.gemini.", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 2099,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ads.gemini.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3000,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.foxpush.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3001,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.foxpush.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3002,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sdk.mrf.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3003,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sdk.mrf.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3004,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.speakol.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3005,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.speakol.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3006,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "events.newsroom.bi", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3007,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "events.newsroom.bi", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3008,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "gedistatic.it/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3009,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "gedistatic.it/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3010,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".opecloud.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3011,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/utag.sync.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3012,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/utag.sync.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3013,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "revi.rcs.it/", 
+    "resourceTypes": ["image"] }
   }                              
     ]
