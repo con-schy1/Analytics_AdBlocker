@@ -8518,5 +8518,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn4.forter.com", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3018,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "marketo.com/js/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3019,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "marketo.com/js/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
