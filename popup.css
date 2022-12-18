@@ -160,22 +160,10 @@ body {
   padding-bottom: 3px;
 }
 
-/* Ukraine Donation */
-#supportUA{
-  display: flex;
-  line-height: 0px;
-}
-
-#uaFlag{
-    padding-left: 150px;
+.pauseRes{
+    margin-left: 160px;
     padding-right: 5px;
-    padding-bottom: 3px;
-}
-
-#supportText{
-    padding-top: 2px;
-    padding-left: 15px;
-    padding-right: 5px;
+    height: 45px;
     
 }
 

@@ -8490,5 +8490,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "revi.rcs.it/", 
     "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3014,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mpsnare.iesnare.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3015,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mpsnare.iesnare.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3016,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn4.forter.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3017,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn4.forter.com", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
