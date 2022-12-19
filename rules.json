@@ -8532,5 +8532,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "marketo.com/js/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3020,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "-adzone.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3021,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "-adzone.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3022,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.tinypass.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3023,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.tinypass.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
