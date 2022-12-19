@@ -8623,5 +8623,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "s.richaudience.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3033,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracking.univtec.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3034,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sync.springserve.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3035,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sync.springserve.com", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
