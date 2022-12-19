@@ -8560,5 +8560,68 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.tinypass.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3024,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ampproject.org/v0/amp-analytics", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3025,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ampproject.org/v0/amp-ad-", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3026,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cntxtfl.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3027,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ampproject.org/v0/amp-sticky-ad-", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3028,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "stats-dev.brid.tv/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3029,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.retargetly.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3030,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "api.retargetly.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3031,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "s.richaudience.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3032,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "s.richaudience.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
