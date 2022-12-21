@@ -8644,5 +8644,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "sync.springserve.com", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3036,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loader.wisepops.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3037,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loader.wisepops.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3038,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ph-static.imgix.net/", 
+    "resourceTypes": ["image"] }
   }                              
     ]
