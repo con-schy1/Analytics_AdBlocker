@@ -273,8 +273,11 @@ var totalString = totalTot.toString();
 var hostURL = window.location.host;
 const storedAt = Date.now();
     
+var Analytics = totalAnal;
+var Ads = totalAd;
+    
 
-var counts = {totalAd, totalAnal, totalString, totalTot, hostURL, storedAt}
+var counts = {totalAd, totalAnal, totalString, totalTot, hostURL, storedAt, Analytics, Ads}
 
 chrome.runtime.sendMessage(counts);
 

@@ -1,4 +1,4 @@
-const MAXSITES = 10;
+const MAXSITES = 14;
 
 chrome.runtime.onInstalled.addListener(details => {
   chrome.storage.session.clear();

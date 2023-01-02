@@ -1,14 +1,14 @@
-//const MAX = request.totalTot*7;
+//libs_ad-service_dist_index_js
 
 const ctx = document.querySelector("#myChart").getContext('2d');
 
 let hosts = [];
 class Hosts {
-  constructor(time, url, totalAd, totalAnal) {
+  constructor(time, url, Ads, Analytics) {
     this.time = time;
     this.url = url;
-    this.totalAd = totalAd;
-    this.totalAnal = totalAnal;
+    this.Ads = Ads;
+    this.Analytics = Analytics;
   }
 }
 class Dataset {
@@ -28,7 +28,7 @@ function chartConfig(storageData) {
   hosts.length = 0;
   for (z in storageData) {
     if (!hosts.length) {
-      hosts.push(new Hosts(storageData[z].storedAt, storageData[z].hostURL, storageData[z].totalAd, storageData[z].totalAnal));
+      hosts.push(new Hosts(storageData[z].storedAt, storageData[z].hostURL, storageData[z].Ads, storageData[z].Analytics));
       
       continue;
     }
@@ -38,7 +38,7 @@ function chartConfig(storageData) {
       let y = hosts[i];
       if (storageData[z].storedAt < y.time) {
         let firstHalf = hosts.splice(0, i);
-        firstHalf.push(new Hosts(storageData[z].storedAt, storageData[z].hostURL, storageData[z].totalAd, storageData[z].totalAnal));
+        firstHalf.push(new Hosts(storageData[z].storedAt, storageData[z].hostURL, storageData[z].Ads, storageData[z].totalAnal));
         hosts = firstHalf.concat(hosts); 
           
         added = true;
@@ -47,17 +47,17 @@ function chartConfig(storageData) {
     }
 
     if (!added) {
-      hosts.push(new Hosts(storageData[z].storedAt, storageData[z].hostURL, storageData[z].totalAd, storageData[z].totalAnal))
+      hosts.push(new Hosts(storageData[z].storedAt, storageData[z].hostURL, storageData[z].Ads, storageData[z].Analytics))
     }
   }
 
   const datasets = [
     {
-      label: "totalAd",
+      label: "Ads",
       color: "#ebdc3d"
     },
     {
-      label: "totalAnal",
+      label: "Analytics",
       color: "#f18931"
     }
   ];
@@ -90,7 +90,7 @@ function chartConfig(storageData) {
           min: 0,
           /*max: 100,*/
           ticks: {
-            stepSize: 10,
+            stepSize: 1,
           }
         }
       }
