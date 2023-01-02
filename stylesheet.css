@@ -13,8 +13,8 @@ body {
     font-size: 20px;
     padding-left: 10px;
     padding-top: 5px;
-/*    line-height: 0;*/
     letter-spacing: 0.1em;
+    width: 100%;
 }
 
 #gbTitle{
@@ -27,14 +27,34 @@ body {
 #chartTitle{
     font-size: 17px;
     line-height: 0;
-    margin-left: 54vh;
+/*    margin-left: 24%;*/
     margin-top: 35px;
+/*    margin-left: 31%;*/
+}
 
+@media (max-width: 1700px) {
+  #chartTitle{
+    margin-left: 27%;
+  }
+ .info-icon{
+      margin-left: 30%;  
+    }
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout*/
+@media (min-width: 1700px) {
+    #chartTitle{
+        margin-left: 34%;
+    }
+    
+    .info-icon{
+      margin-left: 36%;  
+    }
 }
 
 .info-icon{
     
-    margin-left: 60vh;
+/*    margin-left: 22%;*/
     border-radius: 50%;
         width: 9px;
         height: 9px;

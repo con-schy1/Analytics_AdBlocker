@@ -1,4 +1,3 @@
-//libs_ad-service_dist_index_js
 
 const ctx = document.querySelector("#myChart").getContext('2d');
 

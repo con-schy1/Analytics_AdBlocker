@@ -8720,7 +8720,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "trace.mediago.io/", 
-    "resourceTypes": ["script"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3047,
