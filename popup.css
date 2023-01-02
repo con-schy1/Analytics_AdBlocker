@@ -155,15 +155,14 @@ body {
 }
 
 #donate{
-  padding-left: 12px;
-  padding-top: 7px;
-  padding-bottom: 3px;
+  margin-left: 91px;
+  margin-top: 4px;
+
 }
 
 .pauseRes{
-    margin-left: 160px;
-    padding-right: 5px;
-    height: 45px;
+    margin-left: 81px;
+    height: 48px;
     
 }
 
@@ -222,10 +221,17 @@ body {
 /*.dropdown:hover .dropbtn {background: radial-gradient(circle at center, white 1%, transparent 95%);}*/
 
 
+#go-to-options{
+    margin-left: 17px;
+    border: none;
+    background-color: whitesmoke;
+    opacity: .5;
+}
 
 
-
-
+#go-to-options:hover {
+    cursor: pointer;
+}
 
 
 

@@ -54,7 +54,7 @@ chrome.tabs.query({
     active: true,currentWindow: true
 }).then(tabs => {
     tab = tabs[0];
-    chrome.storage.local.get("tab"+tab.id).then(data => {
+    chrome.storage.session.get("tab"+tab.id).then(data => {
         try{
             makeChart(data["tab"+tab.id]);
         }catch(e) {
@@ -79,7 +79,7 @@ let pause = document.getElementById("pause");
 let resume = document.getElementById("resume");
 
 
-chrome.storage.local.get("paused").then(data=> {
+chrome.storage.session.get("paused").then(data=> {
     if(data.paused) {
         resume.style.display = "initial";
         pause.style.display = "none";
@@ -88,7 +88,7 @@ chrome.storage.local.get("paused").then(data=> {
     }
 });
 pause.addEventListener('click', (e) => {
-    chrome.storage.local.set({"paused": true});
+    chrome.storage.session.set({"paused": true});
     resume.style.display = "initial";
     pause.style.display = "none";
     document.getElementById('blocked').innerHTML = "Not Blocked";
@@ -106,7 +106,7 @@ pause.addEventListener('click', (e) => {
     }
 });
 resume.addEventListener('click', (e) => {
-    chrome.storage.local.set({"paused": false});
+    chrome.storage.session.set({"paused": false});
     pause.style.display = "initial";
     resume.style.display = "none";
     document.getElementById('blocked').innerHTML = "Blocked";
@@ -123,4 +123,12 @@ resume.addEventListener('click', (e) => {
         chrome.tabs.reload(tab.id);
         //refresh();
     }
+});
+
+document.querySelector('#go-to-options').addEventListener('click', function() {
+  if (chrome.runtime.openOptionsPage) {
+    chrome.runtime.openOptionsPage();
+  } else {
+    window.open(chrome.runtime.getURL('options.html'));
+  }
 });

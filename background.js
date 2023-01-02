@@ -1,5 +1,7 @@
+const MAXSITES = 10;
+
 chrome.runtime.onInstalled.addListener(details => {
-  chrome.storage.local.clear();
+  chrome.storage.session.clear();
 });
 chrome.tabs.onUpdated.addListener((tabId, tab)=> {
     if (tab.status == "complete") {
@@ -7,10 +9,22 @@ chrome.tabs.onUpdated.addListener((tabId, tab)=> {
     }
 });
 
-chrome.runtime.onMessage.addListener((request, sender) => {
-    //console.log(request)
-    chrome.storage.local.set({["tab"+sender.tab.id]:request}); 
-    chrome.storage.local.get("tab"+sender.tab.id).then(dat => {
+chrome.runtime.onMessage.addListener(async (request, sender) => {
+    // changes made(only store MAXSITES sites data) -harshit
+    let data = await chrome.storage.session.get(null), storedAt = 99999999999999999999999, toRemove = null;
+    if (Object.keys(data).length >= MAXSITES) {
+        for (z in data) {
+            if (data[z].storedAt < storedAt) {
+                storedAt = data[z].storedAt;
+                toRemove = z;
+            }
+        }
+
+        chrome.storage.session.remove(toRemove);
+    }
+
+    chrome.storage.session.set({["tab"+sender.tab.id]:request}); 
+    chrome.storage.session.get("tab"+sender.tab.id).then(dat => {
         
         if (request.totalTot <= 5){
             var colorString = "#32a852";
@@ -41,7 +55,7 @@ chrome.runtime.onMessage.addListener((request, sender) => {
 
 // Clear Cache
 chrome.tabs.onRemoved.addListener(tabId => {
-    chrome.storage.local.get('tab'+tabId).then(data => {
+    chrome.storage.session.get('tab'+tabId).then(data => {
         delete data['tab' + tabId];
     });
 });

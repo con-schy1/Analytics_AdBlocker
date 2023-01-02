@@ -8665,5 +8665,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "ph-static.imgix.net/", 
     "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3039,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "th.bing.com", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3040,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "browser.events.data.msn.com/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3041,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "browser.events.data.msn.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3042,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "aka.ms-ads.co/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3043,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "aka.ms-ads.co/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3044,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "www.bing.com/aes/c.gif", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3045,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bing.com/api/v1/mediation/tracking", 
+    "resourceTypes": ["main_frame"] }
+  },
+     {
+    "id": 3046,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".adnxs-simple.com/", 
+    "resourceTypes": ["main_frame"] }
   }                              
     ]

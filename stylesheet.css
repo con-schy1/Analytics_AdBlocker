@@ -1,0 +1,76 @@
+body {
+  font-family: veranda, sans-serif;
+  font-size: 12px;
+  background-color:  white;
+  margin: 0; /*new*/
+  padding: 0; /*new*/
+  block-size: 97vh;
+  color: #606060;
+}
+
+#title{
+    display: flex;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+/*    line-height: 0;*/
+    letter-spacing: 0.1em;
+}
+
+#gbTitle{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    line-height: 0;
+    margin-bottom: 2px;
+}
+
+#chartTitle{
+    font-size: 17px;
+    line-height: 0;
+    margin-left: 54vh;
+    margin-top: 35px;
+
+}
+
+.info-icon{
+    
+    margin-left: 60vh;
+    border-radius: 50%;
+        width: 9px;
+        height: 9px;
+        padding: 3px;
+        background: #fff;
+        border: 1.5px solid #606060;
+        color: #606060;
+        text-align: center;
+        font-size: 9px;
+    font-weight: 550;
+    
+    
+}
+
+#infoTip{
+    display: none;
+}
+
+.info-icon:hover + #infoTip{
+  display: block;
+  width: 240px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  font-size: 11px;
+  margin-left: 80%;    
+    
+}
+
+/* changes below -harshit max-inline-size used to be 100%*/
+canvas {
+  max-inline-size: 90% !important;
+  block-size: 90% !important;
+  margin-left: 5%;
+}

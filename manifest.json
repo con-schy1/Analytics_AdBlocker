@@ -3,6 +3,7 @@
    "description": "A simple to use analytics & 3rd party advertisements blocker.",
    "version": "0.0.1.8",
    "manifest_version": 3,
+   "options_page": "options.html",
    "declarative_net_request": {
     "rule_resources": [{
       "id": "ruleset_1",
