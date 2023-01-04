@@ -8924,5 +8924,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "fc.yahoo.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3076,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pages.ebay.com/identity/device/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3077,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "devicebind.ebay.com", 
+    "resourceTypes": ["other"] }
+  },
+     {
+    "id": 3078,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "rover.ebay.com", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3079,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tracking/configuration.js", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3080,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/gh/dfpsvc?", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3081,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "backstory.ebay.com", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3082,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/ads/identity/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
