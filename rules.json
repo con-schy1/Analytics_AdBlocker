@@ -8973,5 +8973,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/ads/identity/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3083,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tags.news.com.au/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3084,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.speedcurve.com/", 
+    "resourceTypes": ["script"] }
   }                              
     ]

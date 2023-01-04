@@ -32,9 +32,9 @@ body {
 /*    margin-left: 31%;*/
 }
 
-@media (max-width: 1700px) {
+@media (min-width: 1100px) {
   #chartTitle{
-    margin-left: 27%;
+    margin-left: 30%;
   }
  .info-icon{
       margin-left: 30%;  
@@ -42,13 +42,13 @@ body {
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout*/
-@media (min-width: 1700px) {
+@media (max-width: 1100px) {
     #chartTitle{
-        margin-left: 34%;
+        margin-left: 15%;
     }
     
     .info-icon{
-      margin-left: 36%;  
+      margin-left: 25%;  
     }
 }
 
