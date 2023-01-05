@@ -8987,5 +8987,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.speedcurve.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3085,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/testandtarget/clientlibs/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3086,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ced.sascdn.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3087,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "s0.wp.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3088,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "discover-metrics.cloud.", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3089,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.fuseplatform.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3090,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mmstat.com/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3091,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".mmstat.com/", 
+    "resourceTypes": ["image"] }
   }                              
     ]
