@@ -9057,5 +9057,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/logs.naukri.com/", 
     "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3095,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sentry.", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3096,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/bms-analytics.js", 
+    "resourceTypes": ["websocket"] }
+  },
+     {
+    "id": 3097,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/bms-analytics.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3098,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://sentry.", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3099,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "googleoptimize.com/optimize.js", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3100,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "delivery.adrecover.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3101,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/js/ads.js", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                              
     ]
