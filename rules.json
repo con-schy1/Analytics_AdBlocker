@@ -9036,5 +9036,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".mmstat.com/", 
     "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3092,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".clmbtech.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3093,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "logs.infoedgeindia.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3094,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/logs.naukri.com/", 
+    "resourceTypes": ["ping"] }
   }                              
     ]
