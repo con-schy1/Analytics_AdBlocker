@@ -9106,5 +9106,26 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "/js/ads.js", 
     "resourceTypes": ["xmlhttprequest"] }
-  }                              
+  },
+     {
+    "id": 3102,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "onetag-sys.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3103,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".pubguru.net", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3104,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".webengage.co", 
+    "resourceTypes": ["script"] }
+  }                             
     ]
