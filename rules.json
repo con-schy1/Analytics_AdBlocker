@@ -9127,5 +9127,61 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".webengage.co", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3105,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".automatad.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3106,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".automatad.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3107,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "/rediffadserver/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3108,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "usmetric.rediff", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3109,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.moengage.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3110,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.moengage.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3111,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://adscontent", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3112,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "https://adscontent", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
