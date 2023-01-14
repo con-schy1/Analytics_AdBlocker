@@ -9183,5 +9183,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "https://adscontent", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3113,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "va.tawk.to/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3114,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.brandadvance.co", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3115,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.brandadvance.co", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3116,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".affinity.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3117,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".affinity.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3118,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.adpushup.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3119,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.adpushup.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
