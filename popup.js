@@ -6,6 +6,9 @@ function updateChartData(x) {
         dataset.data = [x.totalAnal, x.totalAd];
     });
     chart.update();
+    //Report Try - delete if not working
+    document.getElementById('reportAttempt').innerHTML = x.totalString;
+    
 }
 function removeData() {
     //chart.data.labels.pop();
