@@ -1,7 +1,7 @@
 {
    "name": "Analytics & Ad Blocker",
    "description": "A simple to use analytics & 3rd party advertisements blocker.",
-   "version": "0.0.2.0",
+   "version": "0.0.2.3",
    "manifest_version": 3,
    "options_page": "options.html",
    "declarative_net_request": {

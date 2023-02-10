@@ -2,8 +2,8 @@ body {
   font-family: veranda, sans-serif;
   font-size: 12px;
   background-color:  white;
-  margin: 0; /*new*/
-  padding: 0; /*new*/
+  margin: 0;
+  padding: 0;
   block-size: 97vh;
   color: #606060;
 }
@@ -14,7 +14,6 @@ body {
     padding-left: 10px;
     padding-top: 5px;
     letter-spacing: 0.1em;
-/*    width: 100%;*/
 }
 
 #gbTitle{
@@ -24,49 +23,32 @@ body {
     margin-bottom: 2px;
 }
 
+#chartTitleDiv{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    line-height: 0;
+}
+
 #chartTitle{
     font-size: 17px;
     line-height: 0;
-/*    margin-left: 24%;*/
-    margin-top: 35px;
-/*    margin-left: 31%;*/
-}
+    letter-spacing: 0.1em;
 
-@media (min-width: 1100px) {
-  #chartTitle{
-    margin-left: 30%;
-  }
- .info-icon{
-      margin-left: 30%;  
-    }
-}
-
-/* Responsive layout - makes a one column layout instead of a two-column layout*/
-@media (max-width: 1100px) {
-    #chartTitle{
-        margin-left: 15%;
-    }
-    
-    .info-icon{
-      margin-left: 25%;  
-    }
 }
 
 .info-icon{
-    
-/*    margin-left: 22%;*/
+    margin-left: 75%;
     border-radius: 50%;
-        width: 9px;
-        height: 9px;
-        padding: 3px;
-        background: #fff;
-        border: 1.5px solid #606060;
-        color: #606060;
-        text-align: center;
-        font-size: 9px;
-    font-weight: 550;
-    
-    
+    width: 9px;
+    height: 9px;
+    padding: 3px;
+    background: #fff;
+    border: 1.5px solid #606060;
+    color: #606060;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 550;  
 }
 
 #infoTip{
@@ -88,9 +70,44 @@ body {
     
 }
 
-/* changes below -harshit max-inline-size used to be 100%*/
+#menuBar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#siteOver{
+    margin-right: 20px;
+}
+
+/* max-inline-size used to be 100%*/
 canvas {
   max-inline-size: 90% !important;
   block-size: 90% !important;
   margin-left: 5%;
+}
+
+
+#chartDiv {
+  max-inline-size: 90% !important;
+  block-size: 90% !important;
+  margin-left: 5%;
+}
+
+
+#requestDiv {
+  padding-inline: 10px;
+}
+
+.site-more {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.site-more-rotated {
+  transform: rotate(90deg);
+}
+
+.list-sections {
+  display: none;
 }

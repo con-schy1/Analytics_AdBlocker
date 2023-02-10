@@ -121,7 +121,81 @@ chrome.storage.session.get(null).then(data => {
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
   chrome.storage.session.get(null).then(data => {
-    chart.destroy();
+    chart.destroy();    
     chart = createChart(chartConfig, data);
+      
+    //Connor Added
+    //chrome.storage.session.clear();
+      
+          // changes below -harshit
+    if (window.location.hash == "#Requests") {
+      requestDiv.innerHTML = "";
+      for (x in data) {
+        listSiteInfo(data[x].hostURL, data[x].foundHTTPArray, data[x].foundHTTPADArray);
+      }
+    } 
   });
 });
+
+
+
+// changes below -harshit
+// ----------------- iframe and image list DOM -----------------
+const requestDiv = document.querySelector("#requestDiv");
+const siteInfoTemplate = document.querySelector("#site-info-template");
+
+function listSiteInfo(name, imgs, frames) {
+  let clone = siteInfoTemplate.content.cloneNode(true);
+
+  let siteName = clone.querySelector(".site-name");
+  let siteMore = clone.querySelector(".site-more");
+  let siteImageList = clone.querySelector(".site-image-list");
+  let siteFrameList = clone.querySelector(".site-frame-list");
+  let listsections = clone.querySelectorAll(".list-sections");
+
+  siteName.innerText = name;
+  siteMore.addEventListener('click', e => {
+    listsections.forEach(z => {z.classList.toggle("list-sections")});
+    e.currentTarget.classList.toggle("site-more-rotated");
+  });
+
+//Connor Try / Catch    
+try{    
+  imgs.forEach(z => {
+    if (z && z != "") siteImageList.innerHTML += `<li>${z}</li>`;
+  });
+  frames.forEach(z => {
+    if (z && z != "") siteFrameList.innerHTML += `<li>${z}</li>`;
+  });
+    
+requestDiv.appendChild(clone);
+    
+
+    
+}
+    catch(e){
+        
+    }
+
+  
+}
+
+//Chart Code to display requestDiv and hide chartDiv
+window.addEventListener("hashchange", async function() {
+  if(location.hash === "#Requests"){
+    document.getElementById("chartDiv").style.display = "none";
+    document.getElementById("requestDiv").style.display = "block";
+
+    // changes below -harshit
+    requestDiv.innerHTML = "";
+    await chrome.storage.session.get(null).then(data => {
+      for (x in data) {
+        listSiteInfo(data[x].hostURL, data[x].foundHTTPArray, data[x].foundHTTPADArray);
+      }
+    });
+  }else{
+    document.getElementById("requestDiv").style.display = "none";
+    document.getElementById("chartDiv").style.display = "block";
+  }
+});
+

@@ -9757,5 +9757,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "beacon.wikia-services.com", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3195,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loggly.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3196,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loggly.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
