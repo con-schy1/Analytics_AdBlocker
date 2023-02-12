@@ -124,10 +124,9 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
     chart.destroy();    
     chart = createChart(chartConfig, data);
       
-    //Connor Added
     //chrome.storage.session.clear();
       
-          // changes below -harshit
+
     if (window.location.hash == "#Requests") {
       requestDiv.innerHTML = "";
       for (x in data) {
@@ -139,7 +138,6 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 
 
 
-// changes below -harshit
 // ----------------- iframe and image list DOM -----------------
 const requestDiv = document.querySelector("#requestDiv");
 const siteInfoTemplate = document.querySelector("#site-info-template");
@@ -159,7 +157,7 @@ function listSiteInfo(name, imgs, frames) {
     e.currentTarget.classList.toggle("site-more-rotated");
   });
 
-//Connor Try / Catch    
+//Try / Catch    
 try{    
   imgs.forEach(z => {
     if (z && z != "") siteImageList.innerHTML += `<li>${z}</li>`;
