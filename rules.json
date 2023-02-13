@@ -9771,5 +9771,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "loggly.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3197,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.firstpromoter.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3198,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.firstpromoter.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
