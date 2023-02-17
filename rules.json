@@ -9813,5 +9813,75 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "ascent360.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3203,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adzerk.net/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3204,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adzerk.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3205,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "firstimpression.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3206,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "firstimpression.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3207,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "analysis.fi", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3208,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "analysis.fi", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3209,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pub.network/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3210,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pub.network/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3211,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "posthog.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3212,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "posthog.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
