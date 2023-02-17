@@ -9785,5 +9785,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "cdn.firstpromoter.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3199,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "datadoghq-browser-agent.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3200,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "datadoghq-browser-agent.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3201,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ascent360.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3202,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ascent360.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
