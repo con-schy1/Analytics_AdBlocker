@@ -402,14 +402,14 @@
     "id": 58,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//fastlane.rubiconproject.com/", 
+    "condition": {"urlFilter": ".rubiconproject.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 59,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//fastlane.rubiconproject.com/", 
+    "condition": {"urlFilter": ".rubiconproject.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   }
     ,
@@ -9398,7 +9398,7 @@
     "id": 3143,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "openx.net", 
+    "condition": {"urlFilter": "ads.stickyadstv.com", 
     "resourceTypes": ["sub_frame"] }
   },
      {
@@ -9932,5 +9932,103 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "loadus.exelator.com/", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3220,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".rubiconproject.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3221,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "onetag-sys.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3222,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "admanmedia.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3223,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "admanmedia.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3224,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "admanmedia.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3225,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".a-mo.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3226,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".a-mo.net/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3227,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".a-mo.net/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3228,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "technoratimedia.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3229,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "technoratimedia.com", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3230,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "technoratimedia.com", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3231,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "minutemedia-prebid.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3232,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "minutemedia-prebid.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3233,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "minutemedia-prebid.com/", 
+    "resourceTypes": ["sub_frame"] }
   }                             
     ]
