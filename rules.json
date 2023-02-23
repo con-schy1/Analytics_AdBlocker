@@ -984,7 +984,7 @@
     "id": 141,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//loadus.exelator.com/", 
+    "condition": {"urlFilter": "exelator.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -9883,5 +9883,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "posthog.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3213,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "investingchannel.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3214,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "investingchannel.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3215,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ay.delivery/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3216,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ay.delivery/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3217,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ml314.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3218,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ml314.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3219,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "loadus.exelator.com/", 
+    "resourceTypes": ["script"] }
   }                             
     ]
