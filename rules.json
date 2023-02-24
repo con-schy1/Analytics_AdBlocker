@@ -10030,5 +10030,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "minutemedia-prebid.com/", 
     "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3234,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "convertexperiments.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3235,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "convertexperiments.com/", 
+    "resourceTypes": ["script"] }
   }                             
     ]
