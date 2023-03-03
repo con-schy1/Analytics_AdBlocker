@@ -10044,5 +10044,117 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "convertexperiments.com/", 
     "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3236,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "luckyorange.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3237,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "luckyorange.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3238,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "brandmentions.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3239,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "brandmentions.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3240,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "brandmentions.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3241,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "brandmentions.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3242,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "statcounter.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3243,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "statcounter.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3244,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "opmnstr.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3245,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "opmnstr.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3246,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "omappapi.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3247,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "omappapi.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3248,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "trstplse.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3249,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "trstplse.com", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3248,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "metrics.gfycat.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 3249,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "metrics.gfycat.com/", 
+    "resourceTypes": ["script"] }
   }                             
     ]
