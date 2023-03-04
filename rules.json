@@ -10144,17 +10144,87 @@
     "resourceTypes": ["script"] }
   },
      {
-    "id": 3248,
+    "id": 3250,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "metrics.gfycat.com/", 
     "resourceTypes": ["image"] }
   },
     {
-    "id": 3249,
+    "id": 3251,
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "metrics.gfycat.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3252,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adobetarget.com/", 
+    "resourceTypes": ["ping"] }
+  },
+    {
+    "id": 3253,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adition.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3254,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ad.iskonet", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3255,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ad.iskonet", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3256,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "4dex.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3257,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "4dex.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3258,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "id5-sync.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3259,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "id5-sync.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3260,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js/datadog-rum", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3261,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "js/datadog-rum", 
     "resourceTypes": ["script"] }
   }                             
     ]
