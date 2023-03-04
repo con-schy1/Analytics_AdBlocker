@@ -655,21 +655,21 @@
     "id": 94,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//p1.parsely.com/", 
+    "condition": {"urlFilter": "parsely.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 95,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//p1.parsely.com/", 
+    "condition": {"urlFilter": "parsely.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 96,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//p1.parsely.com/", 
+    "condition": {"urlFilter": "parsely.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -6430,7 +6430,7 @@
     "id": 919,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": ".jwpltx.com/v1", 
+    "condition": {"urlFilter": "jwpltx.com/v1", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -10443,5 +10443,40 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "moatpixel.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3293,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "clean.gg", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3294,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "clean.gg", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3295,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "moatpixel.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3296,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "jwpltx.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 3297,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "jwpltx.com/", 
+    "resourceTypes": ["ping"] }
   }                             
     ]
