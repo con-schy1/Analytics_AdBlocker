@@ -10226,5 +10226,96 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "js/datadog-rum", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3262,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "match.deepintent.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3263,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "match.deepintent.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3264,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "medtargetsystem.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3265,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "medtargetsystem.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3266,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "medtargetsystem.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3267,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "medtargetsystem.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3268,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "servebom.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3269,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "servebom.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3270,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "perfectmarket.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3271,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "perfectmarket.com/", 
+    "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3272,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "perfectmarket.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3273,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pro-market.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3274,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pro-market.net/", 
+    "resourceTypes": ["image"] }
   }                             
     ]
