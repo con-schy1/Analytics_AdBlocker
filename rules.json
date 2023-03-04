@@ -4799,14 +4799,14 @@
     "id": 686,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "s.skimresources.com/",
+    "condition": {"urlFilter": "skimresources.com/",
     "resourceTypes": ["xmlhttprequest"] }
   },
 {
     "id": 687,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "s.skimresources.com/",
+    "condition": {"urlFilter": "skimresources.com/",
     "resourceTypes": ["script"] }
   },
 {
@@ -10337,7 +10337,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "adscale.de/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3278,
@@ -10351,7 +10351,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "postrelease.com", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3280,
@@ -10365,7 +10365,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "connexity.net/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3282,
@@ -10379,7 +10379,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "contextweb.com/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3284,
@@ -10393,7 +10393,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "intentiq.com/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3286,
@@ -10407,7 +10407,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "onaudience.com/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3288,
@@ -10421,7 +10421,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "storygize.net/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3290,
@@ -10435,7 +10435,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {"urlFilter": "moatpixel.com/", 
-    "resourceTypes": ["imgage"] }
+    "resourceTypes": ["image"] }
   },
      {
     "id": 3292,
