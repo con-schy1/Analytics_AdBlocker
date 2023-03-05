@@ -360,14 +360,14 @@
     "id": 52,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "x.bidswitch.net/", 
+    "condition": {"urlFilter": "bidswitch.net/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 53,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "x.bidswitch.net/", 
+    "condition": {"urlFilter": "bidswitch.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -494,7 +494,7 @@
     "id": 71,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "www.google-analytics.com", 
+    "condition": {"urlFilter": "google-analytics.com", 
     "resourceTypes": ["image"] }
   },
     {
@@ -522,21 +522,21 @@
     "id": 75,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//cdn.segment.com/", 
+    "condition": {"urlFilter": "cdn.segment.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 76,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//ad-delivery.net/", 
+    "condition": {"urlFilter": "ad-delivery.net/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 77,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pix.pub", 
+    "condition": {"urlFilter": "pix.pub", 
     "resourceTypes": ["script"] }
   },
     {
@@ -599,56 +599,56 @@
     "id": 86,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s.yimg.com/", 
+    "condition": {"urlFilter": "s.yimg.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 87,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//c.lytics.io/", 
+    "condition": {"urlFilter": "c.lytics.io/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 88,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//c.lytics.io/", 
+    "condition": {"urlFilter": "c.lytics.io/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 89,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//secure-us.imrworldwide.com/", 
+    "condition": {"urlFilter": "secure-us.imrworldwide.com/", 
     "resourceTypes": ["image"] }
   },
     {
     "id": 90,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//assets.adobedtm.com/", 
+    "condition": {"urlFilter": "assets.adobedtm.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 91,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//assets.adobedtm.com/", 
+    "condition": {"urlFilter": "assets.adobedtm.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 92,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//js-sec.indexww.com/", 
+    "condition": {"urlFilter": "js-sec.indexww.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 93,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//js-sec.indexww.com/", 
+    "condition": {"urlFilter": "js-sec.indexww.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
@@ -1733,14 +1733,14 @@
     "id": 248,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//x.bidswitch.net/", 
+    "condition": {"urlFilter": "bidswitch.net/", 
     "resourceTypes": ["image"] }
   },
      {
     "id": 249,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//x.bidswitch.net/", 
+    "condition": {"urlFilter": "sharethrough.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -8271,14 +8271,14 @@
     "id": 2082,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "/io.narrative.io/", 
+    "condition": {"urlFilter": "io.narrative.io/", 
     "resourceTypes": ["script"] }
   },
      {
     "id": 2083,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "/io.narrative.io/", 
+    "condition": {"urlFilter": "io.narrative.io/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -10478,5 +10478,117 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "jwpltx.com/", 
     "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3298,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "io.narrative.io/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3299,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yahoo.com/bidRequest", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3300,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "openx.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3301,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "media.net/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3302,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ads.servenobid.com", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3303,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "yellowblue.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3304,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "treasuredata.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3305,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "treasuredata.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3306,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "stackadapt.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3307,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "stackadapt.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3308,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tribl.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3309,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tribl.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3310,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "treasuredata.com/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3311,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "intentsify.io", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3312,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "intentsify.io", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3313,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "intentsify.io", 
+    "resourceTypes": ["script"] }
   }                             
     ]
