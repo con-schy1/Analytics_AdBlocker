@@ -1425,29 +1425,29 @@
     "id": 204,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s-a.innovid.com/", 
+    "condition": {"urlFilter": "innovid.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
     "id": 205,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//s-a.innovid.com/", 
+    "condition": {"urlFilter": "innovid.com/", 
     "resourceTypes": ["image"] }
   },
      {
     "id": 206,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//ag.innovid.com/", 
-    "resourceTypes": ["xmlhttprequest"] }
+    "condition": {"urlFilter": "innovid.com/", 
+    "resourceTypes": ["script"] }
   },
      {
     "id": 207,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//ag.innovid.com/", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": "innovid.com/", 
+    "resourceTypes": ["sub_frame"] }
   },
      {
     "id": 208,
@@ -1719,14 +1719,14 @@
     "id": 246,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pixel.rubiconproject.com/", 
+    "condition": {"urlFilter": "rubiconproject.com/", 
     "resourceTypes": ["image"] }
   },
      {
     "id": 247,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//pixel.rubiconproject.com/", 
+    "condition": {"urlFilter": "rubiconproject.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
      {
@@ -2958,8 +2958,8 @@
     "id": 423,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tps.doubleverify.com/", 
-    "resourceTypes": ["image"] }
+    "condition": {"urlFilter": "doubleverify.com/", 
+    "resourceTypes": ["sub_frame"] }
   },
     {
     "id": 424,
@@ -10590,5 +10590,54 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "intentsify.io", 
     "resourceTypes": ["script"] }
+  },
+    {
+    "id": 3314,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bidr.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3315,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bidr.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3316,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mailmunch.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3317,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mailmunch.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3318,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "trustarc.com/", 
+    "resourceTypes": ["image"] }
+  },
+     {
+    "id": 3319,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "trustarc.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3320,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "2mdn.net/", 
+    "resourceTypes": ["media"] }
   }                             
     ]
