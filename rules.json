@@ -8754,7 +8754,7 @@
     "id": 3051,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "match.sharethrough.com/", 
+    "condition": {"urlFilter": "sharethrough.com/", 
     "resourceTypes": ["image"] }
   },
      {
@@ -8796,7 +8796,7 @@
     "id": 3057,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "b.sharethrough.com/", 
+    "condition": {"urlFilter": "sharethrough.com/", 
     "resourceTypes": ["image"] }
   },
      {
@@ -9405,7 +9405,7 @@
     "id": 3144,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "match.sharethrough.com", 
+    "condition": {"urlFilter": "sharethrough.com", 
     "resourceTypes": ["sub_frame"] }
   },
      {
@@ -10639,5 +10639,33 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "2mdn.net/", 
     "resourceTypes": ["media"] }
+  },
+    {
+    "id": 3321,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "sonobi.com/", 
+    "resourceTypes": ["image"] }
+  },
+    {
+    "id": 3322,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "advertising.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 3323,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "bidswitch.net/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 3324,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "omnitagjs.com/", 
+    "resourceTypes": ["sub_frame"] }
   }                             
     ]
