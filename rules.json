@@ -8243,14 +8243,14 @@
     "id": 2078,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "viglink.com/images/pixel", 
+    "condition": {"urlFilter": "viglink.com/", 
     "resourceTypes": ["script"] }
   },
      {
     "id": 2079,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "viglink.com/images/pixel", 
+    "condition": {"urlFilter": "viglink.com/", 
     "resourceTypes": ["image"] }
   },
      {
@@ -10667,5 +10667,12 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "omnitagjs.com/", 
     "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3325,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "viglink.com", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
