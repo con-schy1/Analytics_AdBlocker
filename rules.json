@@ -963,14 +963,14 @@
     "id": 138,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tags.crwdcntrl.net/", 
+    "condition": {"urlFilter": "crwdcntrl.net/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 139,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//tags.crwdcntrl.net/", 
+    "condition": {"urlFilter": "crwdcntrl.net/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -3259,14 +3259,14 @@
     "id": 466,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//comcluster.cxense.com/", 
+    "condition": {"urlFilter": "cxense.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 467,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "//comcluster.cxense.com/", 
+    "condition": {"urlFilter": "cxense.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -4085,7 +4085,7 @@
     "id": 584,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "api.cxense.com/", 
+    "condition": {"urlFilter": "cxense.com/", 
     "resourceTypes": ["script"] }
   },
     {
@@ -4456,21 +4456,21 @@
     "id": 637,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "widget.criteo.com/", 
+    "condition": {"urlFilter": "criteo.com/", 
     "resourceTypes": ["script"] }
   },
     {
     "id": 638,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "widget.criteo.com/", 
+    "condition": {"urlFilter": "criteo.com/", 
     "resourceTypes": ["xmlhttprequest"] }
   },
     {
     "id": 639,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "widget.criteo.com/", 
+    "condition": {"urlFilter": "criteo.com/", 
     "resourceTypes": ["image"] }
   },
     {
@@ -10674,5 +10674,103 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "viglink.com", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3326,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mediavoice.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3327,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "mediavoice.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3328,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adservice.google", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3329,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adservice.google", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3330,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "syndication.twitter.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3331,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "syndication.twitter.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3332,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pubmine.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3333,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pubmine.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3334,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "pubmine.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3335,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tynt.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3336,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tynt.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+     {
+    "id": 3337,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "tynt.com/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3338,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".teads.tv/", 
+    "resourceTypes": ["sub_frame"] }
+  },
+     {
+    "id": 3339,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "media.net/", 
+    "resourceTypes": ["sub_frame"] }
   }                             
     ]
