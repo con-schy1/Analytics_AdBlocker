@@ -10772,5 +10772,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "media.net/", 
     "resourceTypes": ["sub_frame"] }
+  },
+    {
+    "id": 3340,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "getdrip.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3341,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "getdrip.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3342,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ipinfo.io/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3343,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "ipinfo.io/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3344,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "playwire.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3345,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "playwire.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
