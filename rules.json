@@ -10814,5 +10814,47 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": "playwire.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3346,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "inspectlet.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3347,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "inspectlet.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3348,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "intergient.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3349,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "intergient.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3350,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".splunkcloud.com/", 
+    "resourceTypes": ["ping"] }
+  },
+     {
+    "id": 3351,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": ".splunkcloud.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
