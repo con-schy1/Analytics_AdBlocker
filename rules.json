@@ -10856,5 +10856,19 @@
     "action": { "type": "block" },
     "condition": {"urlFilter": ".splunkcloud.com/", 
     "resourceTypes": ["xmlhttprequest"] }
+  },
+    {
+    "id": 3352,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.broadstreetads.com/", 
+    "resourceTypes": ["script"] }
+  },
+     {
+    "id": 3353,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "cdn.broadstreetads.com/", 
+    "resourceTypes": ["xmlhttprequest"] }
   }                             
     ]
