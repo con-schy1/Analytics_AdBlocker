@@ -9,16 +9,18 @@
 <h4 align="center">Protect your privacy while browsing the web.</h4>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
+  <a href="https://microsoftedge.microsoft.com/addons/detail/analytics-ad-blocker/aefflmbddeelichjblegdiofcnheglho">
+    <img src="https://user-images.githubusercontent.com/25206214/232240901-a3a3238e-323f-4e27-b403-c3cae1b75e04.png"
+         alt="Edge" width="50">
   </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+    <a href="https://chrome.google.com/webstore/detail/analytics-ad-blocker/fapldghopmonkbgaaiinpeopokpkhbmk?hl=en">
+    <img src="https://user-images.githubusercontent.com/25206214/232240940-ab68afc0-2fe4-46b6-a3f0-a66002c6769d.png"
+         alt="Edge" width="50">
   </a>
-  <a href="https://www.paypal.me/AmitMerchant">
-    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+  <br>
+  <a href="https://apps.apple.com/app/analytics-ad-blocker/id1641772773">
+    <img src="https://user-images.githubusercontent.com/25206214/232240922-82009465-ade0-4882-8e7a-6176fb6fa037.png"
+         alt="Edge" width="50">
   </a>
 </p>
 
