@@ -38,10 +38,7 @@
 <img src="https://user-images.githubusercontent.com/25206214/232250712-23c0b1d8-8e56-4cd1-8db3-f1a725988058.gif" alt="Edge" width="500">
 </p>
 
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/25206214/232250712-23c0b1d8-8e56-4cd1-8db3-f1a725988058.gif" alt="Edge" width="500">
-</p>
+![veed](https://user-images.githubusercontent.com/25206214/232251234-c60f33ae-774d-4d92-a257-5d07be8d2b75.gif)
 
 ## Key Features
 
