@@ -13,6 +13,7 @@
     <img src="https://user-images.githubusercontent.com/25206214/232240901-a3a3238e-323f-4e27-b403-c3cae1b75e04.png"
          alt="Edge" width="50">
   </a>
+  &nbsp;
     <a href="https://chrome.google.com/webstore/detail/analytics-ad-blocker/fapldghopmonkbgaaiinpeopokpkhbmk?hl=en">
     <img src="https://user-images.githubusercontent.com/25206214/232240940-ab68afc0-2fe4-46b6-a3f0-a66002c6769d.png"
          alt="Edge" width="50">
