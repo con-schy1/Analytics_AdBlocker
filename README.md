@@ -113,11 +113,11 @@ This software uses the following open source packages:
 
 ## License
 
-Apache 2.0
+Apache-2.0 License
 
 ---
 
-> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
-> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
-> Twitter [@amit_merchant](https://twitter.com/amit_merchant)
+> [globemallow.io](https://globemallow.io/) &nbsp;&middot;&nbsp;
+> GitHub [@con_schy1](https://github.com/con-schy1) &nbsp;&middot;&nbsp;
+> Mastodon [@globemallow@infosec.exchange](https://infosec.exchange/@globemallow)
 
