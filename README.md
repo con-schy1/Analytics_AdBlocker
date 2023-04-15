@@ -38,23 +38,20 @@
 
 ## Key Features
 
-* LivePreview - Make changes, See changes
-  - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* [KaTeX](https://khan.github.io/KaTeX/) Support
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
-  - Write distraction free.
-* Cross platform
-  - Windows, macOS and Linux ready.
+* Protect your privacy while browsing online - block ads and analytics (trackers)
+  - Instantly see what has been blocked 
+* Lightweight
+  - A lightweigth browser extension to ensure browsing speed is not affected.
+* Simple UI/UX that you don't need a degree to read 
+* Pause / Resume Blocking
+  - If you notice that Analytics & Ad Blocker is affecting the page you're on you can simply pause the blocking, and resume as soon as you've completed the action you were trying to attempt
+* Easy to see reports
+  - See the ads and trackers blocked by each site
+  - See the different requests blocked on each site
+* OpenSource!
+* No tracking on YOU! We don't use any analytics within the extension. 
+* Email us with any feedback or any ads / trackers you notice we missed.
+* Works with Edge, Safari, and Chrome
 
 ## How To Use
 
