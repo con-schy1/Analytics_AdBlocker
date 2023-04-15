@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://www.globemallow.io"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
+  <a href="https://www.globemallow.io"><img src="https://user-images.githubusercontent.com/25206214/232239552-1e012a0f-5a70-4498-be91-5cfbf739659b.jpg" alt="Analytics and Ad Blocker" width="200"></a>
   <br>
   Analytics & AdBlocker
   <br>
