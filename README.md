@@ -34,7 +34,14 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25206214/232250712-23c0b1d8-8e56-4cd1-8db3-f1a725988058.gif" alt="Edge" width="500">
+</p>
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25206214/232250712-23c0b1d8-8e56-4cd1-8db3-f1a725988058.gif" alt="Edge" width="500">
+</p>
 
 ## Key Features
 
