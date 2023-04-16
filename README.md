@@ -54,19 +54,21 @@
 
 ## How To Use
 
-1) Download all files into a single folder.
+<h3>Install-Chrome</h3>
+1) Download all files into a single folder. <br>
 2) Exclude the following Files from download:<br>
 &nbsp; * .github <br> 
 &nbsp; * License <br>
-&nbsp; * README.md
-3) Create a folder within the folder titled: "images"
+&nbsp; * README.md <br>
+3) Create a folder within the folder titled: "images" <br>
 4) Put the following files into the folder titled- "images":<br>
-&nbsp; * 128x128.png  
+&nbsp; * 128x128.png <br> 
 &nbsp; * 48x48.png <br>
 &nbsp; * 32x32.png <br>
 &nbsp; * 16x16.png <br>
-&nbsp; * ellypsis-vertical.svg
-5) Add the 
+&nbsp; * ellypsis-vertical.svg<br>
+5) Go to: chrome://extensions/ <br>
+6) Toggle ON: Developer Mode - in the top right <br>
 
 > **Note**
 > If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
