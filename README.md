@@ -55,8 +55,18 @@
 ## How To Use
 
 1) Download all files into a single folder.
-2) Create a folder within the folder titled: "images"
-3) Put the following files into a folder within that folder
+2) Exclude the following Files from download:<br>
+&nbsp; * .github <br> 
+&nbsp; * License <br>
+&nbsp; * README.md
+3) Create a folder within the folder titled: "images"
+4) Put the following files into the folder titled- "images":<br>
+&nbsp; * 128x128.png  
+&nbsp; * 48x48.png <br>
+&nbsp; * 32x32.png <br>
+&nbsp; * 16x16.png <br>
+&nbsp; * ellypsis-vertical.svg
+5) Add the 
 
 > **Note**
 > If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
