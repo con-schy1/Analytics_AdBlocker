@@ -73,6 +73,12 @@
 8) You're ready to go!
 
 <h3>Add New Ads / Analaytics to Block</h3>
+1) The only 2 files you'll have to add to are: performance.js and rules.json <br>
+2) Familiarize yourself with this documentation: https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/ <br>
+3) Observe the **ResourceType** you can add. You will have to use these to match the requests you will want to block. <br>
+&nbsp; * For example, if you want to block img> src="advertisementexample1.com"<img, you'll have to select **image** for the rule type.<br>  
+
+
 
 > **Note**
 > If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
