@@ -27,10 +27,12 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="#how-to-install">How To Install</a> •
   <a href="#download">Download</a> •
   <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+  <a href="#license">License</a> •
+  <a href="#helpful-documentation">Helpful Documentation</a> •
+  <a href="#examples">Examples</a> 
 </p>
 
 ![veed](https://user-images.githubusercontent.com/25206214/232251234-c60f33ae-774d-4d92-a257-5d07be8d2b75.gif)
@@ -52,11 +54,11 @@
 * Email us with any feedback or any ads / trackers you notice we missed.
 * Works with Edge, Safari, and Chrome
 
-## How To Use
+## How To Install
 
 <h3>Install-Chrome</h3>
 1) Download all files into a single folder. <br>
-2) Exclude the following Files from download:<br>
+2) Exclude the following files from download:<br>
 &nbsp; * .github <br> 
 &nbsp; * License <br>
 &nbsp; * README.md <br>
@@ -72,16 +74,46 @@
 7) Load Unpacked <br>
 8) You're ready to go!
 
-<h3>Add New Ads / Analaytics to Block</h3>
-1) The only 2 files you'll have to add to are: performance.js and rules.json <br>
-2) Familiarize yourself with this documentation: https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/ <br>
-3) Observe the **ResourceType** you can add. You will have to use these to match the requests you will want to block. <br>
-&nbsp; * For example, if you want to block img> src="advertisementexample1.com"<img, you'll have to select **image** for the rule type.<br>  
+## Helpful Documentation 
+* https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/ <br>
+* More specifically: 
+https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#type-ResourceType
+ 
+
+## Examples
+
+<h3>Example 1</h3>
+
+1) If you find an Ad look at it in the Browser's Dev tools. <br>
+
+It will look something like:
+```
+<script async="" src="https://www.adexample1.com/"></script>
+```
+
+2) Open the rules.json <br>
+
+The resulting rule to block this script will look like:
+```
+,
+    {
+    "id": 3000,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adexample1.com/", 
+    "resourceTypes": ["script"] }
+  }
+```
+3) Add this rule to the rules.json, and make sure you change the id to go in order as the rule before it. <br>
+4) Open the performance.js. <br>
+
+Add the following to the end of the adList array:
+```
+, /adexample1.c/
+```
 
 
-
-> **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+<h3>Example 2</h3>
 
 
 ## Download
