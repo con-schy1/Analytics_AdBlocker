@@ -69,6 +69,8 @@
 &nbsp; * 32x32.png <br>
 &nbsp; * 16x16.png <br>
 &nbsp; * ellypsis-vertical.svg<br>
+&nbsp; * newWindow.png<br>
+&nbsp; * kofi.png<br>
 5) Go to: chrome://extensions/ <br>
 6) Toggle ON: Developer Mode - in the top right <br>
 7) Load Unpacked <br>
