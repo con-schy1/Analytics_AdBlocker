@@ -71,6 +71,8 @@
 &nbsp; * ellypsis-vertical.svg<br>
 &nbsp; * newWindow.png<br>
 &nbsp; * kofi.png<br>
+&nbsp; * play.svg<br>
+&nbsp; * pause.svg<br>
 5) Go to: chrome://extensions/ <br>
 6) Toggle ON: Developer Mode - in the top right <br>
 7) Load Unpacked <br>
