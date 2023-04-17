@@ -157,7 +157,7 @@ Add the following to the end of the **adList** array:
   }
 ```
 8) There is no need to ad an additional entry in **adList** array.
-9) That's it! Repeat the steps until the add it gone.
+9) That's it! Repeat the steps until the ad is gone.
 
 
 ## Download
