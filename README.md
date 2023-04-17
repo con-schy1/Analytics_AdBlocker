@@ -29,10 +29,11 @@
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-install">How To Install</a> •
   <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#license">License</a> •
   <a href="#helpful-documentation">Helpful Documentation</a> •
-  <a href="#examples">Examples</a> 
+  <a href="#examples">Examples</a> •
+  <a href="#rules">Rules</a> •
+    <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
 </p>
 
 ![veed](https://user-images.githubusercontent.com/25206214/232251234-c60f33ae-774d-4d92-a257-5d07be8d2b75.gif)
@@ -75,8 +76,8 @@
 &nbsp; * pause.svg<br>
 5) Go to: chrome://extensions/ <br>
 6) Toggle ON: Developer Mode - in the top right <br>
-7) Load Unpacked <br>
-8) You're ready to go!
+7) Select the File you just created <br>
+9) You're ready to go!
 
 ## Helpful Documentation 
 * https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/ <br>
