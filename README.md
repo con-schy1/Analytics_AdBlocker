@@ -161,8 +161,8 @@ Add the following to the end of the **adList** array:
 
 ## Rules
 <h4>There's a couple project rules:</h4>
-1) No Blocking Cookie Consent Banners and their technologies
-2) No Blocking Chat Bots
+1) No Blocking Cookie Consent Banners and their technologies  <br>
+2) No Blocking Chat Bots  <br>
 3) Don't use main_frame as a Resource Type
 
 ## Download
