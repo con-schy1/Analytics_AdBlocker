@@ -1,3 +1,4 @@
+//This code is protected under Apache-2.0 license
 const MAXSITES = 14;
 
 chrome.runtime.onInstalled.addListener(details => {
@@ -10,7 +11,6 @@ chrome.tabs.onUpdated.addListener((tabId, tab)=> {
 });
 
 chrome.runtime.onMessage.addListener(async (request, sender) => {
-    // changes made(only store MAXSITES sites data) -harshit
     let data = await chrome.storage.session.get(null), storedAt = 99999999999999999999999, toRemove = null;
     if (Object.keys(data).length >= MAXSITES) {
         for (z in data) {

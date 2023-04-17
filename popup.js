@@ -1,6 +1,6 @@
+//This code is protected under Apache-2.0 license
 var tab, chart;
 function updateChartData(x) {
-    //chart.data.labels.push(label);
     document.getElementById("scoreHTML").innerHTML = x.totalString;
     chart.data.datasets.forEach((dataset) => {
         dataset.data = [x.totalAnal, x.totalAd];
@@ -11,7 +11,6 @@ function updateChartData(x) {
     
 }
 function removeData() {
-    //chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
         dataset.data.length = 0;
     });

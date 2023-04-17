@@ -1,4 +1,4 @@
-//This code is owned and the proprietary property of Globemallow.io LLC. Any use of this intellectual property without the consent of Globemallow.io LLC is illegal. All rights reserved.
+//This code is protected under Apache-2.0 license
 chrome.runtime.onMessage.addListener(msg=> {
     
     if (document.readyState === 'complete') {

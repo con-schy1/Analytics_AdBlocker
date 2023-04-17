@@ -2,7 +2,6 @@ body {
   font-family: veranda, sans-serif;
   font-size: 13px;
   width: 350px;
-/*  height: 245px;*/
   margin: 0; /*new*/
   padding: 0; /*new*/
 }
@@ -57,7 +56,7 @@ body {
 
 .ScoreGraph{
      /* For button text center */
-    position: absolute;          /* Position absolute */
+    position: absolute;
     left: 16%;
     padding-top: 14%;
 }
