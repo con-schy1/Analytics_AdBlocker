@@ -159,6 +159,11 @@ Add the following to the end of the **adList** array:
 8) There is no need to ad an additional entry in **adList** array.
 9) That's it! Repeat the steps until the ad is gone.
 
+## Rules
+<h4>There's a couple project rules:</h4>
+1) No Blocking Cookie Consent Banners and their technologies
+2) No Blocking Chat Bots
+3) Don't use main_frame as a Resource Type
 
 ## Download
 
