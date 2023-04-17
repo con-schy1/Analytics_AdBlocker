@@ -91,7 +91,7 @@ It will look something like:
 <script async="" src="https://www.adexample1.com/"></script>
 ```
 
-2) Open the rules.json <br>
+2) Open the **rules.json** <br>
 
 The resulting rule to block this script will look like:
 ```
@@ -105,15 +105,59 @@ The resulting rule to block this script will look like:
   }
 ```
 3) Add this rule to the rules.json, and make sure you change the id to go in order as the rule before it. <br>
-4) Open the performance.js. <br>
+4) Open the **performance.js**. <br>
 
-Add the following to the end of the adList array:
+Add the following to the end of the **adList** array:
 ```
 , /adexample1.c/
 ```
-
+5) Congratulate yourself- that's it!
 
 <h3>Example 2</h3>
+
+1) If you find an Ad look at it in the Browser's Dev tools. <br>
+
+It will look something like:
+```
+<iframe async="" src="https://www.adexample2.com/"></script>
+```
+
+2) Open the **rules.json** <br>
+
+The resulting rule to block this script will look like:
+```
+,
+    {
+    "id": 3000,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adexample2.com/", 
+    "resourceTypes": ["sub_frame"] }
+  }
+```
+3) Add this rule to the rules.json, and make sure you change the id to go in order as the rule before it. <br>
+4) Open the **performance.js**. <br>
+
+Add the following to the end of the **adList** array:
+```
+, /adexample2.c/
+```
+<h4>But, you notice the ad is still there?</h4>
+
+5) Look at the **Network** requests for: **adexample2.com/**, and you see that it is sending a request after the iframe is blocked. 
+6) Identify how it is calling the addition request and see that it's sending a **Ping** request type
+7) Write an additional rule and follow all the steps above. It will look something like this:
+```
+    {
+    "id": 3001,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "adexample2.com/", 
+    "resourceTypes": ["ping"] }
+  }
+```
+8) There is no need to ad an additional entry in **adList** array.
+9) That's it! Repeat the steps until the add it gone.
 
 
 ## Download
