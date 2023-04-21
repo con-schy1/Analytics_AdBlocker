@@ -58,26 +58,15 @@
 ## How To Install
 
 <h3>Install-Chrome</h3>
-1) Download all files into a single folder. <br>
+1) Download all files and **image** folder into a single Folder. <br>
 2) Exclude the following files from download:<br>
 &nbsp; * .github <br> 
 &nbsp; * License <br>
 &nbsp; * README.md <br>
-3) Create a folder within the folder titled: "images" <br>
-4) Put the following files into the folder titled- "images":<br>
-&nbsp; * 128x128.png <br> 
-&nbsp; * 48x48.png <br>
-&nbsp; * 32x32.png <br>
-&nbsp; * 16x16.png <br>
-&nbsp; * ellypsis-vertical.svg<br>
-&nbsp; * newWindow.png<br>
-&nbsp; * kofi.png<br>
-&nbsp; * play.svg<br>
-&nbsp; * pause.svg<br>
-5) Go to: chrome://extensions/ <br>
-6) Toggle ON: Developer Mode - in the top right <br>
-7) Select the File you just created <br>
-9) You're ready to go!
+3) Go to: chrome://extensions/ in your chrome browser <br>
+4) Toggle ON: Developer Mode - in the top right <br>
+5) Select the Folder you just created <br>
+6) You're ready to go!
 
 ## Helpful Documentation 
 * https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/ <br>
@@ -168,7 +157,7 @@ Add the following to the end of the **adList** array:
 <h4>There's a couple project rules:</h4>
 1) No Blocking Cookie Consent Banners and their technologies  <br>
 2) No Blocking Chat Bots  <br>
-3) Don't use main_frame as a Resource Type
+3) Don't use *main_frame* as a Resource Type in your rules
 
 ## Download
 
