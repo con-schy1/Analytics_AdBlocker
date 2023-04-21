@@ -58,7 +58,7 @@
 ## How To Install
 
 <h3>Install-Chrome</h3>
-1) Download all files and **image** folder into a single Folder. <br>
+1) Download all files and **images** folder into a single Folder. <br>
 2) Exclude the following files from download:<br>
 &nbsp; * .github <br> 
 &nbsp; * License <br>
