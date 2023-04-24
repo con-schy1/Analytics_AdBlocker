@@ -62,7 +62,7 @@ chrome.tabs.onRemoved.addListener(tabId => {
 
 
 chrome.runtime.onInstalled.addListener(function (object) {
-    let externalUrl = "https://ko-fi.com/globemallow#paypalModal";
+    let externalUrl = "https://github.com/con-schy1/Analytics_AdBlocker#readme";
 
     if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
         chrome.tabs.create({ url: externalUrl }, function (tab) {
