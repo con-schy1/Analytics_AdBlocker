@@ -78,7 +78,7 @@ https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#ty
 
 <h3>Example 1</h3>
 
-1) If you find an Ad look at it in the Browser's Dev tools. <br>
+1) If you find an Ad, look at it in the Browser's Dev tools. <br>
 
 It will look something like:
 ```
@@ -109,7 +109,7 @@ Add the following to the end of the **adList** array:
 
 <h3>Example 2</h3>
 
-1) If you find an Ad look at it in the Browser's Dev tools. <br>
+1) If you find an Ad, look at it in the Browser's Dev tools. <br>
 
 It will look something like:
 ```
