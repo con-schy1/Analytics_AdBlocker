@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AdShield Settings</title>
+        <link rel="stylesheet" href="options.css" />
+        <script src="../chart.js"></script>
+        <!-- Ensure chart.js is in your folder -->
+    </head>
+    <body>
+        <div class="app-container">
+            <!-- Sidebar Navigation -->
+            <nav class="sidebar">
+                <div class="logo">
+                    <span class="icon">🛡️</span>
+                    <span>AdShield</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="active" data-tab="dashboard">
+                        <span class="icon">📊</span> Dashboard
+                    </li>
+                    <li data-tab="requests">
+                        <span class="icon">🌐</span> Request Log
+                    </li>
+                    <!-- Added for future expansion -->
+                    <li data-tab="settings">
+                        <span class="icon">⚙️</span> Settings
+                    </li>
+                </ul>
+
+                <div class="sidebar-footer">
+                    <p>Version 2.0</p>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Header -->
+                <header>
+                    <h1 id="page-title">Dashboard</h1>
+                </header>
+
+                <!-- Dashboard View -->
+                <div id="view-dashboard" class="view-section active">
+                    <!-- Stats Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Blocked</h3>
+                            <p class="stat-number" id="total-blocked">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Ads Stopped</h3>
+                            <p class="stat-number" id="ads-blocked">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Trackers Blocked</h3>
+                            <p class="stat-number" id="analytics-blocked">0</p>
+                        </div>
+                    </div>
+
+                    <!-- Main Chart -->
+                    <div class="chart-card">
+                        <h3>Blocking History</h3>
+                        <div class="chart-container">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Requests View -->
+                <div
+                    id="view-requests"
+                    class="view-section"
+                    style="display: none"
+                >
+                    <div class="card">
+                        <h3>Recent Network Activity</h3>
+                        <div id="requestDiv" class="request-list">
+                            <!-- Dynamic Content from JS -->
+                            <p class="empty-state">
+                                No recent activity logged.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings View (Placeholder for logic) -->
+                <div
+                    id="view-settings"
+                    class="view-section"
+                    style="display: none"
+                >
+                    <div class="card">
+                        <h3>Privacy & Data</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Clear Activity Log</h4>
+                                <p>
+                                    Remove all stored charts and history data.
+                                </p>
+                            </div>
+                            <button id="clear-data-btn" class="btn btn-danger">
+                                Clear Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Templates for JS to use -->
+        <template id="site-info-template">
+            <div class="log-entry">
+                <div class="log-header">
+                    <span class="site-name">example.com</span>
+                    <button class="site-more">▼</button>
+                </div>
+                <div class="list-sections hidden">
+                    <div class="site-image-list"></div>
+                    <div class="site-frame-list"></div>
+                </div>
+            </div>
+        </template>
+
+        <script src="myscripts.js"></script>
+    </body>
+</html>

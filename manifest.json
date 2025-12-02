@@ -1,48 +1,42 @@
 {
-   "name": "Analytics & Ad Blocker",
-   "description": "An Analytics & Ad Blocker for a more sustainable internet.",
-   "version": "0.0.3.2",
-   "manifest_version": 3,
-   "options_page": "options.html",
-   "declarative_net_request": {
-    "rule_resources": [{
-      "id": "ruleset_1",
-      "enabled": true,
-      "path": "rules.json"
-    }]
-  },
-   "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-         "16": "/images/16x16.png",
-         "32": "/images/32x32.png",
-         "48": "/images/48x48.png",
-         "128": "/images/128x128.png"
-      }
-   },
-   "content_scripts": [
+  "name": "Analytics & Ad Blocker",
+  "description": "An Analytics & Ad Blocker for a more sustainable internet.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "options_page": "src/options/options.html",
+  "declarative_net_request": {
+    "rule_resources": [
       {
-         "matches": [
-            "*://*/*"
-         ],
-         "js": [
-            "performance.js",
-            "Chart.js"
-         ],
-         "run_at": "document_start"
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "src/rules.json"
       }
-   ],
-   "background": {
-      "service_worker": "background.js"
-   },
-   "permissions": [
-      "storage",
-      "declarativeNetRequest"
-   ],
-   "icons": {
-      "16": "/images/16x16.png",
-       "32": "/images/32x32.png",
-       "48": "/images/48x48.png",
-       "128": "/images/128x128.png"
-   }
+    ]
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "src/assets/images/16x16.png",
+      "32": "src/assets/images/32x32.png",
+      "48": "src/assets/images/48x48.png",
+      "128": "src/assets/images/128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["src/content_scripts/performance.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["storage", "declarativeNetRequest"],
+  "icons": {
+    "16": "src/assets/images/16x16.png",
+    "32": "src/assets/images/32x32.png",
+    "48": "src/assets/images/48x48.png",
+    "128": "src/assets/images/128x128.png"
+  }
 }

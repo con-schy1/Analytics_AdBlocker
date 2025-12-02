@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="popup.css" />
+        <!-- Make sure chart.js is in your extension folder -->
+        <script src="../chart.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="header">
+            <div class="title">Analytics & Adblocker</div>
+            <div id="go-to-options" class="settings-icon">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    ></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Hidden Status (Kept for JS compatibility) -->
+            <div id="blocked" style="display: none">Blocked</div>
+
+            <!-- Chart Section -->
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+                <div class="chart-center-text">
+                    <div id="scoreHTML" class="score-number">0</div>
+                    <div class="score-label">Blocked</div>
+                </div>
+            </div>
+
+            <!-- Custom Legend -->
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="dot orange"></span>
+                    <span>Analytics</span>
+                </div>
+                <div class="legend-item">
+                    <span class="dot yellow"></span>
+                    <span>Ads</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="footer">
+            <button id="pause" class="btn btn-pause">Pause Blocking</button>
+            <button id="resume" class="btn btn-resume" style="display: none">
+                Resume Blocking
+            </button>
+        </div>
+
+        <!-- Hidden Reporting (Kept for JS compatibility) -->
+        <div id="reportAttempt" style="display: none"></div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

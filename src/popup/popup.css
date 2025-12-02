@@ -1,0 +1,142 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    width: 300px;
+    margin: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.settings-icon {
+    cursor: pointer;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+}
+
+.settings-icon:hover {
+    color: #334155;
+}
+
+/* Main Container */
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Chart Area */
+.chart-container {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+.chart-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none; /* Lets clicks pass through to the chart tooltip */
+}
+
+.score-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #475569;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.orange {
+    background-color: #f18931;
+}
+.dot.yellow {
+    background-color: #ebdc3d;
+}
+
+/* Footer Buttons */
+.footer {
+    padding: 15px 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-pause {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btn-pause:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-resume {
+    background-color: #2563eb; /* Bright Blue */
+    color: white;
+}
+
+.btn-resume:hover {
+    background-color: #1d4ed8;
+}
+/* Add this to the bottom of your popup.css */
+.grayscale-filter {
+    filter: grayscale(100%);
+    opacity: 0.5; /* Optional: makes it look "inactive" */
+    transition:
+        filter 0.3s ease,
+        opacity 0.3s ease;
+}
