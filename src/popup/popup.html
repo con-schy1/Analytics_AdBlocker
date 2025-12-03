@@ -9,8 +9,15 @@
     </head>
     <body>
         <!-- Header -->
-        <div class="header">
-            <div class="title">Analytics & Adblocker</div>
+        <header class="header">
+            <div class="heading-logo">
+                <img
+                    src="../assets/images/128x128.png"
+                    width="30px"
+                    alt="logo"
+                />
+                <h1 class="title">Analytics & Ad blocker</h1>
+            </div>
             <div id="go-to-options" class="settings-icon">
                 <svg
                     width="20"
@@ -28,10 +35,10 @@
                     ></path>
                 </svg>
             </div>
-        </div>
+        </header>
 
         <!-- Main Content -->
-        <div class="container">
+        <main class="container">
             <!-- Hidden Status (Kept for JS compatibility) -->
             <div id="blocked" style="display: none">Blocked</div>
 
@@ -55,15 +62,16 @@
                     <span>Ads</span>
                 </div>
             </div>
-        </div>
+        </main>
 
         <!-- Footer Actions -->
-        <div class="footer">
+        <footer class="footer">
             <button id="pause" class="btn btn-pause">Pause Blocking</button>
             <button id="resume" class="btn btn-resume" style="display: none">
                 Resume Blocking
             </button>
-        </div>
+            <img src="../assets/images/kofi.png" width="30px" alt="logo" />
+        </footer>
 
         <!-- Hidden Reporting (Kept for JS compatibility) -->
         <div id="reportAttempt" style="display: none"></div>
