@@ -1,64 +1,66 @@
 // This code is protected under Apache-2.0 license
 
 const ctx = document.getElementById("myChart").getContext("2d");
-let hosts = [];
+let chart = null;
 
-// --- Data Models ---
-class Hosts {
-  constructor(time, url, Ads, Analytics) {
-    this.time = time;
-    this.url = url;
-    this.Ads = Ads;
-    this.Analytics = Analytics;
-  }
-}
-
-class Dataset {
-  constructor(label, bgcolor) {
-    this.label = label;
-    this.data = hosts.map((z) => z[label]);
-    this.backgroundColor = bgcolor;
-    this.borderColor = bgcolor;
-    this.borderWidth = 1;
-    this.borderRadius = 4;
-  }
-}
-
-// --- Chart Logic ---
-function chartConfig(storageData) {
-  hosts = []; // Reset array
-
+// --- CHART LOGIC ---
+function createChartConfig(storageData) {
+  // 1. Aggregate Data by Domain
+  let aggregated = {};
   let totalAds = 0;
   let totalAnalytics = 0;
 
-  for (let z in storageData) {
-    let entry = storageData[z];
-    // Add to stats
-    totalAds += entry.Ads || 0;
-    totalAnalytics += entry.Analytics || 0;
+  for (let key in storageData) {
+    let entry = storageData[key];
+    let domain = entry.hostURL;
 
-    hosts.push(
-      new Hosts(entry.storedAt, entry.hostURL, entry.Ads, entry.Analytics),
-    );
+    if (!aggregated[domain]) {
+      aggregated[domain] = { ads: 0, analytics: 0 };
+    }
+
+    aggregated[domain].ads += entry.Ads || 0;
+    aggregated[domain].analytics += entry.Analytics || 0;
   }
 
-  // Update Dashboard Numbers
+  // Update UI Stats
+  Object.values(aggregated).forEach((v) => {
+    totalAds += v.ads;
+    totalAnalytics += v.analytics;
+  });
+
   document.getElementById("total-blocked").innerText =
     totalAds + totalAnalytics;
   document.getElementById("ads-blocked").innerText = totalAds;
   document.getElementById("analytics-blocked").innerText = totalAnalytics;
 
-  // Create Datasets
-  const datasets = [
-    new Dataset("Ads", "#ebdc3d"), // Yellow
-    new Dataset("Analytics", "#f18931"), // Orange
-  ];
+  // 2. Prepare Top 10 for Chart
+  let sorted = Object.keys(aggregated)
+    .map((domain) => ({
+      domain,
+      ads: aggregated[domain].ads,
+      analytics: aggregated[domain].analytics,
+    }))
+    .sort((a, b) => b.ads + b.analytics - (a.ads + a.analytics))
+    .slice(0, 10);
 
   return {
     type: "bar",
     data: {
-      labels: hosts.map((z) => z.url),
-      datasets: datasets,
+      labels: sorted.map((item) => item.domain),
+      datasets: [
+        {
+          label: "Ads",
+          data: sorted.map((item) => item.ads),
+          backgroundColor: "#ebdc3d",
+          borderRadius: 4,
+        },
+        {
+          label: "Trackers",
+          data: sorted.map((item) => item.analytics),
+          backgroundColor: "#f18931",
+          borderRadius: 4,
+        },
+      ],
     },
     options: {
       responsive: true,
@@ -74,112 +76,141 @@ function chartConfig(storageData) {
   };
 }
 
-let chart = null;
-
 function initChart(data) {
   if (chart) chart.destroy();
-  chart = new Chart(ctx, chartConfig(data));
+  const canvas = document.getElementById("myChart");
+  if (canvas) {
+    chart = new Chart(canvas, createChartConfig(data));
+  }
 }
 
-// --- Load Data ---
-function refreshData() {
-  chrome.storage.session.get(null).then((data) => {
-    // 1. Draw Chart
-    initChart(data);
+// --- REQUEST LOG LOGIC ---
+function populateRequestList(data) {
+  const listContainer = document.getElementById("requestDiv");
+  const template = document.getElementById("site-info-template");
 
-    // 2. Populate Request List
+  if (!listContainer || !template) return;
+
+  listContainer.innerHTML = "";
+  let hasData = false;
+
+  for (let key in data) {
+    hasData = true;
+    let item = data[key];
+
+    // Clone Template
+    let clone = template.content.cloneNode(true);
+
+    // Set Domain Name
+    clone.querySelector(".site-name").innerText = item.hostURL || "Unknown";
+
+    // Count items
+    let adCount = item.totalAd || 0;
+    let trackerCount = item.totalAnal || 0;
+    let totalCount = adCount + trackerCount;
+
+    // Badge
+    let badge = clone.querySelector(".badge-count");
+    if (totalCount > 0) {
+      badge.innerText = `${totalCount} Blocked`;
+      badge.classList.remove("hidden");
+    }
+
+    // Details Section Logic
+    let toggleBtn = clone.querySelector(".btn-toggle");
+    let detailsDiv = clone.querySelector(".log-details");
+
+    if (totalCount === 0) {
+      toggleBtn.style.display = "none"; // Hide button if nothing to show
+    } else {
+      toggleBtn.addEventListener("click", () => {
+        let isHidden = detailsDiv.classList.contains("hidden");
+        if (isHidden) {
+          detailsDiv.classList.remove("hidden");
+          toggleBtn.innerText = "Hide";
+
+          // Lazy load details content
+          let html = "";
+          if (adCount > 0)
+            html += `<div><strong>Ads:</strong> ${adCount} found</div>`;
+          if (trackerCount > 0)
+            html += `<div><strong>Trackers:</strong> ${trackerCount} found</div>`;
+          detailsDiv.innerHTML = html;
+        } else {
+          detailsDiv.classList.add("hidden");
+          toggleBtn.innerText = "Details";
+        }
+      });
+    }
+
+    listContainer.appendChild(clone);
+  }
+
+  if (!hasData) {
+    listContainer.innerHTML = `<div style="padding:20px; text-align:center; color:#888;">No activity recorded yet.</div>`;
+  }
+}
+
+// --- APP INIT ---
+function refreshApp() {
+  chrome.storage.session.get(null).then((data) => {
+    initChart(data);
     populateRequestList(data);
   });
 }
 
-// --- Request List Logic ---
-const requestDiv = document.getElementById("requestDiv");
-const siteInfoTemplate = document.getElementById("site-info-template");
-
-function populateRequestList(data) {
-  requestDiv.innerHTML = ""; // Clear list
-  let hasData = false;
-
-  for (let x in data) {
-    hasData = true;
-    let item = data[x];
-
-    // Clone Template
-    let clone = siteInfoTemplate.content.cloneNode(true);
-
-    // Fill Info
-    clone.querySelector(".site-name").innerText = item.hostURL;
-
-    // Setup Toggle
-    let moreBtn = clone.querySelector(".site-more");
-    let sections = clone.querySelector(".list-sections");
-
-    moreBtn.addEventListener("click", () => {
-      sections.classList.toggle("hidden");
-      moreBtn.classList.toggle("site-more-rotated");
-    });
-
-    // Add lists
-    let imgList = clone.querySelector(".site-image-list");
-    let frameList = clone.querySelector(".site-frame-list");
-
-    if (item.foundHTTPArray)
-      imgList.innerHTML += `<div><strong>Trackers:</strong> ${item.foundHTTPArray.length}</div>`;
-    if (item.foundHTTPADArray)
-      frameList.innerHTML += `<div><strong>Ads:</strong> ${item.foundHTTPADArray.length}</div>`;
-
-    requestDiv.appendChild(clone);
-  }
-
-  if (!hasData) {
-    requestDiv.innerHTML = '<p class="empty-state">No data captured yet.</p>';
-  }
-}
-
-// --- UI Navigation Tabs ---
-document.querySelectorAll(".nav-links li").forEach((tab) => {
-  tab.addEventListener("click", () => {
-    // 1. UI Active State
+// Navigation Tabs
+document.querySelectorAll(".nav-item").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all tabs
     document
-      .querySelectorAll(".nav-links li")
-      .forEach((t) => t.classList.remove("active"));
-    tab.classList.add("active");
+      .querySelectorAll(".nav-item")
+      .forEach((b) => b.classList.remove("active"));
+    // Add to clicked
+    btn.classList.add("active");
 
-    // 2. Switch Views
-    const tabId = tab.getAttribute("data-tab");
+    // Hide all views
     document
       .querySelectorAll(".view-section")
-      .forEach((view) => (view.style.display = "none"));
+      .forEach((v) => v.classList.add("hidden"));
+    document
+      .querySelectorAll(".view-section")
+      .forEach((v) => v.classList.remove("active"));
 
-    // Map tab ID to view ID
-    if (tabId === "dashboard")
-      document.getElementById("view-dashboard").style.display = "block";
-    if (tabId === "requests")
-      document.getElementById("view-requests").style.display = "block";
-    if (tabId === "settings")
-      document.getElementById("view-settings").style.display = "block";
+    // Show target view
+    const tabId = btn.getAttribute("data-tab");
+    const targetView = document.getElementById(`view-${tabId}`);
+    if (targetView) {
+      targetView.classList.remove("hidden");
+      targetView.classList.add("active");
+    }
 
-    // Update Header Title
-    document.getElementById("page-title").innerText = tab.innerText.trim();
+    // Update Title
+    document.getElementById("page-title").innerText = btn.innerText;
+
+    // Resize chart if showing dashboard
+    if (tabId === "dashboard" && chart) {
+      chart.resize();
+    }
   });
 });
 
-// --- Clear Data Button ---
+// Buttons
 const clearBtn = document.getElementById("clear-data-btn");
 if (clearBtn) {
   clearBtn.addEventListener("click", () => {
-    if (confirm("Are you sure you want to clear all stats?")) {
+    if (confirm("Clear all data?")) {
       chrome.storage.session.clear();
-      refreshData();
-      alert("Data cleared.");
+      refreshApp();
     }
   });
 }
 
-// --- Init ---
-refreshData();
+const refreshBtn = document.getElementById("refresh-log");
+if (refreshBtn) {
+  refreshBtn.addEventListener("click", refreshApp);
+}
 
-// Listen for live updates
-chrome.storage.onChanged.addListener(() => {
-  refreshData();
-});
+// Init
+refreshApp();
+chrome.storage.onChanged.addListener(refreshApp);

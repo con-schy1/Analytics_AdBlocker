@@ -3,102 +3,97 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AdShield Settings</title>
+        <title>Analytics & Ads blocker Settings</title>
         <link rel="stylesheet" href="options.css" />
         <script src="../chart.js"></script>
-        <!-- Ensure chart.js is in your folder -->
     </head>
     <body>
-        <div class="app-container">
-            <!-- Sidebar Navigation -->
-            <nav class="sidebar">
-                <div class="logo">
-                    <span class="icon">🛡️</span>
-                    <span>AdShield</span>
+        <div class="layout-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="logo-area">
+                    <h2>Analytics & Ads blocker</h2>
                 </div>
 
-                <ul class="nav-links">
-                    <li class="active" data-tab="dashboard">
-                        <span class="icon">📊</span> Dashboard
-                    </li>
-                    <li data-tab="requests">
-                        <span class="icon">🌐</span> Request Log
-                    </li>
-                    <!-- Added for future expansion -->
-                    <li data-tab="settings">
-                        <span class="icon">⚙️</span> Settings
-                    </li>
-                </ul>
+                <nav class="nav-menu">
+                    <button class="nav-item active" data-tab="dashboard">
+                        Dashboard
+                    </button>
+                    <button class="nav-item" data-tab="requests">
+                        Request Log
+                    </button>
+                    <button class="nav-item" data-tab="settings">
+                        Settings
+                    </button>
+                </nav>
 
-                <div class="sidebar-footer">
-                    <p>Version 2.0</p>
-                </div>
-            </nav>
+                <div class="sidebar-footer">v2.0.0</div>
+            </aside>
 
-            <!-- Main Content Area -->
+            <!-- Main Content -->
             <main class="main-content">
-                <!-- Header -->
-                <header>
+                <header class="top-bar">
                     <h1 id="page-title">Dashboard</h1>
                 </header>
 
-                <!-- Dashboard View -->
+                <!-- DASHBOARD VIEW -->
                 <div id="view-dashboard" class="view-section active">
-                    <!-- Stats Cards -->
+                    <!-- Stats Row -->
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <h3>Total Blocked</h3>
-                            <p class="stat-number" id="total-blocked">0</p>
+                            <span class="stat-label">Total Blocked</span>
+                            <span class="stat-value" id="total-blocked">0</span>
                         </div>
                         <div class="stat-card">
-                            <h3>Ads Stopped</h3>
-                            <p class="stat-number" id="ads-blocked">0</p>
+                            <span class="stat-label">Ads Stopped</span>
+                            <span class="stat-value" id="ads-blocked">0</span>
                         </div>
                         <div class="stat-card">
-                            <h3>Trackers Blocked</h3>
-                            <p class="stat-number" id="analytics-blocked">0</p>
+                            <span class="stat-label">Trackers Blocked</span>
+                            <span class="stat-value" id="analytics-blocked"
+                                >0</span
+                            >
                         </div>
                     </div>
 
-                    <!-- Main Chart -->
-                    <div class="chart-card">
-                        <h3>Blocking History</h3>
+                    <!-- Chart Section -->
+                    <div class="content-card chart-wrapper">
+                        <div class="card-header">
+                            <h3>Blocking History</h3>
+                        </div>
                         <div class="chart-container">
                             <canvas id="myChart"></canvas>
                         </div>
                     </div>
                 </div>
 
-                <!-- Requests View -->
-                <div
-                    id="view-requests"
-                    class="view-section"
-                    style="display: none"
-                >
-                    <div class="card">
-                        <h3>Recent Network Activity</h3>
-                        <div id="requestDiv" class="request-list">
-                            <!-- Dynamic Content from JS -->
-                            <p class="empty-state">
-                                No recent activity logged.
-                            </p>
+                <!-- REQUESTS VIEW -->
+                <div id="view-requests" class="view-section hidden">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                            <button id="refresh-log" class="btn-sm">
+                                Refresh
+                            </button>
+                        </div>
+                        <div id="requestDiv" class="log-list">
+                            <!-- JS populates this -->
                         </div>
                     </div>
                 </div>
 
-                <!-- Settings View (Placeholder for logic) -->
-                <div
-                    id="view-settings"
-                    class="view-section"
-                    style="display: none"
-                >
-                    <div class="card">
-                        <h3>Privacy & Data</h3>
-                        <div class="setting-item">
+                <!-- SETTINGS VIEW -->
+                <div id="view-settings" class="view-section hidden">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3>Data Management</h3>
+                        </div>
+                        <div class="setting-row">
                             <div class="setting-info">
-                                <h4>Clear Activity Log</h4>
+                                <h4>Clear Activity History</h4>
                                 <p>
-                                    Remove all stored charts and history data.
+                                    Remove all stored charts and request logs
+                                    permanently.
                                 </p>
                             </div>
                             <button id="clear-data-btn" class="btn btn-danger">
@@ -110,16 +105,18 @@
             </main>
         </div>
 
-        <!-- Templates for JS to use -->
+        <!-- Templates -->
         <template id="site-info-template">
             <div class="log-entry">
-                <div class="log-header">
+                <div class="log-summary">
                     <span class="site-name">example.com</span>
-                    <button class="site-more">▼</button>
+                    <div class="log-actions">
+                        <span class="badge-count hidden">0 Items</span>
+                        <button class="btn-toggle">Details</button>
+                    </div>
                 </div>
-                <div class="list-sections hidden">
-                    <div class="site-image-list"></div>
-                    <div class="site-frame-list"></div>
+                <div class="log-details hidden">
+                    <!-- Details injected here -->
                 </div>
             </div>
         </template>
