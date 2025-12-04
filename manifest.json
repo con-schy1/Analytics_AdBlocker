@@ -22,13 +22,6 @@
       "128": "src/assets/images/128x128.png"
     }
   },
-  "content_scripts": [
-    {
-      "matches": ["*://*/*"],
-      "js": ["src/content_scripts/performance.js"],
-      "run_at": "document_start"
-    }
-  ],
   "background": {
     "service_worker": "src/background.js"
   },
