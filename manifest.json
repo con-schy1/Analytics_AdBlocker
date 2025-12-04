@@ -1,7 +1,7 @@
 {
   "name": "Analytics & Ad Blocker",
   "description": "An Analytics & Ad Blocker for a more sustainable internet.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "manifest_version": 3,
   "options_page": "src/options/options.html",
   "declarative_net_request": {

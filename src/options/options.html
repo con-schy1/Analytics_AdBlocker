@@ -3,131 +3,256 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Analytics & Ads blocker Settings</title>
+        <title>Settings - Analytics & Ad Blocker</title>
         <link rel="stylesheet" href="options.css" />
-        <script src="../chart.js"></script>
     </head>
     <body>
         <div class="layout-container">
             <!-- Sidebar -->
             <aside class="sidebar">
                 <div class="logo-area">
-                    <img src="../assets/images/128x128.png" alt="logo" />
-                    <h2>Analytics & Ads blocker</h2>
+                    <img
+                        src="../assets/images/128x128.png"
+                        width="60px"
+                        alt="logo"
+                    />
+                    <h2>Analytics &<br />Ad Blocker</h2>
                 </div>
 
                 <nav class="nav-menu">
-                    <button class="nav-item active" data-tab="dashboard">
-                        Dashboard
+                    <button class="nav-item active" data-tab="blocklist">
+                        Custom Blocklist
                     </button>
-                    <button class="nav-item" data-tab="requests">
-                        Request Log
-                    </button>
-                    <button class="nav-item" data-tab="settings">
-                        Settings
-                    </button>
+                    <button class="nav-item" data-tab="about">About</button>
                 </nav>
 
                 <div class="sidebar-footer">
-                    <code>v1.0.0</code>
-                    <img
-                        src="../assets/images/kofi.png"
-                        width="30px"
-                        alt="logo"
-                    />
+                    <a
+                        href="https://ko-fi.com/U6U46R9FA"
+                        target="_blank"
+                        class="kofi-button"
+                    >
+                        <img
+                            src="../assets/images/kofi.png"
+                            width="30px"
+                            alt="logo"
+                        />
+                        Support on Ko-fi
+                    </a>
+                    <div class="version-text">v2.0.0</div>
                 </div>
             </aside>
 
             <!-- Main Content -->
             <main class="main-content">
                 <header class="top-bar">
-                    <h1 id="page-title">Dashboard</h1>
+                    <h1 id="page-title">Custom Blocklist</h1>
                 </header>
 
-                <!-- DASHBOARD VIEW -->
-                <div id="view-dashboard" class="view-section active">
-                    <!-- Stats Row -->
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <span class="stat-label">Total Blocked</span>
-                            <span class="stat-value" id="total-blocked">0</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-label">Ads Stopped</span>
-                            <span class="stat-value" id="ads-blocked">0</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-label">Trackers Blocked</span>
-                            <span class="stat-value" id="analytics-blocked"
-                                >0</span
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Chart Section -->
-                    <div class="content-card chart-wrapper">
-                        <div class="card-header">
-                            <h3>Blocking History</h3>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="myChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- REQUESTS VIEW -->
-                <div id="view-requests" class="view-section hidden">
+                <!-- BLOCKLIST VIEW -->
+                <div id="view-blocklist" class="view-section active">
+                    <!-- Add Rule Section -->
                     <div class="content-card">
                         <div class="card-header">
-                            <h3>Recent Activity</h3>
-                            <button id="refresh-log" class="btn-sm">
-                                Refresh
-                            </button>
+                            <h3>Add New Block Rule</h3>
                         </div>
-                        <div id="requestDiv" class="log-list">
-                            <!-- JS populates this -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SETTINGS VIEW -->
-                <div id="view-settings" class="view-section hidden">
-                    <div class="content-card">
-                        <div class="card-header">
-                            <h3>Data Management</h3>
-                        </div>
-                        <div class="setting-row">
-                            <div class="setting-info">
-                                <h4>Clear Activity History</h4>
-                                <p>
-                                    Remove all stored charts and request logs
-                                    permanently.
-                                </p>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="rule-type">Rule Type</label>
+                                <select id="rule-type" class="input-select">
+                                    <option value="domain">
+                                        Block Everything (Entire Domain)
+                                    </option>
+                                    <option value="ads">
+                                        Block Ads (Scripts, Frames, XHR)
+                                    </option>
+                                    <option value="analytics">
+                                        Block Analytics (Trackers, Pixels)
+                                    </option>
+                                    <option value="regex">
+                                        Regex Pattern (Advanced)
+                                    </option>
+                                </select>
                             </div>
-                            <button id="clear-data-btn" class="btn btn-danger">
-                                Clear Data
+
+                            <div class="form-group" id="domain-input-group">
+                                <label for="domain-input"
+                                    >Domain to Block</label
+                                >
+                                <input
+                                    type="text"
+                                    id="domain-input"
+                                    class="input-text"
+                                    placeholder="example-ads.com"
+                                />
+                                <small class="input-hint"
+                                    >Enter a domain without protocol (e.g.,
+                                    ads.example.com)</small
+                                >
+                            </div>
+
+                            <div
+                                class="form-group hidden"
+                                id="regex-input-group"
+                            >
+                                <label for="regex-input">Regex Pattern</label>
+                                <input
+                                    type="text"
+                                    id="regex-input"
+                                    class="input-text"
+                                    placeholder="https?://.*\\.example-ads\\.com/.*"
+                                />
+                                <small class="input-hint"
+                                    >Use RE2 syntax. Max 2KB complexity.
+                                    <a
+                                        href="https://github.com/google/re2/wiki/Syntax"
+                                        target="_blank"
+                                        >Learn more</a
+                                    ></small
+                                >
+                            </div>
+
+                            <button id="add-rule-btn" class="btn btn-primary">
+                                Add Rule
                             </button>
+                        </div>
+                    </div>
+
+                    <!-- Current Rules List -->
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3>Active Custom Rules</h3>
+                            <span id="rule-count" class="badge">0 rules</span>
+                        </div>
+                        <div id="rules-list" class="rules-container">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ABOUT VIEW -->
+                <div id="view-about" class="view-section hidden">
+                    <div class="content-card">
+                        <div class="card-body">
+                            <h2 style="margin-bottom: 16px">
+                                About Analytics & Ad Blocker
+                            </h2>
+                            <p
+                                style="
+                                    margin-bottom: 16px;
+                                    line-height: 1.6;
+                                    color: var(--text-secondary);
+                                "
+                            >
+                                A lightweight, privacy-focused extension that
+                                blocks intrusive ads and invisible trackers.
+                            </p>
+
+                            <div
+                                style="
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    gap: 20px;
+                                    margin-bottom: 24px;
+                                "
+                            >
+                                <div
+                                    style="
+                                        background: #f9fafb;
+                                        padding: 16px;
+                                        border-radius: 8px;
+                                        border: 1px solid #e5e7eb;
+                                    "
+                                >
+                                    <strong>Version</strong>
+                                    <div
+                                        style="font-size: 18px; margin-top: 4px"
+                                    >
+                                        2.0.0
+                                    </div>
+                                </div>
+                                <div
+                                    style="
+                                        background: #f9fafb;
+                                        padding: 16px;
+                                        border-radius: 8px;
+                                        border: 1px solid #e5e7eb;
+                                    "
+                                >
+                                    <strong>License</strong>
+                                    <div
+                                        style="font-size: 18px; margin-top: 4px"
+                                    >
+                                        Apache-2.0
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3
+                                style="
+                                    margin-top: 24px;
+                                    margin-bottom: 12px;
+                                    border-bottom: 1px solid #e5e7eb;
+                                    padding-bottom: 8px;
+                                "
+                            >
+                                Rule Capabilities
+                            </h3>
+                            <p
+                                style="
+                                    margin-bottom: 12px;
+                                    color: var(--text-secondary);
+                                "
+                            >
+                                You can manage up to
+                                <strong>5,000 custom rules</strong>. These rules
+                                persist across browser updates and restarts.
+                            </p>
+
+                            <ul
+                                style="
+                                    padding-left: 20px;
+                                    line-height: 1.8;
+                                    color: var(--text-primary);
+                                "
+                            >
+                                <li>
+                                    <strong>Block Everything:</strong>
+                                    Completely blocks all connections to a
+                                    specific domain.
+                                </li>
+                                <li>
+                                    <strong>Ad Server:</strong> Targeted
+                                    blocking of scripts, frames, and objects
+                                    used to deliver ads.
+                                </li>
+                                <li>
+                                    <strong>Analytics:</strong> Blocks invisible
+                                    pixels, tracking scripts, and ping requests.
+                                </li>
+                                <li>
+                                    <strong>Regex Rules:</strong> Advanced
+                                    pattern matching using RE2 syntax (Limit:
+                                    1,000 active regex rules).
+                                </li>
+                            </ul>
+
+                            <div
+                                style="
+                                    margin-top: 32px;
+                                    font-size: 13px;
+                                    color: var(--text-secondary);
+                                    text-align: center;
+                                "
+                            >
+                                &copy; 2025 Analytics & Ad Blocker. All rights
+                                reserved.
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
-
-        <!-- Templates -->
-        <template id="site-info-template">
-            <div class="log-entry">
-                <div class="log-summary">
-                    <span class="site-name">example.com</span>
-                    <div class="log-actions">
-                        <span class="badge-count hidden">0 Items</span>
-                        <button class="btn-toggle">Details</button>
-                    </div>
-                </div>
-                <div class="log-details hidden">
-                    <!-- Details injected here -->
-                </div>
-            </div>
-        </template>
 
         <script src="myscripts.js"></script>
     </body>
