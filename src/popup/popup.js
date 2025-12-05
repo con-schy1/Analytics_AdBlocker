@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const isPaused = !!pausedData.paused;
 
   applyPausedUI(isPaused, statusAnim, blockedText, pauseBtn, resumeBtn);
+  await setBadgeFromPaused(isPaused);
 
   // ----- Init global toggle state -----
   const toggleStateData = await chrome.storage.local.get("globalToggles");
@@ -41,6 +42,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     applyPausedUI(true, statusAnim, blockedText, pauseBtn, resumeBtn);
     await chrome.storage.local.set({ paused: true });
 
+    await setBadgeFromPaused(true); // <- add this
+
     await chrome.declarativeNetRequest.updateEnabledRulesets({
       disableRulesetIds: ["ruleset_1"],
     });
@@ -52,6 +55,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   resumeBtn.addEventListener("click", async () => {
     applyPausedUI(false, statusAnim, blockedText, pauseBtn, resumeBtn);
     await chrome.storage.local.set({ paused: false });
+
+    await setBadgeFromPaused(false); // <- add this
 
     await chrome.declarativeNetRequest.updateEnabledRulesets({
       enableRulesetIds: ["ruleset_1"],
@@ -208,4 +213,15 @@ function buildVideoRule() {
       resourceTypes: ["media"],
     },
   };
+}
+
+// Badge helper: show "ON" when active, hide when paused
+async function setBadgeFromPaused(paused) {
+  if (paused) {
+    // Empty string hides the badge
+    await chrome.action.setBadgeText({ text: "" });
+  } else {
+    await chrome.action.setBadgeBackgroundColor({ color: "#22c55e" });
+    await chrome.action.setBadgeText({ text: "ON" });
+  }
 }
