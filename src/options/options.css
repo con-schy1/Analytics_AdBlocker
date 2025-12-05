@@ -24,6 +24,7 @@ body {
     overflow: hidden;
 }
 
+/* Layout Grid */
 .layout-container {
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
@@ -38,9 +39,7 @@ body {
     flex-direction: column;
     padding: 24px;
 }
-/* ... (Keep previous root variables) ... */
 
-/* Logo Styling */
 .logo-area {
     display: flex;
     flex-direction: column;
@@ -49,8 +48,7 @@ body {
     text-align: center;
 }
 
-.logo-icon {
-    font-size: 48px;
+.logo-area img {
     margin-bottom: 12px;
 }
 
@@ -59,42 +57,6 @@ body {
     font-weight: 700;
     color: var(--primary);
     line-height: 1.4;
-}
-
-/* Ko-fi Button Styling */
-.sidebar-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-top: auto;
-}
-
-.kofi-button {
-    background-color: var(--primary);
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.kofi-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.version-text {
-    font-size: 12px;
-    color: var(--text-secondary);
 }
 
 .nav-menu {
@@ -121,10 +83,46 @@ body {
     background-color: #f9fafb;
     color: var(--text-primary);
 }
+
 .nav-item.active {
     background-color: #eff6ff;
     color: var(--primary);
     font-weight: 600;
+}
+
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.kofi-button {
+    background-color: #ff5f5f;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kofi-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.version-text {
+    font-size: 12px;
+    color: var(--text-secondary);
 }
 
 /* Main Content */
@@ -136,9 +134,19 @@ body {
 .top-bar {
     margin-bottom: 32px;
 }
+
 h1 {
     font-size: 24px;
     font-weight: 700;
+}
+
+/* View Sections */
+.view-section {
+    display: none;
+}
+
+.view-section.active {
+    display: block;
 }
 
 /* Content Cards */
@@ -148,6 +156,8 @@ h1 {
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     margin-bottom: 24px;
+    display: block;
+    min-width: 0;
 }
 
 .card-header {
@@ -285,17 +295,6 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Add these to your options.css */
-.badge-ads {
-    background: #fef3c7;
-    color: #92400e; /* Amber/Orange */
-}
-
-.badge-analytics {
-    background: #e0e7ff;
-    color: #3730a3; /* Indigo/Purple */
-}
-
 .badge-domain {
     background: #dbeafe;
     color: #1e40af;
@@ -306,11 +305,130 @@ h1 {
     color: #92400e;
 }
 
+.badge-ads {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-analytics {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
 .empty-state {
     padding: 40px;
     text-align: center;
     color: var(--text-secondary);
     font-style: italic;
+}
+
+/* About Section Styles */
+.about-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.about-intro {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* GitHub-style Badges */
+.badges-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.badge-shield {
+    display: inline-flex;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+        sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.badge-label {
+    background: #555;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 3px 0 0 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-value {
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 0 3px 3px 0;
+    font-weight: 700;
+}
+
+.badge-value-blue {
+    background: #007ec6;
+}
+
+.badge-value-green {
+    background: #97ca00;
+}
+
+/* GitHub Link */
+.github-link-container {
+    margin-bottom: 32px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #24292e;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.github-link:hover {
+    background: #e5e7eb;
+}
+
+/* Section Headings */
+.section-heading {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+
+.section-intro {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.feature-list {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.feature-list li {
+    margin-bottom: 8px;
+}
+
+.about-footer {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: center;
 }
 
 /* Helpers */

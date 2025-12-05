@@ -18,7 +18,7 @@ const GLOBAL_IMG_RULE_ID = 9000002;
 const GLOBAL_VIDEO_RULE_ID = 9000003;
 
 chrome.runtime.onInstalled.addListener(async function (object) {
-  let externalUrl = "https://github.com/con-schy1/Analytics_AdBlocker#readme";
+  // chrome.tabs.create({ url: "options.html?tab=about" });
   if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
     // 1. Get all existing dynamic rules
     const existingRules = await chrome.declarativeNetRequest.getDynamicRules();
@@ -38,7 +38,8 @@ chrome.runtime.onInstalled.addListener(async function (object) {
       globalToggles: { js: false, images: false, videos: false },
     });
 
-    chrome.tabs.create({ url: externalUrl });
+    // chrome.runtime.openOptionsPage();
+    chrome.tabs.create({ url: "options.html?tab=about" });
   }
   chrome.storage.local.set({ paused: false });
 });

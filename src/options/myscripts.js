@@ -3,6 +3,15 @@
 // --- RULE MANAGEMENT ---
 let currentRuleType = "domain";
 
+const GLOBAL_JS_RULE_ID = 9000001;
+const GLOBAL_IMG_RULE_ID = 9000002;
+const GLOBAL_VIDEO_RULE_ID = 9000003;
+const RESERVED_IDS = [
+  GLOBAL_JS_RULE_ID,
+  GLOBAL_IMG_RULE_ID,
+  GLOBAL_VIDEO_RULE_ID,
+];
+
 // Toggle inputs based on selection
 document.getElementById("rule-type").addEventListener("change", (e) => {
   currentRuleType = e.target.value;
@@ -60,15 +69,6 @@ document.getElementById("add-rule-btn").addEventListener("click", async () => {
     alert("Error adding rule: " + error.message);
   }
 });
-
-const GLOBAL_JS_RULE_ID = 9000001;
-const GLOBAL_IMG_RULE_ID = 9000002;
-const GLOBAL_VIDEO_RULE_ID = 9000003;
-const RESERVED_IDS = [
-  GLOBAL_JS_RULE_ID,
-  GLOBAL_IMG_RULE_ID,
-  GLOBAL_VIDEO_RULE_ID,
-];
 
 // Add Block Rule Function
 async function addBlockRule(pattern, type) {
@@ -293,5 +293,15 @@ document.querySelectorAll(".nav-item").forEach((btn) => {
   });
 });
 
-// --- INIT ---
-loadCustomRules();
+// / Check for URL params to set active tab
+const urlParams = new URLSearchParams(window.location.search);
+const tabParam = urlParams.get("tab");
+
+if (tabParam === "about") {
+  // Simulate click on About tab
+  const aboutBtn = document.querySelector('.nav-item[data-tab="about"]');
+  if (aboutBtn) aboutBtn.click();
+} else {
+  // Default load behavior
+  loadCustomRules();
+}
