@@ -159,10 +159,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Spreads items out */
+    flex-wrap: wrap;
+    gap: 12px;
+
     padding: 12px 16px;
     background-color: #f8fafc;
     border-top: 1px solid #e2e8f0;
-    gap: 12px;
 }
 
 .main-control {
@@ -206,6 +208,10 @@ body {
 }
 .btn-resume:hover {
     background-color: #1d4ed8;
+}
+
+#open-dashboard {
+    inline-size: 100%;
 }
 
 /* Compact Toggle Buttons */

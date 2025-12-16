@@ -104,7 +104,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.open(chrome.runtime.getURL("options.html"));
       }
     });
+
+  // in popup.js (or options page), add a "Dashboard" button handler
+  document.getElementById("open-dashboard").addEventListener("click", () => {
+    chrome.tabs.create({ url: chrome.runtime.getURL("dashboard.html") });
+  });
 });
+
+// popup.js (add to your existing DOMContentLoaded)
+
+async function getActiveTabId() {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  return tab?.id;
+}
 
 // ----- UI helpers -----
 function applyPausedUI(isPaused, svg, blockedText, pauseBtn, resumeBtn) {

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Dashboard - Analytics Ad Blocker</title>
+        <link rel="stylesheet" href="dashboard.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo">A</div>
+                <div class="brandText">
+                    <div class="brandTitle">Analytics Ad Blocker</div>
+                    <div class="brandSub">Blocked Requests Dashboard</div>
+                </div>
+            </div>
+
+            <div class="topbarActions">
+                <button id="open-settings" class="btn">Settings</button>
+            </div>
+        </header>
+
+        <main class="page">
+            <section class="toolbar">
+                <label class="field">
+                    Scope
+                    <select id="scope">
+                        <option value="active" selected>This tab</option>
+                        <option value="all">All tabs</option>
+                    </select>
+                </label>
+
+                <label class="field">
+                    Time window
+                    <select id="windowMs">
+                        <option value="60000">Last 1 min</option>
+                        <option value="300000" selected>Last 5 min</option>
+                        <option value="900000">Last 15 min</option>
+                        <option value="3600000">Last 1 hour</option>
+                    </select>
+                </label>
+
+                <label class="field fieldGrow">
+                    Search
+                    <input
+                        id="search"
+                        placeholder="Filter by URL/host/initiator/ruleId/type…"
+                    />
+                </label>
+
+                <label class="field fieldInline">
+                    <input id="autoRefresh" type="checkbox" />
+                    Auto
+                </label>
+
+                <button id="refresh" class="btn btnPrimary">Refresh</button>
+                <button id="clear" class="btn btnDanger">Clear</button>
+            </section>
+
+            <section id="kpis" class="kpis"></section>
+
+            <section class="grid">
+                <div class="panel">
+                    <div class="panelHead">
+                        <h3>By resource type</h3>
+                        <span class="muted" id="typeHint"></span>
+                    </div>
+                    <div id="byType" class="bars"></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panelHead">
+                        <h3>Top initiators</h3>
+                        <span class="muted" id="initHint"></span>
+                    </div>
+                    <div id="byInitiator" class="bars"></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panelHead">
+                        <h3>Top destination hosts</h3>
+                        <span class="muted" id="hostHint"></span>
+                    </div>
+                    <div id="byHost" class="bars"></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panelHead">
+                        <h3>Top rule IDs</h3>
+                        <span class="muted" id="ruleHint"></span>
+                    </div>
+                    <div id="byRule" class="bars"></div>
+                </div>
+            </section>
+
+            <section class="panel panelTable">
+                <div class="panelHead">
+                    <h3>Recent events</h3>
+                    <div class="rightHead">
+                        <span class="badge" id="count">0</span>
+                        <button class="btn btnSmall" id="exportJson">
+                            Export JSON
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tableWrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Type</th>
+                                <th>Method</th>
+                                <th>Initiator</th>
+                                <th>Destination</th>
+                                <th>Rule</th>
+                                <th class="colTab">Tab</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <script src="dashboard.bundle.js"></script>
+    </body>
+</html>
