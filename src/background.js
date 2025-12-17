@@ -89,8 +89,6 @@ if (chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener) {
     // const action =
     //   ruleId != null ? await resolveActionType(ruleId, rulesetId) : "block";
 
-    console.log(e);
-
     // e typically includes: tabId, request: { url, method, type, ... }, rule: { ruleId, rulesetId }, timeStamp...
     await appendLog(tabId, {
       ts: Date.now(),
