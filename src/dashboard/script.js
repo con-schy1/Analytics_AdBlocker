@@ -202,8 +202,15 @@ function renderTable(items, limit = 200) {
 }
 
 async function getActiveTabId() {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  return tab?.id ?? null;
+  // const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  // return tab?.id ?? null;
+
+  const params = new URLSearchParams(window.location.search);
+  const raw = params.get("activeTabId");
+  if (!raw) return null;
+
+  const n = Number(raw);
+  return Number.isInteger(n) && n > 0 ? n : null;
 }
 
 function applyScopeUI() {
@@ -283,11 +290,6 @@ function setAutoRefresh(enabled) {
     timer = setInterval(loadDataAndRender, 2000);
   }
 }
-
-els.openSettings.addEventListener("click", () => {
-  if (chrome.runtime.openOptionsPage) chrome.runtime.openOptionsPage();
-  else chrome.tabs.create({ url: chrome.runtime.getURL("options.html") });
-});
 
 els.refresh.addEventListener("click", loadDataAndRender);
 els.clear.addEventListener("click", clearLogs);

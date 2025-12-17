@@ -2,8 +2,38 @@
 const LOG_KEY = "dnrMatchLogByTab";
 const MAX_PER_TAB = 200;
 const MAXSITES = 14;
+// Cache: ruleId -> action.type (dynamic + session only)
+let actionTypeByRuleId = new Map();
 
 // ---- helpers ----
+async function rebuildActionCache() {
+  //not using
+  const dyn = await chrome.declarativeNetRequest.getDynamicRules(); // includes your toggles + custom rules [web:9]
+  const ses = chrome.declarativeNetRequest.getSessionRules
+    ? await chrome.declarativeNetRequest.getSessionRules()
+    : [];
+
+  const map = new Map();
+  for (const r of [...dyn, ...ses]) {
+    if (r?.id != null && r?.action?.type) map.set(r.id, r.action.type);
+  }
+  actionTypeByRuleId = map;
+}
+
+async function resolveActionType(ruleId, rulesetId) {
+  // 1) dynamic/session lookup
+  if (actionTypeByRuleId.has(ruleId)) return actionTypeByRuleId.get(ruleId);
+
+  // 2) maybe cache is stale (rules added/removed) -> rebuild once
+  await rebuildActionCache();
+  if (actionTypeByRuleId.has(ruleId)) return actionTypeByRuleId.get(ruleId);
+
+  // 3) static rulesets: no direct lookup; choose a safe fallback
+  // If your packaged ruleset_1 is currently only "block", fallback to "block".
+  // Later, if you add redirect to static ruleset, add an index file.
+  return "block";
+}
+
 async function getLogMap() {
   const obj = await chrome.storage.session.get(LOG_KEY);
   return obj[LOG_KEY] || {};
@@ -54,6 +84,11 @@ if (chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener) {
     const tabId = e?.request?.tabId ?? e?.tabId ?? -1;
     if (tabId < 0) return;
 
+    const ruleId = e?.rule?.ruleId;
+    const rulesetId = e?.rule?.rulesetId;
+    // const action =
+    //   ruleId != null ? await resolveActionType(ruleId, rulesetId) : "block";
+
     console.log(e);
 
     // e typically includes: tabId, request: { url, method, type, ... }, rule: { ruleId, rulesetId }, timeStamp...
@@ -65,8 +100,8 @@ if (chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener) {
       method: e.request?.method,
       type: e.request?.type,
       initiator: e.request?.initiator,
-      ruleId: e.rule?.ruleId,
-      rulesetId: e.rule?.rulesetId,
+      ruleId,
+      rulesetId,
       action: "block", // since all your rules are block today
     });
   });
@@ -79,16 +114,17 @@ async function snapshotMatches(tabId, minTimeStamp) {
   const res = await chrome.declarativeNetRequest.getMatchedRules({
     tabId,
     minTimeStamp,
-  });
+  }); // [web:9]
 
-  // res.rules is an array of matched rules
   for (const r of res.rules || []) {
+    const action = "block"; //await resolveActionType(r.ruleId, r.rulesetId);
     await appendLog(tabId, {
       ts: r.timeStamp || Date.now(),
       source: "getMatchedRules",
       tabId,
       ruleId: r.ruleId,
       rulesetId: r.rulesetId,
+      action,
     });
   }
 }
@@ -170,6 +206,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 });
 
 chrome.runtime.onInstalled.addListener(async function (object) {
+  rebuildActionCache().catch(() => {});
+
   // chrome.tabs.create({ url: "options.html?tab=about" });
   if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
     // 1. Get all existing dynamic rules
