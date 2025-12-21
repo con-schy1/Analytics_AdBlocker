@@ -157,6 +157,7 @@ body {
 /* --- UPDATED FOOTER LAYOUT --- */
 .footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between; /* Spreads items out */
     flex-wrap: wrap;
@@ -168,7 +169,13 @@ body {
 }
 
 .main-control {
+    inline-size: 100%;
     flex: 1; /* Takes available space */
+}
+
+.secondary-control {
+    display: flex;
+    gap: 8px;
 }
 
 .divider {
@@ -178,14 +185,18 @@ body {
 }
 
 .toggles-row {
+    inline-size: 100%;
     display: flex;
     gap: 8px;
 }
 
 /* Main Button Styling */
 .btn {
-    width: 100%;
-    padding: 8px 12px;
+    inline-size: 100%;
+
+    padding-block: 9px;
+    padding-inline: 12px;
+
     border: none;
     border-radius: 6px;
     font-size: 13px;
@@ -210,17 +221,16 @@ body {
     background-color: #1d4ed8;
 }
 
-#open-dashboard {
-    inline-size: 100%;
-}
-
 /* Compact Toggle Buttons */
 .icon-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 32px;
+
+    inline-size: 100%;
+
+    padding-block: 9px;
+
     border: 1px solid #e2e8f0;
     background: #ffffff;
     border-radius: 6px;

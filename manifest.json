@@ -1,7 +1,7 @@
 {
-  "name": "Analytics & Ad Blocker",
-  "description": "An Analytics & Ad Blocker for a more sustainable internet.",
-  "version": "3.0.0",
+  "name": "Analytics & Ad Blocker: Open Source Privacy Firewall",
+  "description": "An extension for privacy and security for the internet.",
+  "version": "4.0.0",
   "manifest_version": 3,
   "options_page": "options.html",
   "declarative_net_request": {
@@ -12,6 +12,9 @@
         "path": "rules.json"
       }
     ]
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
   },
   "action": {
     "default_popup": "popup.html",
@@ -27,13 +30,17 @@
   },
   "permissions": [
     "storage",
+    "sidePanel",
+    "activeTab",
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback"
+    "declarativeNetRequestFeedback",
+    "cookies"
   ],
   "icons": {
     "16": "assets/images/16x16.png",
     "32": "assets/images/32x32.png",
     "48": "assets/images/48x48.png",
     "128": "assets/images/128x128.png"
-  }
+  },
+  "optional_host_permissions": ["*://*/*", "<all_urls>"]
 }

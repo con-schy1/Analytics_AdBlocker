@@ -4,6 +4,7 @@
 const GLOBAL_JS_RULE_ID = 9000001;
 const GLOBAL_IMG_RULE_ID = 9000002;
 const GLOBAL_VIDEO_RULE_ID = 9000003;
+const GLOBAL_COOKIES_RULE_ID = 9000004;
 
 document.addEventListener("DOMContentLoaded", async () => {
   const pauseBtn = document.getElementById("pause");
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const jsBtn = document.getElementById("toggle-js");
   const imgBtn = document.getElementById("toggle-images");
   const videoBtn = document.getElementById("toggle-videos");
+  const cookiesBtn = document.getElementById("toggle-cookies");
 
   // ----- Init paused state -----
   const pausedData = await chrome.storage.local.get("paused");
@@ -28,11 +30,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     js: false,
     images: false,
     videos: false,
+    cookies: false,
   };
 
   setToggleVisual(jsBtn, toggles.js);
   setToggleVisual(imgBtn, toggles.images);
   setToggleVisual(videoBtn, toggles.videos);
+  setToggleVisual(cookiesBtn, toggles.cookies);
 
   // Ensure rules reflect stored state
   await syncGlobalRulesWithState(toggles);
@@ -94,6 +98,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     reloadActiveTab();
   });
 
+  cookiesBtn.addEventListener("click", async () => {
+    const newState = !cookiesBtn.classList.contains("active");
+    setToggleVisual(cookiesBtn, newState);
+    toggles.cookies = newState;
+    await applyGlobalToggle("cookies", newState);
+    await chrome.storage.local.set({ globalToggles: toggles });
+    reloadActiveTab();
+  });
+
   // Settings button
   document
     .getElementById("go-to-options")
@@ -119,6 +132,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             "dashboard.html?activeTabId=" + tabs[0].id,
           ),
         });
+    });
+  document
+    .getElementById("open-cookie-panel")
+    .addEventListener("click", async () => {
+      const tabs = await chrome.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
+      await chrome.sidePanel.open({ windowId: tabs[0].windowId });
+      // Optional: Send tab info to sidepanel
+      chrome.runtime.sendMessage({ type: "UPDATE_TAB", tabId: tabs[0].id });
     });
 });
 
@@ -163,6 +187,7 @@ async function syncGlobalRulesWithState(state) {
       GLOBAL_JS_RULE_ID,
       GLOBAL_IMG_RULE_ID,
       GLOBAL_VIDEO_RULE_ID,
+      GLOBAL_COOKIES_RULE_ID,
     ],
   });
 
@@ -189,6 +214,9 @@ async function applyGlobalToggle(kind, enabled) {
   } else if (kind === "videos") {
     removeIds.push(GLOBAL_VIDEO_RULE_ID);
     if (enabled) addRules.push(buildVideoRule());
+  } else if (kind === "cookies") {
+    removeIds.push(GLOBAL_COOKIES_RULE_ID);
+    if (enabled) addRules.push(buildCookiesRule());
   }
 
   if (removeIds.length > 0) {
@@ -234,6 +262,26 @@ function buildVideoRule() {
     action: { type: "block" },
     condition: {
       resourceTypes: ["media"],
+    },
+  };
+}
+
+// Matches ALL media/video/streaming
+function buildCookiesRule() {
+  return {
+    id: GLOBAL_COOKIES_RULE_ID,
+    priority: 1,
+    action: {
+      type: "modifyHeaders",
+      requestHeaders: [
+        {
+          header: "cookie",
+          operation: "remove",
+        },
+      ],
+    },
+    condition: {
+      resourceTypes: ["xmlhttprequest", "sub_frame"],
     },
   };
 }

@@ -103,6 +103,8 @@ if (chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener) {
       action: "block", // since all your rules are block today
     });
   });
+} else {
+  chrome.storage.local.set({ dashboardUnavailable: true });
 }
 
 // ---- B) Fallback: pull-based snapshot using getMatchedRules() ----
@@ -112,7 +114,7 @@ async function snapshotMatches(tabId, minTimeStamp) {
   const res = await chrome.declarativeNetRequest.getMatchedRules({
     tabId,
     minTimeStamp,
-  }); // [web:9]
+  });
 
   for (const r of res.rules || []) {
     const action = "block"; //await resolveActionType(r.ruleId, r.rulesetId);
@@ -204,6 +206,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 });
 
 chrome.runtime.onInstalled.addListener(async function (object) {
+  // chrome.storage.local.clear();
   rebuildActionCache().catch(() => {});
 
   // chrome.tabs.create({ url: "options.html?tab=about" });

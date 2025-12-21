@@ -6,10 +6,13 @@ let currentRuleType = "domain";
 const GLOBAL_JS_RULE_ID = 9000001;
 const GLOBAL_IMG_RULE_ID = 9000002;
 const GLOBAL_VIDEO_RULE_ID = 9000003;
+const GLOBAL_COOKIE_RULE_ID = 9000004;
+
 const RESERVED_IDS = [
   GLOBAL_JS_RULE_ID,
   GLOBAL_IMG_RULE_ID,
   GLOBAL_VIDEO_RULE_ID,
+  GLOBAL_COOKIE_RULE_ID,
 ];
 
 // Toggle inputs based on selection

@@ -218,6 +218,15 @@ function applyScopeUI() {
 }
 
 async function loadDataAndRender() {
+  // On load:
+  const { dashboardUnavailable } = await chrome.storage.local.get(
+    "dashboardUnavailable",
+  );
+  if (dashboardUnavailable) {
+    document.getElementById("storeModal").style.display = "flex";
+    return; // Exit early
+  }
+
   applyScopeUI();
 
   const windowMs = Number(els.windowMs.value);
@@ -325,3 +334,13 @@ els.exportJson.addEventListener("click", () => {
 // initial
 applyScopeUI();
 loadDataAndRender();
+
+// chrome storage listenes
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  for (let [changeKey, { oldValue, newValue }] of Object.entries(changes)) {
+    if (changeKey == "dashboardUnavailable" && newValue) {
+      document.getElementById("storeModal").style.display = "flex";
+      return; // Exit early
+    }
+  }
+});
