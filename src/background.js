@@ -141,16 +141,6 @@ async function snapshotAllTabs(minTimeStamp) {
   }
 }
 
-chrome.tabs.onUpdated.addListener((tabId, tab) => {
-  if (tab.status == "complete") {
-    // Check paused state before triggering the content script
-    chrome.storage.local.get("paused").then((data) => {
-      if (!data.paused) {
-        chrome.tabs.sendMessage(tabId, { start: true });
-      }
-    });
-  }
-});
 // Clear logs when tab closes (optional)
 chrome.tabs.onRemoved.addListener((tabId) => {
   clearTabLog(tabId);
@@ -206,6 +196,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 chrome.runtime.onInstalled.addListener(async function (object) {
   // chrome.storage.local.clear();
   rebuildActionCache().catch(() => {});
+  chrome.storage.local.set({ paused: false });
 
   // chrome.tabs.create({ url: "options.html?tab=about" });
   if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
@@ -230,5 +221,4 @@ chrome.runtime.onInstalled.addListener(async function (object) {
     // chrome.runtime.openOptionsPage();
     chrome.tabs.create({ url: "options.html?tab=about" });
   }
-  chrome.storage.local.set({ paused: false });
 });
