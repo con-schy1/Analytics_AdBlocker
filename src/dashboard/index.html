@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Dashboard - Analytics Ad Blocker</title>
         <link rel="stylesheet" href="dashboard.css" />
     </head>
-
     <body>
+        <!-- Store modal unchanged -->
         <div id="storeModal" class="store-modal" style="display: none">
             <div class="modal-content">
                 <h2>Dashboard Unavailable</h2>
@@ -17,12 +17,12 @@
                 </p>
                 <br />
                 <div class="steps">
-                    <h3>Get Full Dashboard (3 steps):</h3>
+                    <h3>Get Full Dashboard (3 steps)</h3>
                     <ol>
                         <li>
                             Download from
                             <a
-                                href="https://github.com/con-schy1/Analytics_AdBlocker"
+                                href="https://github.com/con-schy1/AnalyticsAdBlocker"
                                 target="_blank"
                                 >GitHub</a
                             >
@@ -31,13 +31,27 @@
                         <li>Load Unpacked folder → Dashboard works!</li>
                     </ol>
                 </div>
-                <!--<button id="closeModal">Got it</button>-->
+                <button id="closeModal">Got it</button>
             </div>
         </div>
 
         <div class="layout-container">
-            <!-- Main -->
-            <main class="main-content">
+            <!-- New Sidebar -->
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-page="dashboard">
+                        <span class="nav-icon">📊</span>
+                        Requests Viewer
+                    </a>
+                    <a href="#" class="nav-item" data-page="cookies">
+                        <span class="nav-icon">🍪</span>
+                        Cookies Viewer
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Dashboard Page (existing content) -->
+            <main class="main-content dashboard-page active">
                 <header class="top-bar">
                     <h1>Blocked Requests Dashboard</h1>
                 </header>
@@ -47,7 +61,6 @@
                     <div class="card-header">
                         <h3>Filters</h3>
                     </div>
-
                     <div class="card-body">
                         <div class="form-grid">
                             <div class="form-group">
@@ -59,7 +72,6 @@
                                     <option value="all">All tabs</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
                                 <label for="windowMs">Time window</label>
                                 <select id="windowMs" class="input-select">
@@ -71,7 +83,6 @@
                                     <option value="3600000">Last 1 hour</option>
                                 </select>
                             </div>
-
                             <div class="form-group form-grow">
                                 <label for="search">Search</label>
                                 <input
@@ -81,7 +92,6 @@
                                     placeholder="Filter by URL/host/initiator/ruleId/type..."
                                 />
                             </div>
-
                             <div class="form-group form-inline">
                                 <label class="checkbox">
                                     <input id="autoRefresh" type="checkbox" />
@@ -89,7 +99,6 @@
                                 </label>
                             </div>
                         </div>
-
                         <div class="actions-row">
                             <button
                                 id="refresh"
@@ -126,7 +135,6 @@
                             <div id="byType" class="bars"></div>
                         </div>
                     </div>
-
                     <div class="content-card">
                         <div class="card-header">
                             <h3>Top initiators</h3>
@@ -136,7 +144,6 @@
                             <div id="byInitiator" class="bars"></div>
                         </div>
                     </div>
-
                     <div class="content-card">
                         <div class="card-header">
                             <h3>Top destination hosts</h3>
@@ -146,7 +153,6 @@
                             <div id="byHost" class="bars"></div>
                         </div>
                     </div>
-
                     <div class="content-card">
                         <div class="card-header">
                             <h3>Top rule IDs</h3>
@@ -166,28 +172,73 @@
                             <span id="count" class="badge">0</span>
                         </div>
                     </div>
-
-                    <div class="card-body tableWrap">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Type</th>
-                                    <th>Method</th>
-                                    <th>Initiator</th>
-                                    <th>Destination</th>
-                                    <th>Rule</th>
-                                    <th class="colTab">Tab</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbody"></tbody>
-                        </table>
+                    <div class="card-body">
+                        <div class="tableWrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Type</th>
+                                        <th>Method</th>
+                                        <th>Initiator</th>
+                                        <th>Destination</th>
+                                        <th>Rule</th>
+                                        <th class="colTab">Tab</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
             </main>
+
+            <!-- Cookie Viewer Page (new) -->
+            <main class="main-content cookies-page">
+                <header class="top-bar">
+                    <h1>
+                        Cookies <span id="cookieCount" class="badge">0</span>
+                    </h1>
+                </header>
+
+                <div class="form-grid">
+                    <div class="form-group form-grow">
+                        <label for="domainFilter">Filter Domain</label>
+                        <input
+                            id="domainFilter"
+                            class="input-text"
+                            type="text"
+                            placeholder="e.g. google.com"
+                        />
+                    </div>
+                    <button id="refreshCookies" class="btn btn-primary">
+                        Refresh
+                    </button>
+                </div>
+
+                <div class="cookies-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Domain</th>
+                                <th>Name</th>
+                                <th>Value</th>
+                                <th>Path</th>
+                                <th>Expires</th>
+                                <th>Secure</th>
+                                <th>HttpOnly</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cookieTableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="status-bar">
+                    <span id="statusText">Click Refresh to load cookies</span>
+                </div>
+            </main>
         </div>
 
-        <!-- Keep your existing bundle name as-is -->
         <script src="dashboard.bundle.js"></script>
     </body>
 </html>

@@ -133,17 +133,17 @@ document.addEventListener("DOMContentLoaded", async () => {
           ),
         });
     });
-  document
-    .getElementById("open-cookie-panel")
-    .addEventListener("click", async () => {
-      const tabs = await chrome.tabs.query({
-        active: true,
-        currentWindow: true,
-      });
-      await chrome.sidePanel.open({ windowId: tabs[0].windowId });
-      // Optional: Send tab info to sidepanel
-      chrome.runtime.sendMessage({ type: "UPDATE_TAB", tabId: tabs[0].id });
-    });
+  // document
+  //   .getElementById("open-cookie-panel")
+  //   .addEventListener("click", async () => {
+  //     const tabs = await chrome.tabs.query({
+  //       active: true,
+  //       currentWindow: true,
+  //     });
+  //     await chrome.sidePanel.open({ windowId: tabs[0].windowId });
+  //     // Optional: Send tab info to sidepanel
+  //     chrome.runtime.sendMessage({ type: "UPDATE_TAB", tabId: tabs[0].id });
+  //   });
 });
 
 // popup.js (add to your existing DOMContentLoaded)

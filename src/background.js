@@ -1,14 +1,13 @@
 //This code is protected under Apache-2.0 license
 const LOG_KEY = "dnrMatchLogByTab";
-const MAX_PER_TAB = 200;
-const MAXSITES = 14;
+const MAX_PER_TAB = 300;
+const MAXSITES = 100;
 // Cache: ruleId -> action.type (dynamic + session only)
 let actionTypeByRuleId = new Map();
 
 // ---- helpers ----
 async function rebuildActionCache() {
-  //not using
-  const dyn = await chrome.declarativeNetRequest.getDynamicRules(); // includes your toggles + custom rules [web:9]
+  const dyn = await chrome.declarativeNetRequest.getDynamicRules(); // includes your toggles + custom rules
   const ses = chrome.declarativeNetRequest.getSessionRules
     ? await chrome.declarativeNetRequest.getSessionRules()
     : [];
@@ -79,7 +78,10 @@ async function clearTabLog(tabId) {
 
 // ---- A) Best case: live event stream (debug/feedback) ----
 // NOTE: availability can depend on browser/channel/policy; guard it.
-if (chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener) {
+if (
+  chrome.declarativeNetRequest.onRuleMatchedDebug &&
+  chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener
+) {
   chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(async (e) => {
     const tabId = e?.request?.tabId ?? e?.tabId ?? -1;
     if (tabId < 0) return;
@@ -103,9 +105,10 @@ if (chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener) {
       action: "block", // since all your rules are block today
     });
   });
-} else {
-  chrome.storage.local.set({ dashboardUnavailable: true });
 }
+// setTimeout(() => { //for testing
+//   chrome.storage.local.set({ dashboardUnavailable: true });
+// }, 9000);
 
 // ---- B) Fallback: pull-based snapshot using getMatchedRules() ----
 // This usually gives you matched rule IDs (less detail than debug event),
@@ -177,12 +180,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
       }
       return;
     }
-    // if (msg.type === "DNR_LOG_GET") {
-    //   const tabId = msg.tabId;
-    //   const map = await getLogMap();
-    //   sendResponse({ ok: true, items: map[String(tabId)] || [] });
-    //   return;
-    // }
 
     if (msg.type === "DNR_LOG_CLEAR") {
       if (tabId === null) await clearAllLogs();
@@ -192,6 +189,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     }
 
     if (msg.type === "DNR_SNAPSHOT") {
+      // need to be worked on. Might work in production
       const minTimeStamp = msg.minTimeStamp ?? Date.now() - 60_000;
 
       if (tabId === null) await snapshotAllTabs(minTimeStamp);
