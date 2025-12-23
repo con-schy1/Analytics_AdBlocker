@@ -239,7 +239,7 @@ async function loadDataAndRender() {
     document.getElementById("storeModal").style.display = "flex";
     // Close modal functionality
 
-    return; // Exit early
+    // return; // Exit early
   }
 
   applyScopeUI();
@@ -249,11 +249,11 @@ async function loadDataAndRender() {
   const tabId =
     els.scope.value === "active" ? await getActiveTabIdFromUrl() : null;
 
-  await chrome.runtime.sendMessage({
-    type: "DNR_SNAPSHOT",
-    tabId,
-    minTimeStamp,
-  });
+  // await chrome.runtime.sendMessage({
+  //   type: "DNR_SNAPSHOT",
+  //   tabId,
+  //   minTimeStamp,
+  // });
 
   const res = await chrome.runtime.sendMessage({
     type: "DNR_LOG_GET",

@@ -19,6 +19,7 @@ module.exports = {
     dashboard: "./src/dashboard/script.js", // Entry point for script.js
     options: "./src/options/myscripts.js", // Entry point for script.js
     background: "./src/background.js", // Entry point for script.js
+    content: "./src/content.js", // Entry point for script.js
   },
   output: {
     path: path.resolve(__dirname, "dist"),

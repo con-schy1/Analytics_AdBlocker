@@ -105,7 +105,9 @@ if (
       action: "block", // since all your rules are block today
     });
   });
+} else {
 }
+
 // setTimeout(() => { //for testing
 //   chrome.storage.local.set({ dashboardUnavailable: true });
 // }, 9000);
@@ -113,37 +115,130 @@ if (
 // ---- B) Fallback: pull-based snapshot using getMatchedRules() ----
 // This usually gives you matched rule IDs (less detail than debug event),
 // but still useful for “what rules fired recently?” style UI.
-async function snapshotMatches(tabId, minTimeStamp) {
-  const res = await chrome.declarativeNetRequest.getMatchedRules({
-    tabId,
-    minTimeStamp,
+// async function snapshotMatches(tabId, minTimeStamp) {
+//   const res = await chrome.declarativeNetRequest.getMatchedRules({
+//     tabId,
+//     minTimeStamp,
+//   });
+
+//   for (const r of res.rules || []) {
+//     const action = "block"; //await resolveActionType(r.ruleId, r.rulesetId);
+//     await appendLog(tabId, {
+//       ts: r.timeStamp || Date.now(),
+//       source: "getMatchedRules",
+//       tabId,
+//       ruleId: r.ruleId,
+//       rulesetId: r.rulesetId,
+//       action,
+//     });
+//   }
+// }
+
+// async function snapshotAllTabs(minTimeStamp) {
+//   const tabs = await chrome.tabs.query({});
+//   for (const t of tabs) {
+//     if (typeof t.id === "number") {
+//       await snapshotMatches(t.id, minTimeStamp);
+//     }
+//   }
+// }
+
+// --- OPTIMIZATION: Rule Indexing & Matching Logic ---
+const ruleIndex = { domainMap: new Map(), genericRules: [] };
+
+// Initialize: Load rules and build the index
+fetch(chrome.runtime.getURL("rules.json"))
+  .then((res) => res.json())
+  .then((rules) => {
+    buildRuleIndex(rules);
+    console.log("Rule index built in background.");
   });
 
-  for (const r of res.rules || []) {
-    const action = "block"; //await resolveActionType(r.ruleId, r.rulesetId);
-    await appendLog(tabId, {
-      ts: r.timeStamp || Date.now(),
-      source: "getMatchedRules",
-      tabId,
-      ruleId: r.ruleId,
-      rulesetId: r.rulesetId,
-      action,
-    });
-  }
+function buildRuleIndex(rules) {
+  const domainRegex = /([a-z0-9-]+\.[a-z0-9-]+)(?:\/|$)/i;
+  rules.forEach((rule) => {
+    const c = rule.condition;
+    // Extract domain for fast lookup
+    if (c.urlFilter) {
+      const clean = c.urlFilter.replace(/^\|\|/, "").replace(/\^/g, "");
+      const match = clean.match(domainRegex);
+      if (match && match[1] && match[1].length > 3) {
+        const key = match[1].toLowerCase();
+        if (!ruleIndex.domainMap.has(key)) ruleIndex.domainMap.set(key, []);
+        ruleIndex.domainMap.get(key).push(rule);
+        return;
+      }
+    }
+    ruleIndex.genericRules.push(rule);
+  });
 }
 
-async function snapshotAllTabs(minTimeStamp) {
-  const tabs = await chrome.tabs.query({});
-  for (const t of tabs) {
-    if (typeof t.id === "number") {
-      await snapshotMatches(t.id, minTimeStamp);
+function findMatchingRule(url, initiatorType) {
+  try {
+    const urlObj = new URL(url);
+    const hostname = urlObj.hostname.toLowerCase();
+    const parts = hostname.split(".");
+
+    // Map performance types to DNR types
+    const typeMap = {
+      script: "script",
+      img: "image",
+      xmlhttprequest: "xmlhttprequest",
+      fetch: "xmlhttprequest",
+      sub_frame: "sub_frame",
+      iframe: "sub_frame",
+    };
+    const reqType = typeMap[initiatorType] || "other";
+
+    // Helper to check a specific list of rules
+    const check = (list) =>
+      list.find((r) => {
+        const c = r.condition;
+        if (c.resourceTypes && !c.resourceTypes.includes(reqType)) return false;
+        if (c.urlFilter) {
+          const pattern = c.urlFilter.replace(/^\|\|/, ""); // Simple cleanup
+          if (!url.includes(pattern)) return false;
+        }
+        return true;
+      });
+
+    // 1. Check Domain Map (iterating subdomains)
+    while (parts.length > 1) {
+      const domain = parts.join(".");
+      if (ruleIndex.domainMap.has(domain)) {
+        const match = check(ruleIndex.domainMap.get(domain));
+        if (match) return match;
+      }
+      parts.shift();
     }
+
+    // 2. Check Generic Rules
+    return check(ruleIndex.genericRules);
+  } catch (e) {
+    return null;
   }
 }
 
 // Clear logs when tab closes (optional)
 chrome.tabs.onRemoved.addListener((tabId) => {
   clearTabLog(tabId);
+});
+
+// Check if the Debug API is available (Developer Mode)
+const isDebugAvailable = !!(
+  chrome.declarativeNetRequest.onRuleMatchedDebug &&
+  chrome.declarativeNetRequest.onRuleMatchedDebug.addListener
+);
+// Listen for new tabs or reloads to inform content script
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "complete") {
+    chrome.tabs
+      .sendMessage(tabId, {
+        type: "DNR_STATUS_UPDATE",
+        useSimulatedMode: !isDebugAvailable, // If Debug is FALSE, use Simulation (True)
+      })
+      .catch(() => {}); // Ignore errors if content script isn't ready
+  }
 });
 
 // ---- Messaging API for popup/options ----
@@ -178,15 +273,46 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
       return;
     }
 
-    if (msg.type === "DNR_SNAPSHOT") {
-      // need to be worked on. Might work in production
-      const minTimeStamp = msg.minTimeStamp ?? Date.now() - 60_000;
+    // if (msg.type === "DNR_SNAPSHOT") {
+    //   // need to be worked on. Might work in production
+    //   const minTimeStamp = msg.minTimeStamp ?? Date.now() - 60_000;
 
-      if (tabId === null) await snapshotAllTabs(minTimeStamp);
-      else await snapshotMatches(tabId, minTimeStamp);
+    //   if (tabId === null) await snapshotAllTabs(minTimeStamp);
+    //   else await snapshotMatches(tabId, minTimeStamp);
 
-      sendResponse({ ok: true });
-      return;
+    //   sendResponse({ ok: true });
+    //   return;
+    // }
+    if (msg.type === "GET_DNR_STATUS") {
+      sendResponse({ useSimulatedMode: !isDebugAvailable });
+    }
+
+    if (
+      msg.type === "DNR_MATCH_BATCH" &&
+      !chrome.declarativeNetRequest.onRuleMatchedDebug
+    ) {
+      console.log(1);
+      const contentTabId = sender.tab ? sender.tab.id : tabId;
+
+      msg.items.forEach(async (item) => {
+        const rule = findMatchingRule(item.url, item.type);
+
+        // Only log if we found a matching rule in our blocklist
+        if (rule) {
+          await appendLog(contentTabId, {
+            ts: item.ts,
+            source: "content_script", // Distinct source tag
+            tabId: contentTabId,
+            url: item.url,
+            method: "GET", // Performance API doesn't allow seeing method, assume GET
+            type: item.type,
+            initiator: item.initiator, // <-
+            ruleId: rule.id,
+            rulesetId: "ruleset_1",
+            action: "block",
+          });
+        }
+      });
     }
   })().catch((err) => sendResponse({ ok: false, error: String(err) }));
 
