@@ -1,42 +1,50 @@
 {
-  "name": "Analytics & Ad Blocker",
-  "description": "An Analytics & Ad Blocker for a more sustainable internet.",
-  "version": "1.0.0",
+  "name": "Analytics & Ad Blocker: Open Source Privacy Firewall",
+  "description": "An extension for privacy and security for the internet.",
+  "version": "4.1.0",
   "manifest_version": 3,
-  "options_page": "src/options/options.html",
+  "options_page": "options.html",
   "declarative_net_request": {
     "rule_resources": [
       {
         "id": "ruleset_1",
         "enabled": true,
-        "path": "src/rules.json"
+        "path": "rules.json"
       }
     ]
   },
   "action": {
-    "default_popup": "src/popup/popup.html",
+    "default_popup": "popup.html",
     "default_icon": {
-      "16": "src/assets/images/16x16.png",
-      "32": "src/assets/images/32x32.png",
-      "48": "src/assets/images/48x48.png",
-      "128": "src/assets/images/128x128.png"
+      "16": "assets/images/16x16.png",
+      "32": "assets/images/32x32.png",
+      "48": "assets/images/48x48.png",
+      "128": "assets/images/128x128.png"
     }
+  },
+  "icons": {
+    "16": "assets/images/16x16.png",
+    "32": "assets/images/32x32.png",
+    "48": "assets/images/48x48.png",
+    "128": "assets/images/128x128.png"
+  },
+  "background": {
+    "service_worker": "background.bundle.js"
   },
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["src/content_scripts/performance.js"],
-      "run_at": "document_start"
+      "matches": ["<all_urls>"],
+      "js": ["content.bundle.js"],
+      "run_at": "document_start",
+      "all_frames": true
     }
   ],
-  "background": {
-    "service_worker": "src/background.js"
-  },
-  "permissions": ["storage", "declarativeNetRequest"],
-  "icons": {
-    "16": "src/assets/images/16x16.png",
-    "32": "src/assets/images/32x32.png",
-    "48": "src/assets/images/48x48.png",
-    "128": "src/assets/images/128x128.png"
-  }
+  "permissions": [
+    "storage",
+    "activeTab",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "cookies"
+  ],
+  "optional_host_permissions": ["<all_urls>"]
 }

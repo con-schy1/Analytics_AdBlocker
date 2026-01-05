@@ -1,14 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="popup.css" />
-        <!-- Make sure chart.js is in your extension folder -->
-        <script src="../chart.js"></script>
+        <meta charset="utf-8" />
+        <title>Analytics & Ad Blocker</title>
+        <link rel="stylesheet" href="popup.css" />
     </head>
     <body>
-        <!-- Header -->
         <header class="header">
             <div class="heading-logo">
                 <img
@@ -16,9 +13,9 @@
                     width="30px"
                     alt="logo"
                 />
-                <h1 class="title">Analytics & Ad blocker</h1>
+                <span class="title">Analytics & Ad Blocker</span>
             </div>
-            <div id="go-to-options" class="settings-icon">
+            <div class="settings-icon" id="go-to-options" title="Open settings">
                 <svg
                     width="20"
                     height="20"
@@ -29,7 +26,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                 >
-                    <circle cx="12" cy="12" r="3"></circle>
+                    ircle cx="12" cy="12" r="3"></circle>
                     <path
                         d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
                     ></path>
@@ -37,45 +34,90 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="container">
-            <!-- Hidden Status (Kept for JS compatibility) -->
-            <div id="blocked" style="display: none">Blocked</div>
-
-            <!-- Chart Section -->
-            <div class="chart-container">
-                <canvas id="myChart"></canvas>
-                <div class="chart-center-text">
-                    <div id="scoreHTML" class="score-number">0</div>
-                    <div class="score-label">Blocked</div>
-                </div>
-            </div>
-
-            <!-- Custom Legend -->
-            <div class="legend">
-                <div class="legend-item">
-                    <span class="dot orange"></span>
-                    <span>Analytics</span>
-                </div>
-                <div class="legend-item">
-                    <span class="dot yellow"></span>
-                    <span>Ads</span>
+            <!-- Status Animation -->
+            <div class="status-wrapper">
+                <svg
+                    id="status-anim"
+                    class="status-svg"
+                    viewBox="0 0 120 120"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <defs>
+                        <linearGradient
+                            id="grad"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="0%"
+                        >
+                            <stop offset="0%" stop-color="#2563eb" />
+                            <stop offset="100%" stop-color="#22c55e" />
+                        </linearGradient>
+                    </defs>
+                    <circle
+                        class="status-bg"
+                        cx="60"
+                        cy="60"
+                        r="40"
+                        fill="none"
+                        stroke="#e5e7eb"
+                        stroke-width="10"
+                    />
+                    <circle
+                        class="status-ring"
+                        cx="60"
+                        cy="60"
+                        r="40"
+                        fill="none"
+                        stroke="url(#grad)"
+                        stroke-width="10"
+                        stroke-linecap="round"
+                    />
+                </svg>
+                <div class="status-text">
+                    <div id="blocked" class="status-label">Blocked</div>
                 </div>
             </div>
         </main>
 
-        <!-- Footer Actions -->
+        <!-- Unified Footer -->
         <footer class="footer">
-            <button id="pause" class="btn btn-pause">Pause Blocking</button>
-            <button id="resume" class="btn btn-resume" style="display: none">
-                Resume Blocking
-            </button>
-            <img src="../assets/images/kofi.png" width="30px" alt="logo" />
+            <!-- Main Pause/Resume -->
+            <div class="main-control">
+                <button id="pause" class="btn btn-pause">Pause</button>
+                <button id="resume" class="btn btn-resume" style="display: none">
+                    Resume
+                </button>
+            </div>
+
+            <!--<div class="divider"></div>-->
+
+            <!-- Compact Toggles -->
+            <div class="toggles-row">
+                <button id="toggle-js" class="icon-btn" title="Block JavaScript">
+                    <span class="btn-label">JS</span>
+                </button>
+                <button id="toggle-images" class="icon-btn" title="Block Images">
+                   <span class="btn-label">IMG</span>
+                </button>
+                <button id="toggle-videos" class="icon-btn" title="Block Videos">
+                    <span class="btn-label">VID</span>
+                </button>
+                <button id="toggle-cookies" class="icon-btn" title="Block Cookies">
+                    <span class="btn-label">Cookies</span>
+                </button>
+            </div>
+            <div class="secondary-control">
+                <button id="open-dashboard" class="btn">
+                    Open Analysis Dashboard
+                </button>
+                <!--<button id="open-cookie-panel" class="btn">
+                    Open Cookie Viewer
+                </button>-->
+            </div>
         </footer>
 
-        <!-- Hidden Reporting (Kept for JS compatibility) -->
-        <div id="reportAttempt" style="display: none"></div>
-
-        <script src="popup.js"></script>
+        <script src="popup.bundle.js"></script>
     </body>
 </html>

@@ -1,42 +1,98 @@
 const path = require("path");
+const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-
-// Note: Loaders and Terser are removed for now since we are just copying.
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: "development", // Set default to development for readable code
-  target: "web",
-  devtool: false,
+  target: "web", // Ensures compatibility with the browser environment
+  devtool: false, // Use source maps without eval
   cache: {
-    type: "filesystem",
+    type: "filesystem", // or 'memory'
     cacheDirectory: path.resolve(__dirname, ".temp_cache"),
+    buildDependencies: {
+      config: [__filename], // Build depends on config file
+    },
   },
-  // Webpack requires an entry point, but we are relying on the CopyPlugin below.
-  // These bundles will be created but likely ignored in favor of the copied src folder.
   entry: {
-    index: "./src/background.js",
+    popup: "./src/popup/popup.js", // Entry point for script.js
+    // sidepanel: "./src/sidepanel/script.js", // Entry point for script.js
+    dashboard: "./src/dashboard/script.js", // Entry point for script.js
+    options: "./src/options/myscripts.js", // Entry point for script.js
+    background: "./src/background.js", // Entry point for script.js
+    content: "./src/content.js", // Entry point for script.js
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle_ignore_me.js", // Placeholder bundle name
-    clean: true, // Cleans dist folder before copying
+    filename: "[name].bundle.js",
+    devtoolModuleFilenameTemplate: (info) => `file:///${info.resourcePath}`,
+    clean: true, // Clean output directory before each build
   },
-  // Module rules for Babel/CSS are removed to stop transpiling
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.js$/, // Target JavaScript files
+        exclude: /node_modules/, // Exclude node_modules
+        use: {
+          loader: "babel-loader", // Use Babel loader if you want to transpile ES6+
+          options: {
+            presets: ["@babel/preset-env"], // Specify presets if using Babel
+          },
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff2?|ttf|eot)$/, // Handle images and fonts
+        type: "asset/resource", // Use the built-in asset module
+        generator: {
+          filename: "./assets/[hash][ext][query]", // Specify output path for assets
+        },
+      },
+    ],
   },
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        // Copies the entire 'src' folder into 'dist/src'
-        { from: "src", to: "src" },
-        // Copies manifest to the root of 'dist'
+        { from: "src/popup/popup.html", to: "popup.html" },
+        { from: "src/popup/popup.css", to: "popup.css" },
+
+        { from: "src/dashboard/index.html", to: "dashboard.html" },
+        { from: "src/dashboard/style.css", to: "dashboard.css" },
+
+        // { from: "src/sidepanel/index.html", to: "sidepanel.html" },
+        // { from: "src/sidepanel/style.css", to: "sidepanel.css" },
+
+        { from: "src/options/options.html", to: "options.html" },
+        { from: "src/options/options.css", to: "options.css" },
+
         { from: "manifest.json", to: "manifest.json" },
+        { from: "src/rules.json", to: "rules.json" },
+        { from: "src/assets", to: "assets" },
       ],
     }),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^child_process$/,
+    }),
   ],
-  // Optimization/Minification removed
   optimization: {
-    minimize: false,
+    minimize: true, // Enable minification
+    minimizer: [
+      new TerserWebpackPlugin({
+        extractComments: false,
+        terserOptions: {
+          compress: {
+            drop_console: true, // Remove console logs
+          },
+          output: {
+            comments: false, // Remove comments
+          },
+        },
+      }),
+    ],
   },
 };
+
+// npx webpack --mode development
+// npx webpack --mode production

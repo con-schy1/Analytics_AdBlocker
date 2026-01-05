@@ -21,7 +21,7 @@ body {
     background-color: var(--bg-body);
     color: var(--text-primary);
     height: 100vh;
-    overflow: hidden; /* Prevent body scroll, let main scroll */
+    overflow: hidden;
 }
 
 /* Layout Grid */
@@ -44,13 +44,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.logo-area h2 {
+    margin-bottom: 32px;
     text-align: center;
-    font-size: 20px;
+}
+
+.logo-area img {
+    margin-bottom: 12px;
+}
+
+.logo-area h2 {
+    font-size: 18px;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 32px;
+    line-height: 1.4;
 }
 
 .nav-menu {
@@ -86,13 +92,37 @@ body {
 
 .sidebar-footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    gap: 6px;
+    gap: 12px;
+    margin-top: auto;
+}
 
+.kofi-button {
+    background-color: #ff5f5f;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kofi-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.version-text {
     font-size: 12px;
     color: var(--text-secondary);
-    margin-top: auto;
 }
 
 /* Main Content */
@@ -110,36 +140,13 @@ h1 {
     font-weight: 700;
 }
 
-/* Stats Grid */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 32px;
+/* View Sections */
+.view-section {
+    display: none;
 }
 
-.stat-card {
-    background: var(--bg-surface);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.stat-label {
+.view-section.active {
     display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.stat-value {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--text-primary);
 }
 
 /* Content Cards */
@@ -149,7 +156,6 @@ h1 {
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     margin-bottom: 24px;
-    /* Fix for chart overflow */
     display: block;
     min-width: 0;
 }
@@ -167,106 +173,265 @@ h1 {
     font-weight: 600;
 }
 
-.chart-container {
-    position: relative;
-    height: 400px;
-    width: 100%;
+.card-body {
     padding: 20px;
-    overflow: hidden;
 }
 
-/* Request Log Styling */
-.log-list {
-    padding: 0;
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
 }
 
-.log-entry {
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.input-text,
+.input-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.input-text:focus,
+.input-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.input-hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.input-hint a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.input-hint a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-remove {
+    padding: 6px 12px;
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-remove:hover {
+    background: #fecaca;
+}
+
+/* Rules List */
+.rules-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.rule-item {
+    padding: 16px;
     border-bottom: 1px solid var(--border-color);
-}
-
-.log-entry:last-child {
-    border-bottom: none;
-}
-
-.log-summary {
-    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.site-name {
-    font-weight: 500;
-    font-size: 14px;
+.rule-item:last-child {
+    border-bottom: none;
 }
 
-.log-actions {
+.rule-info {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.badge-count {
-    background: #f3f4f6;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    color: var(--text-secondary);
-}
-
-.btn-toggle {
-    background: none;
-    border: 1px solid var(--border-color);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
-    color: var(--text-secondary);
-}
-
-.btn-toggle:hover {
-    background: #f9fafb;
+.rule-pattern {
+    font-family: "Courier New", monospace;
+    font-size: 13px;
     color: var(--text-primary);
 }
 
-.log-details {
-    padding: 16px 20px;
-    background-color: #f9fafb;
-    border-top: 1px solid var(--border-color);
+.badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-domain {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-regex {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-ads {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-analytics {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.empty-state {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* About Section Styles */
+.about-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.about-intro {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* GitHub-style Badges */
+.badges-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.badge-shield {
+    display: inline-flex;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+        sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.badge-label {
+    background: #555;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 3px 0 0 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-value {
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 0 3px 3px 0;
+    font-weight: 700;
+}
+
+.badge-value-blue {
+    background: #007ec6;
+}
+
+.badge-value-green {
+    background: #97ca00;
+}
+
+/* GitHub Link */
+.github-link-container {
+    margin-bottom: 32px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #24292e;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.github-link:hover {
+    background: #e5e7eb;
+}
+
+/* Section Headings */
+.section-heading {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+
+.section-intro {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.feature-list {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.feature-list li {
+    margin-bottom: 8px;
+}
+
+.about-footer {
+    margin-top: 32px;
     font-size: 13px;
     color: var(--text-secondary);
+    text-align: center;
 }
 
 /* Helpers */
 .hidden {
     display: none;
-}
-.btn {
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-}
-.btn-danger {
-    background: #fee2e2;
-    color: #dc2626;
-}
-.btn-danger:hover {
-    background: #fecaca;
-}
-.btn-sm {
-    padding: 4px 8px;
-    font-size: 12px;
-    background: #f3f4f6;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.setting-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
 }
