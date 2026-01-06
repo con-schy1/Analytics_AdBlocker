@@ -226,22 +226,7 @@ function applyScopeUI() {
   document.body.dataset.scope = els.scope.value;
 }
 
-const closeModalBtn = $("closeModal");
-if (closeModalBtn) {
-  closeModalBtn.addEventListener("click", () => {
-    document.getElementById("storeModal").style.display = "none";
-  });
-}
-
 async function loadDataAndRender() {
-  // On load
-  if (!chrome.declarativeNetRequest.onRuleMatchedDebug) {
-    document.getElementById("storeModal").style.display = "flex";
-    // Close modal functionality
-
-    // return; // Exit early
-  }
-
   applyScopeUI();
 
   const windowMs = Number(els.windowMs.value);
@@ -491,13 +476,3 @@ document.querySelectorAll(".nav-item").forEach((item) => {
 // Initial load
 applyScopeUI();
 loadDataAndRender();
-
-// Chrome storage listeners
-chrome.storage.onChanged.addListener((changes, namespace) => {
-  for (let [changeKey, { oldValue, newValue }] of Object.entries(changes)) {
-    if (changeKey == "dashboardUnavailable" && newValue) {
-      document.getElementById("storeModal").style.display = "flex";
-      return; // Exit early
-    }
-  }
-});
