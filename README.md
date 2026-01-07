@@ -1,175 +1,111 @@
 <h1 align="center">
-  <br>
   <a href="https://www.globemallow.io"><img src="https://user-images.githubusercontent.com/25206214/232239552-1e012a0f-5a70-4498-be91-5cfbf739659b.jpg" alt="Analytics and Ad Blocker" width="200"></a>
-  <br>
+  <br />
   Analytics & AdBlocker
-  <br>
 </h1>
+<p align="center"><em>Protect your privacy while browsing the web.</em></p>
 
-<h4 align="center">Protect your privacy while browsing the web.</h4>
-
-<p align="center">
+<div align="center">
   <a href="https://microsoftedge.microsoft.com/addons/detail/analytics-ad-blocker/aefflmbddeelichjblegdiofcnheglho">
     <img src="https://user-images.githubusercontent.com/25206214/232240901-a3a3238e-323f-4e27-b403-c3cae1b75e04.png"
-         alt="Edge" width="50">
+    alt="Edge" width="50">
   </a>
   &nbsp;
-    <a href="https://chrome.google.com/webstore/detail/analytics-ad-blocker/fapldghopmonkbgaaiinpeopokpkhbmk">
+  <a href="https://chrome.google.com/webstore/detail/analytics-ad-blocker/fapldghopmonkbgaaiinpeopokpkhbmk">
     <img src="https://user-images.githubusercontent.com/25206214/232240940-ab68afc0-2fe4-46b6-a3f0-a66002c6769d.png"
-         alt="Edge" width="50">
+    alt="Edge" width="50">
   </a>
-  <br>
+  &nbsp;
   <a href="https://apps.apple.com/app/analytics-ad-blocker/id1641772773">
     <img src="https://user-images.githubusercontent.com/25206214/232240922-82009465-ade0-4882-8e7a-6176fb6fa037.png"
-         alt="Edge" width="50">
+    alt="Edge" width="50">
   </a>
-</p>
+</div>
+
+<br />
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-install">How To Install</a> •
-  <a href="#download">Download</a> •
-  <a href="#helpful-documentation">Helpful Documentation</a> •
-  <a href="#examples">Examples</a> •
-  <a href="#rules">Rules</a> •
-    <a href="#credits">Credits</a> •
+  <a href="#what-is-analytics--ad-blocker">About</a> |
+  <a href="#key-features">Key Features</a> |
+  <a href="#how-to-install">How To Install</a> |
+  <a href="#helpful-documentation">Helpful Documentation</a> |
   <a href="#license">License</a>
 </p>
 
 ![veed](https://user-images.githubusercontent.com/25206214/232251234-c60f33ae-774d-4d92-a257-5d07be8d2b75.gif)
 
-## Key Features
 
-* Protect your privacy while browsing online - block ads and analytics (trackers)
-  - Instantly see what has been blocked 
-* Lightweight
-  - A lightweigth browser extension to ensure browsing speed is not affected.
-* Simple UI/UX that you don't need a degree to read 
-* Pause / Resume Blocking
-  - If you notice that Analytics & Ad Blocker is affecting the page you're on you can simply pause the blocking, and resume as soon as you've completed the action you were trying to attempt
-* Easy to see reports
-  - See the ads and trackers blocked by each site
-  - See the different requests blocked on each site
-* OpenSource!
-* No tracking on YOU! We don't use any analytics within the extension. 
-* Email us with any feedback or any ads / trackers you notice we missed.
-* Works with Edge, Safari, and Chrome
+## What is Analytics & Ad Blocker?
 
-## How To Install
+Analytics & Ad Blocker is an open-source browser firewall that blocks ads and tracking scripts, lets you control heavy page resources, and shows what third parties try to load on the sites you visit.
+It’s built for people who want transparency, local processing, and granular controls instead of black-box blocking.
 
-<h3>Install-Chrome</h3>
-1) Download all files and *images* folder into a single Folder. <br>
-2) Exclude the following files from download:<br>
-&nbsp; * .github <br> 
-&nbsp; * License <br>
-&nbsp; * README.md <br>
-3) Go to: chrome://extensions/ in your chrome browser <br>
-4) Toggle ON: Developer Mode - in the top right <br>
-5) Select the Folder you just created <br>
-6) You're ready to go!
 
-## Helpful Documentation 
-* https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/ <br>
-* More specifically: 
-https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#type-ResourceType
- 
+## What problems does it solve?
 
-## Examples
+- Stops common trackers and analytics tags from loading so you share less data by default.
+- Reduces page bloat by blocking unwanted network requests and optionally heavy resources.
+- Helps you identify which websites load the most third-party scripts and requests.
+- Improves browsing focus by removing ad interruptions.
 
-<h3>Example 1</h3>
 
-1) If you find an Ad, look at it in the Browser's Dev tools. <br>
+## Key features
 
-It will look something like:
-```
-<script async="" src="https://www.adexample1.com/"></script>
-```
+- Ad and tracker blocking: Blocks many common advertising and tracking requests.
+- Custom network request blocking: Create rules to block specific domains, URLs, or scripts.
+- Toggle content types: Quickly disable JavaScript, images, or videos to speed up pages and reduce load.
+- Live tracker dashboard: View third-party activity and request behavior in real time across tabs.
+- Local-first privacy: Blocking decisions and dashboard insights are processed on your device.
+- Open-source integrity: No paid whitelisting and no acceptable ads program.
+- Works with Edge, Safari, and Chrome.
 
-2) Open the **rules.json** <br>
 
-The resulting rule to block this script will look like:
-```
-,
-    {
-    "id": 3000,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "adexample1.com/", 
-    "resourceTypes": ["script"] }
-  }
-```
-3) Add this rule to the rules.json, and make sure you change the id to go in order as the rule before it. <br>
-4) Open the **performance.js**. <br>
+## Live tracker dashboard
 
-Add the following to the end of the **adList** array:
-```
-, /adexample1.c/
-```
-5) Congratulate yourself- that's it!
+Use the dashboard to understand what a page is doing behind the scenes:
 
-<h3>Example 2</h3>
+- Live tag monitoring: See tracker tags and third-party requests as they attempt to run.
+- Data audit visibility: Identify which sites are most aggressive with third-party connections.
+- Impact metrics: Correlate blocked requests with lighter page behavior for everyday performance gains.
 
-1) If you find an Ad, look at it in the Browser's Dev tools. <br>
 
-It will look something like:
-```
-<iframe async="" src="https://www.adexample2.com/"></script>
-```
+## Frequently asked questions
 
-2) Open the **rules.json** <br>
+- Does it collect my data? No. The extension is built to work locally and does not require an account.
+- Can I block a specific website or script that annoys me? Yes. You can add custom blocking rules for domains or specific requests.
+- Will disabling JavaScript or media break sites? Some sites rely on scripts and media; use one-click toggles to turn resources off for speed, then back on if needed.
+- Is it really open source? Yes. You can review the code, verify behavior, and contribute.
 
-The resulting rule to block this script will look like:
-```
-,
-    {
-    "id": 3000,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "adexample2.com/", 
-    "resourceTypes": ["sub_frame"] }
-  }
-```
-3) Add this rule to the rules.json, and make sure you change the id to go in order as the rule before it. <br>
-4) Open the **performance.js**. <br>
 
-Add the following to the end of the **adList** array:
-```
-, /adexample2.c/
-```
-<h4>But, you notice the ad is still there?</h4>
+## How to install
 
-5) Look at the **Network** requests for: **adexample2.com/**, and you see that it is sending a request after the iframe is blocked. 
-6) Identify how it is calling the addition request and see that it's sending a **Ping** request type
-7) Write an additional rule and follow all the steps above. It will look something like this:
-```
-    {
-    "id": 3001,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "adexample2.com/", 
-    "resourceTypes": ["ping"] }
-  }
-```
-8) There is no need to ad an additional entry in **adList** array.
-9) That's it! Repeat the steps until the ad is gone.
+#### Direct links:
+- Chrome: https://chrome.google.com/webstore/detail/analytics-ad-blocker/fapldghopmonkbgaaiinpeopokpkhbmk
+- Edge: https://microsoftedge.microsoft.com/addons/detail/analytics-ad-blocker/aefflmbddeelichjblegdiofcnheglho
+- Safari: https://apps.apple.com/app/analytics-ad-blocker/id1641772773
 
-## Rules
-<h4>There's a couple project rules:</h4>
-1) No Blocking Cookie Consent Banners and their technologies  <br>
-2) No Blocking Chat Bots  <br>
-3) Don't use *main_frame* as a Resource Type in your rules
+#### Build from source code:
+1. Clone the repo. or download as ZIP.
+2. Navigate to the root of the folder, where 'manifest.json' is present.
+3. Install the Node Modules with `npm i`.
+4. Once it is complete, build it using `npx webpack`.
+5. A 'dist' folder will be created. This is the package that needs to be loaded in the browser.
 
-## Download
+> For Chrome:
+7. Open the Browser, and navigate to `chrome://extensions/`. Turn on 'Developer Mode' from the top-right corner.
+8. Now, a few new options will appear on the left. Click on the 'load unpacked' and select the 'dist' folder.
+9. You're ready to go.
 
-- [Chrome](https://chrome.google.com/webstore/detail/analytics-ad-blocker/fapldghopmonkbgaaiinpeopokpkhbmk)
-- [Edge](https://microsoftedge.microsoft.com/addons/detail/analytics-ad-blocker/aefflmbddeelichjblegdiofcnheglho)
-- [Safari](https://apps.apple.com/app/analytics-ad-blocker/id1641772773)
+> For Edge:
+7. Open the Browser, and navigate to `edge://extensions/`. Turn on 'Developer Mode' from the left bar.
+8. Now, a few new options will appear besides the 'installed extensions' heading. Click on the 'load unpacked' and select the 'dist' folder.
+9. You're ready to go.
 
-## Credits
 
-This software uses the following open source packages:
+## Helpful documentation
 
-- [Chart.js](https://www.chartjs.org/)
+- https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/
+
 
 ## Support
 
@@ -189,7 +125,4 @@ Apache-2.0 License
 
 ---
 
-> [globemallow.io](https://globemallow.io/) &nbsp;&middot;&nbsp;
-> GitHub [@con_schy1](https://github.com/con-schy1) &nbsp;&middot;&nbsp;
-> Mastodon [@globemallow@infosec.exchange](https://infosec.exchange/@globemallow)
-
+> [globemallow.io](https://globemallow.io/) · GitHub [@con_schy1](https://github.com/con-schy1) · Mastodon [@globemallow@infosec.exchange](https://infosec.exchange/@globemallow)
