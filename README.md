@@ -111,17 +111,16 @@ Use the dashboard to understand what a page is doing behind the scenes:
 
 <a href='https://ko-fi.com/U6U46R9FA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
+
 ## Contact
 
 [Contact Me](mailto:connor@globemallow.io)
+
 
 ## You may also like...
 
 - [Globemallow](https://globemallow.io/) - Create more performant webpages for a sustainable future for the internet.
 
-## License
-
-Apache-2.0 License
 
 ---
 
