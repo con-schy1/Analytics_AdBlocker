@@ -346,23 +346,114 @@ function formatExpires(cookie) {
   return date.toLocaleDateString();
 }
 
+function isStrictBase64(str) {
+  const knownWords = ["false", "true", "True", "False"];
+  if (typeof str !== "string" || !str.length) return false;
+  if (/\s/.test(str)) return false; // no whitespace
+  if (str.length % 4 !== 0) return false;
+  if (knownWords.indexOf(str) >= 0) return false;
+
+  // Only A-Z a-z 0-9 + / with optional = padding at end (0, 1, or 2)
+  const re =
+    /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$/;
+  return re.test(str);
+}
+
+function truncateValue(s, n = 50) {
+  s = String(s ?? "");
+  return s.length > n ? s.slice(0, n) + "..." : s;
+}
+
+function decodeBase64Utf8(b64) {
+  // atob gives a binary string; TextDecoder converts bytes -> UTF-8 text
+  const binary = atob(b64);
+  const bytes = Uint8Array.from(binary, (ch) => ch.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
 function renderCookies(cookies) {
   els.cookieCount.textContent = cookies.length;
+
   els.cookieTableBody.innerHTML = cookies
-    .map(
-      (cookie) => `
-      <tr>
-        <td title="${escapeHtml(cookie.domain)}">${escapeHtml(cookie.domain)}</td>
-        <td title="${escapeHtml(cookie.name)}">${escapeHtml(cookie.name)}</td>
-        <td title="${escapeHtml(cookie.value)}">${escapeHtml(cookie.value.slice(0, 50))}${cookie.value.length > 50 ? "..." : ""}</td>
-        <td>${escapeHtml(cookie.path)}</td>
-        <td title="${formatExpires(cookie)}">${formatExpires(cookie)}</td>
-        <td>${cookie.secure ? "✓" : ""}</td>
-        <td>${cookie.httpOnly ? "✓" : ""}</td>
-      </tr>
-    `,
-    )
+    .map((cookie) => {
+      const fullVal = String(cookie.value ?? "");
+      const shortVal = truncateValue(fullVal, 50);
+      const canDecode = isStrictBase64(fullVal);
+
+      const valueCell = `
+        <td title="${escapeHtml(fullVal)}">
+          <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+            <span class="cookieValueText" data-full="${escapeHtml(fullVal)}">${escapeHtml(shortVal)}</span>
+            <button class="btn btnSmall" type="button" data-copycookie="1">Copy</button>
+            ${
+              canDecode
+                ? `<button class="btn btnSmall" type="button" data-decode="${escapeHtml(fullVal)}">Decode</button>`
+                : ``
+            }
+          </div>
+        </td>
+      `;
+
+      return `
+        <tr>
+          <td title="${escapeHtml(cookie.domain)}">${escapeHtml(cookie.domain)}</td>
+          <td title="${escapeHtml(cookie.name)}">${escapeHtml(cookie.name)}</td>
+          ${valueCell}
+          <td>${escapeHtml(cookie.path)}</td>
+          <td title="${formatExpires(cookie)}">${formatExpires(cookie)}</td>
+          <td>${cookie.secure ? "✅" : ""}</td>
+          <td>${cookie.httpOnly ? "✅" : ""}</td>
+        </tr>
+      `;
+    })
     .join("");
+
+  // Decode button handlers (only for rows where the button exists)
+  els.cookieTableBody.querySelectorAll("button[data-decode]").forEach((btn) => {
+    btn.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+
+      const encoded = btn.getAttribute("data-decode") || "";
+      let decoded = "";
+
+      try {
+        decoded = decodeBase64Utf8(encoded);
+      } catch (e) {
+        // If it somehow fails, do nothing (button only appears for strict base64 anyway)
+        return;
+      }
+
+      const td = btn.closest("td");
+      const span = td ? td.querySelector(".cookieValueText") : null;
+
+      if (span) {
+        span.textContent = truncateValue(decoded, 50);
+        span.setAttribute("data-full", decoded);
+      }
+      if (td) td.title = decoded;
+
+      btn.disabled = true;
+      // btn.remove(); // prevent re-decoding / keep UI clean
+    });
+  });
+  // Copy buttons (always present)
+  els.cookieTableBody
+    .querySelectorAll("button[data-copycookie]")
+    .forEach((btn) => {
+      btn.addEventListener("click", async (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+
+        const td = btn.closest("td");
+        const span = td ? td.querySelector(".cookieValueText") : null;
+        const value = span
+          ? span.getAttribute("data-full") || span.textContent || ""
+          : "";
+
+        await navigator.clipboard.writeText(value);
+      });
+    });
 }
 
 function filterCookies() {
