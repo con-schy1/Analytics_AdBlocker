@@ -60,6 +60,21 @@ chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === "DNR_STATUS_UPDATE") {
     msg.useSimulatedMode ? startSimulation() : stopSimulation();
   }
+  console.log(msg);
+  if (msg.type == "UNSAFE_TAB_URL") {
+    const style = document.createElement("style");
+    style.textContent = `
+      .aa-unsafe {
+        border: 6px solid red !important;
+      }
+    `;
+    document.body.appendChild(style);
+    document.body.classList.add("aa-unsafe");
+    console.log(document.body);
+    setTimeout(() => {
+      document.body.classList.remove("aa-unsafe");
+    }, 10_000);
+  }
 });
 
 chrome.runtime.sendMessage({ type: "GET_DNR_STATUS" }, (res) => {

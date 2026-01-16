@@ -4,8 +4,68 @@ const MAX_PER_TAB = 300;
 const MAXSITES = 100;
 // Cache: ruleId -> action.type (dynamic + session only)
 let actionTypeByRuleId = new Map();
+const SAFE_BROWSING_API_KEY = "";
+const SAFE_BROWSING_ENDPOINT =
+  "https://safebrowsing.googleapis.com/v4/threatMatches:find";
+
+const SAFE_CACHE_TTL = 23 * 60 * 60 * 1000; // 23 hours
+const safeCache = new Map(); // url -> { unsafe: boolean, ts }
 
 // ---- helpers ----
+
+async function checkUrlWithSafeBrowsing(url) {
+  const now = Date.now();
+  console.log("safeCache", safeCache);
+
+  // cache hit
+  const cached = safeCache.get(url);
+  if (cached && now - cached.ts < SAFE_CACHE_TTL) {
+    return cached.unsafe;
+  }
+
+  const payload = {
+    client: {
+      clientId: "A&A",
+      clientVersion: "1.0.0",
+    },
+    threatInfo: {
+      threatTypes: [
+        "MALWARE",
+        "SOCIAL_ENGINEERING",
+        "UNWANTED_SOFTWARE",
+        "POTENTIALLY_HARMFUL_APPLICATION",
+      ],
+      platformTypes: ["ANY_PLATFORM"],
+      threatEntryTypes: ["URL"],
+      threatEntries: [{ url }],
+    },
+  };
+
+  try {
+    const res = await fetch(
+      `${SAFE_BROWSING_ENDPOINT}?key=${SAFE_BROWSING_API_KEY}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      },
+    );
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const data = await res.json();
+    const unsafe = Array.isArray(data.matches) && data.matches.length > 0;
+
+    safeCache.set(url, { unsafe, ts: now });
+    return unsafe;
+  } catch (err) {
+    console.warn("Safe Browsing error:", err);
+    // fail open
+    safeCache.set(url, { unsafe: false, ts: now });
+    return false;
+  }
+}
+
 async function rebuildActionCache() {
   const dyn = await chrome.declarativeNetRequest.getDynamicRules(); // includes your toggles + custom rules
   const ses = chrome.declarativeNetRequest.getSessionRules
@@ -231,14 +291,29 @@ const isDebugAvailable = !!(
 );
 // Listen for new tabs or reloads to inform content script
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === "complete") {
+  console.log(changeInfo, tab, "changeInfo");
+  if (changeInfo.status !== "complete") return;
+  if (!tab.url || tab.url.startsWith("chrome")) return;
+
+  chrome.tabs
+    .sendMessage(tabId, {
+      type: "DNR_STATUS_UPDATE",
+      useSimulatedMode: !isDebugAvailable, // If Debug is FALSE, use Simulation (True)
+    })
+    .catch(() => {}); // Ignore errors if content script isn't ready
+
+  // chrome tab security
+  checkUrlWithSafeBrowsing(tab.url).then((unsafe) => {
+    if (!unsafe) return;
+
     chrome.tabs
       .sendMessage(tabId, {
-        type: "DNR_STATUS_UPDATE",
-        useSimulatedMode: !isDebugAvailable, // If Debug is FALSE, use Simulation (True)
+        type: "UNSAFE_TAB_URL",
       })
-      .catch(() => {}); // Ignore errors if content script isn't ready
-  }
+      .catch((e) => {
+        console.log(e);
+      });
+  });
 });
 
 // ---- Messaging API for popup/options ----
