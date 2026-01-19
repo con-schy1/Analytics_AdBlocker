@@ -4,7 +4,7 @@ const MAX_PER_TAB = 300;
 const MAXSITES = 100;
 // Cache: ruleId -> action.type (dynamic + session only)
 let actionTypeByRuleId = new Map();
-const SAFE_BROWSING_API_KEY = "AIzaSyDQb-1deWH2EAKitfCIwkis8dQZ57mqxXQ";
+const SAFE_BROWSING_API_KEY = "";
 const SAFE_BROWSING_ENDPOINT =
   "https://safebrowsing.googleapis.com/v4/threatMatches:find";
 
