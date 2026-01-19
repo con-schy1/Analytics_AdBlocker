@@ -1,4 +1,3 @@
-// ruleManager.js
 // Apache-2.0 license
 
 let currentRuleType = "domain";
