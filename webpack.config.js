@@ -16,7 +16,7 @@ module.exports = {
   entry: {
     popup: "./src/popup/popup.js", // Entry point for script.js
     // sidepanel: "./src/sidepanel/script.js", // Entry point for script.js
-    dashboard: "./src/dashboard/script.js", // Entry point for script.js
+    // dashboard: "./src/dashboard/script.js", // Entry point for script.js
     options: "./src/options/myscripts.js", // Entry point for script.js
     background: "./src/background.js", // Entry point for script.js
     content: "./src/content.js", // Entry point for script.js
@@ -58,8 +58,8 @@ module.exports = {
         { from: "src/popup/popup.html", to: "popup.html" },
         { from: "src/popup/popup.css", to: "popup.css" },
 
-        { from: "src/dashboard/index.html", to: "dashboard.html" },
-        { from: "src/dashboard/style.css", to: "dashboard.css" },
+        // { from: "src/dashboard/index.html", to: "dashboard.html" },
+        // { from: "src/dashboard/style.css", to: "dashboard.css" },
 
         // { from: "src/sidepanel/index.html", to: "sidepanel.html" },
         // { from: "src/sidepanel/style.css", to: "sidepanel.css" },
@@ -83,7 +83,7 @@ module.exports = {
         extractComments: false,
         terserOptions: {
           compress: {
-            drop_console: true, // Remove console logs
+            drop_console: false, // Remove console logs
           },
           output: {
             comments: false, // Remove comments

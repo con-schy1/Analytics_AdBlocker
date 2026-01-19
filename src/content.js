@@ -65,8 +65,33 @@ chrome.runtime.onMessage.addListener((msg) => {
     const style = document.createElement("style");
     style.textContent = `
       .aa-unsafe {
-        border: 6px solid red !important;
+      /* Standard border properties (optional, but gives shape) */
+        border: 6px solid #ff0000;
+        padding: 15px;
+        border-radius: 5px; /* Optional: for rounded corners */
+
+        /* The key to the neon effect: box-shadow */
+        box-shadow:
+          0 0 5px #ff0000,   /* Inner glow */
+          0 0 15px #ff0000,  /* Medium glow */
+          0 0 30px #ff0000,  /* Outer glow */
+          0 0 60px #ff0000;  /* Wider glow */
+        animation: neonBlink 1s infinite alternate;
       }
+
+      @keyframes neonBlink {
+        0% {
+          border-color: #ff1a1a;
+          box-shadow: 0 0 6px #ff1a1a, 0 0 12px #ff1a1a;
+          opacity: 1;
+        }
+        100% {
+          border-color: #ff4d4d;
+          box-shadow: 0 0 12px #ff4d4d, 0 0 28px #ff4d4d;
+          opacity: 0.6;
+        }
+      }
+
     `;
     document.body.appendChild(style);
     document.body.classList.add("aa-unsafe");

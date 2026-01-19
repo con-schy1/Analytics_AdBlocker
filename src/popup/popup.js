@@ -107,16 +107,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     reloadActiveTab();
   });
 
-  // Settings button
-  document
-    .getElementById("go-to-options")
-    .addEventListener("click", function () {
-      if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-      } else {
-        window.open(chrome.runtime.getURL("options.html"));
-      }
-    });
+  // // Settings button
+  // document
+  //   .getElementById("go-to-options")
+  //   .addEventListener("click", function () {
+  //     if (chrome.runtime.openOptionsPage) {
+  //       chrome.runtime.openOptionsPage();
+  //     } else {
+  //       window.open(chrome.runtime.getURL("options.html"));
+  //     }
+  //   });
 
   // in popup.js (or options page), add a "Dashboard" button handler
   document
@@ -126,12 +126,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         active: true,
         currentWindow: true,
       });
-      if (tabs[0])
-        chrome.tabs.create({
-          url: chrome.runtime.getURL(
-            "dashboard.html?activeTabId=" + tabs[0].id,
-          ),
-        });
+      if (chrome.runtime.openOptionsPage) {
+        window.open(
+          chrome.runtime.getURL("options.html?activeTabId=" + tabs[0].id),
+        );
+        // chrome.runtime.openOptionsPage();
+      } else {
+        window.open(
+          chrome.runtime.getURL("options.html?activeTabId=" + tabs[0].id),
+        );
+      }
     });
   // document
   //   .getElementById("open-cookie-panel")

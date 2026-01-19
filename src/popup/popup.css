@@ -1,6 +1,6 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    width: 320px;
+    width: 270px;
     margin: 0;
     background-color: #ffffff;
     color: #333;
@@ -11,6 +11,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 6px;
+    inline-size: 100%;
     padding: 15px 20px;
     border-bottom: 1px solid #eee;
 }

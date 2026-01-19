@@ -92,8 +92,16 @@ body {
 }
 
 .main-content {
+    padding: 0;
+}
+
+.view-section {
+    display: none;
     padding: 32px 40px;
-    overflow-y: auto;
+}
+
+.view-section.active {
+    display: block;
 }
 
 /* Page switching */

@@ -432,6 +432,139 @@ h1 {
 }
 
 /* Helpers */
-.hidden {
+.view-section {
     display: none;
+}
+
+.view-section.active {
+    display: block;
+}
+
+/* dash */
+/* =========================
+   Dashboard + Cookies
+========================= */
+
+.form-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.form-grow {
+    flex: 1;
+}
+
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.kpi {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.kpiLabel {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.kpiValue {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.kpiSub {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.barRow {
+    display: grid;
+    grid-template-columns: 1fr auto 120px;
+    gap: 8px;
+    align-items: center;
+}
+
+.barLabel {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.barCount {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.barTrack {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: var(--primary);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.table th,
+.table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.table th {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.pill {
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+}
+
+.details {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.btnSmall {
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+.muted {
+    color: var(--text-secondary);
+}
+
+.status-bar {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--text-secondary);
 }
