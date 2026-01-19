@@ -6,7 +6,12 @@
     --text-secondary: #6b7280;
     --border-color: #e5e7eb;
     --sidebar-width: 240px;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+/* =========================
+   Base
+========================= */
 
 * {
     box-sizing: border-box;
@@ -18,22 +23,29 @@ body {
     font-family:
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
         sans-serif;
-    background-color: var(--bg-body);
+    background: var(--bg-body);
     color: var(--text-primary);
     height: 100vh;
     overflow: hidden;
 }
 
-/* Layout Grid */
+/* =========================
+   Layout
+========================= */
+
 .layout-container {
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Sidebar */
+/* =========================
+   Sidebar (unchanged)
+========================= */
+
 .sidebar {
-    background-color: var(--bg-surface);
+    background: var(--bg-surface);
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
@@ -56,7 +68,6 @@ body {
     font-size: 18px;
     font-weight: 700;
     color: var(--primary);
-    line-height: 1.4;
 }
 
 .nav-menu {
@@ -76,16 +87,15 @@ body {
     color: var(--text-secondary);
     font-weight: 500;
     font-size: 14px;
-    transition: all 0.2s;
 }
 
 .nav-item:hover {
-    background-color: #f9fafb;
+    background: #f9fafb;
     color: var(--text-primary);
 }
 
 .nav-item.active {
-    background-color: #eff6ff;
+    background: #eff6ff;
     color: var(--primary);
     font-weight: 600;
 }
@@ -99,25 +109,17 @@ body {
 }
 
 .kofi-button {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
     background-color: #ff5f5f;
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: 700;
     font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.kofi-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .version-text {
@@ -125,11 +127,31 @@ body {
     color: var(--text-secondary);
 }
 
-/* Main Content */
+/* =========================
+   Main content
+========================= */
+
 .main-content {
     padding: 32px 40px;
     overflow-y: auto;
 }
+
+/* =========================
+   View switching
+========================= */
+
+.view-section {
+    display: none;
+}
+
+.view-section.active {
+    display: block;
+    overflow-y: auto;
+}
+
+/* =========================
+   Shared UI
+========================= */
 
 .top-bar {
     margin-bottom: 32px;
@@ -140,23 +162,12 @@ h1 {
     font-weight: 700;
 }
 
-/* View Sections */
-.view-section {
-    display: none;
-}
-
-.view-section.active {
-    display: block;
-}
-
-/* Content Cards */
 .content-card {
     background: var(--bg-surface);
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
     margin-bottom: 24px;
-    display: block;
     min-width: 0;
 }
 
@@ -177,9 +188,34 @@ h1 {
     padding: 20px;
 }
 
-/* Form Elements */
+.muted {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+/* =========================
+   Forms
+========================= */
+
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
 .form-group {
-    margin-bottom: 20px;
+    min-width: 180px;
+}
+
+.form-grow {
+    flex: 1;
+    min-width: 260px;
+}
+
+.form-inline {
+    padding-bottom: 2px;
 }
 
 .form-group label {
@@ -187,7 +223,6 @@ h1 {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 8px;
-    color: var(--text-primary);
 }
 
 .input-text,
@@ -197,7 +232,6 @@ h1 {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 14px;
-    transition: border-color 0.2s;
 }
 
 .input-text:focus,
@@ -206,23 +240,25 @@ h1 {
     border-color: var(--primary);
 }
 
-.input-hint {
-    display: block;
-    margin-top: 6px;
-    font-size: 12px;
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
     color: var(--text-secondary);
 }
 
-.input-hint a {
-    color: var(--primary);
-    text-decoration: none;
+.actions-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.input-hint a:hover {
-    text-decoration: underline;
-}
+/* =========================
+   Buttons
+========================= */
 
-/* Buttons */
 .btn {
     padding: 10px 16px;
     border-radius: 6px;
@@ -230,12 +266,11 @@ h1 {
     cursor: pointer;
     font-weight: 500;
     font-size: 14px;
-    transition: background-color 0.2s;
 }
 
 .btn-primary {
     background: var(--primary);
-    color: white;
+    color: #fff;
 }
 
 .btn-primary:hover {
@@ -249,15 +284,12 @@ h1 {
     border: none;
     border-radius: 4px;
     font-size: 12px;
-    cursor: pointer;
-    font-weight: 500;
 }
 
-.btn-remove:hover {
-    background: #fecaca;
-}
+/* =========================
+   Rules / Blocklist
+========================= */
 
-/* Rules List */
 .rules-container {
     max-height: 500px;
     overflow-y: auto;
@@ -271,10 +303,6 @@ h1 {
     align-items: center;
 }
 
-.rule-item:last-child {
-    border-bottom: none;
-}
-
 .rule-info {
     display: flex;
     align-items: center;
@@ -284,7 +312,6 @@ h1 {
 .rule-pattern {
     font-family: "Courier New", monospace;
     font-size: 13px;
-    color: var(--text-primary);
 }
 
 .badge {
@@ -319,165 +346,172 @@ h1 {
     padding: 40px;
     text-align: center;
     color: var(--text-secondary);
-    font-style: italic;
 }
+/* =========================
+   ABOUT VIEW ONLY
+========================= */
 
-/* About Section Styles */
-.about-title {
-    margin-bottom: 16px;
-    font-size: 24px;
-}
-
-.about-intro {
-    margin-bottom: 16px;
+#view-about {
+    overflow-y: auto;
     line-height: 1.6;
-    color: var(--text-secondary);
 }
 
-/* GitHub-style Badges */
-.badges-container {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-}
-
-.badge-shield {
-    display: inline-flex;
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-        sans-serif;
-    font-size: 11px;
-    line-height: 20px;
-}
-
-.badge-label {
-    background: #555;
-    color: #fff;
-    padding: 0 6px;
-    border-radius: 3px 0 0 3px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.badge-value {
-    color: #fff;
-    padding: 0 8px;
-    border-radius: 0 3px 3px 0;
+/* Title + intro */
+#view-about .about-title,
+#view-about h1 {
+    font-size: 26px;
     font-weight: 700;
-}
-
-.badge-value-blue {
-    background: #007ec6;
-}
-
-.badge-value-green {
-    background: #97ca00;
-}
-
-/* GitHub Link */
-.github-link-container {
-    margin-bottom: 32px;
-}
-
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: #24292e;
-    font-weight: 600;
-    padding: 10px 20px;
-    background: #f3f4f6;
-    border-radius: 6px;
-    transition: background 0.2s;
-}
-
-.github-link:hover {
-    background: #e5e7eb;
-}
-
-/* Section Headings */
-.section-heading {
-    margin-top: 24px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 8px;
-    font-size: 18px;
-}
-
-.section-intro {
-    margin-bottom: 12px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.feature-list {
-    padding-left: 20px;
-    line-height: 1.8;
-    color: var(--text-primary);
-    margin-bottom: 24px;
-}
-
-.feature-list li {
     margin-bottom: 8px;
 }
 
-.about-footer {
-    margin-top: 32px;
-    font-size: 13px;
+#view-about .about-intro {
+    font-size: 14px;
     color: var(--text-secondary);
-    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.6;
 }
 
-/* Helpers */
-.view-section {
-    display: none;
-}
-
-.view-section.active {
-    display: block;
-}
-
-/* dash */
-/* =========================
-   Dashboard + Cookies
-========================= */
-
-.form-grid {
+/* Metadata badges row (Version / License) */
+#view-about .badges-container {
     display: flex;
-    gap: 16px;
+    gap: 10px;
+    margin-bottom: 18px;
     flex-wrap: wrap;
 }
 
-.form-grow {
-    flex: 1;
+#view-about .badge-shield {
+    display: inline-flex;
+    font-size: 11px;
+    line-height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+#view-about .badge-label {
+    background: #374151;
+    color: #fff;
+    padding: 0 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+#view-about .badge-value {
+    padding: 0 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#view-about .badge-value-blue {
+    background: #2563eb;
+}
+
+#view-about .badge-value-green {
+    background: #84cc16;
+}
+
+/* GitHub button */
+#view-about .github-link-container {
+    margin: 16px 0 28px;
+}
+
+#view-about .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background 0.2s,
+        transform 0.15s;
+}
+
+#view-about .github-link:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+/* Section headers */
+#view-about .section-heading {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Section intro text */
+#view-about .section-intro {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Feature lists */
+#view-about .feature-list {
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+
+#view-about .feature-list li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+#view-about .feature-list b {
+    font-weight: 700;
+}
+
+/* Footer */
+#view-about .about-footer {
+    margin-top: 40px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: right;
+}
+/* =========================
+   Dashboard + Cookies ONLY
+========================= */
 
 .kpis {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
-    margin-bottom: 24px;
+    grid-template-columns: repeat(5, minmax(170px, 1fr));
+    gap: 12px;
+    margin: 12px 0 14px;
+}
+
+@media (max-width: 1100px) {
+    .kpis {
+        grid-template-columns: repeat(2, minmax(170px, 1fr));
+    }
 }
 
 .kpi {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 16px;
+    box-shadow: var(--shadow);
+    padding: 14px;
 }
 
 .kpiLabel {
     font-size: 12px;
     color: var(--text-secondary);
-    margin-bottom: 4px;
 }
 
 .kpiValue {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .kpiSub {
@@ -485,71 +519,90 @@ h1 {
     color: var(--text-secondary);
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .bars {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .barRow {
     display: grid;
-    grid-template-columns: 1fr auto 120px;
-    gap: 8px;
-    align-items: center;
-}
-
-.barLabel {
-    font-size: 13px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.barCount {
-    font-size: 12px;
-    color: var(--text-secondary);
+    grid-template-columns: 1fr 60px;
+    gap: 10px;
 }
 
 .barTrack {
-    height: 6px;
+    grid-column: 1 / span 2;
+    height: 8px;
     background: #e5e7eb;
     border-radius: 999px;
-    overflow: hidden;
 }
 
 .barFill {
     height: 100%;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary), #60a5fa);
+}
+
+.tableWrap {
+    max-height: 520px;
+    overflow: auto;
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 13px;
 }
 
 .table th,
 .table td {
-    padding: 8px 10px;
+    padding: 10px 12px;
     border-bottom: 1px solid var(--border-color);
-    text-align: left;
+    font-size: 13px;
 }
 
 .table th {
-    font-size: 12px;
-    color: var(--text-secondary);
-    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background: var(--bg-surface);
 }
 
-.pill {
-    background: #eef2ff;
-    color: #3730a3;
-    padding: 2px 8px;
-    border-radius: 999px;
-    font-size: 11px;
+.colTab {
+    width: 90px;
 }
 
-.details {
+body[data-scope="active"] .colTab,
+body[data-scope="active"] td.colTabCell {
+    display: none;
+}
+
+/* =========================
+   Cookies
+========================= */
+
+.cookies-table {
+    background: var(--bg-surface);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+}
+
+.status-bar {
+    margin-top: 12px;
     font-size: 12px;
     color: var(--text-secondary);
 }
@@ -559,12 +612,29 @@ h1 {
     font-size: 11px;
 }
 
-.muted {
+/* =========================
+Custom Blocklist Layout
+========================= */
+
+/* Form spacing inside Add Rule */
+#view-blocklist .card-body .form-group {
+    margin-bottom: 18px;
+}
+
+/* Inputs feel too tall after dashboard merge */
+#view-blocklist .input-text,
+#view-blocklist .input-select {
+    padding: 9px 12px;
+}
+
+/* Hints under inputs */
+#view-blocklist .input-hint {
+    margin-top: 6px;
+    font-size: 12px;
     color: var(--text-secondary);
 }
 
-.status-bar {
-    margin-top: 12px;
-    font-size: 12px;
-    color: var(--text-secondary);
+/* Add Rule button alignment */
+#view-blocklist .btn-primary {
+    margin-top: 6px;
 }
