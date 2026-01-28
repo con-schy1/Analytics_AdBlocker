@@ -1,7 +1,7 @@
 {
   "name": "Analytics & Ad Blocker: Open Source Privacy Firewall",
   "description": "An extension for privacy and security for the internet.",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "manifest_version": 3,
   "options_page": "options.html",
   "declarative_net_request": {
