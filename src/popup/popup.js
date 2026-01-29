@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ----- Init global toggle state -----
   const toggleStateData = await chrome.storage.local.get("globalToggles");
+  console.log(toggleStateData, "toggleStateData");
   const toggles = toggleStateData.globalToggles || {
     js: false,
     images: false,
@@ -52,8 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       disableRulesetIds: ["ruleset_1"],
     });
 
-    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (tabs[0]) chrome.tabs.reload(tabs[0].id);
+    reloadActiveTab();
   });
 
   resumeBtn.addEventListener("click", async () => {
@@ -66,8 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       enableRulesetIds: ["ruleset_1"],
     });
 
-    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (tabs[0]) chrome.tabs.reload(tabs[0].id);
+    reloadActiveTab();
   });
 
   // ----- Global toggle handlers -----
@@ -103,6 +102,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     setToggleVisual(cookiesBtn, newState);
     toggles.cookies = newState;
     await applyGlobalToggle("cookies", newState);
+    console.log(toggles, "cook");
     await chrome.storage.local.set({ globalToggles: toggles });
     reloadActiveTab();
   });
@@ -130,32 +130,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.open(
           chrome.runtime.getURL("options.html?activeTabId=" + tabs[0].id),
         );
-        // chrome.runtime.openOptionsPage();
       } else {
+        // chrome.runtime.openOptionsPage();
         window.open(
           chrome.runtime.getURL("options.html?activeTabId=" + tabs[0].id),
         );
       }
     });
-  // document
-  //   .getElementById("open-cookie-panel")
-  //   .addEventListener("click", async () => {
-  //     const tabs = await chrome.tabs.query({
-  //       active: true,
-  //       currentWindow: true,
-  //     });
-  //     await chrome.sidePanel.open({ windowId: tabs[0].windowId });
-  //     // Optional: Send tab info to sidepanel
-  //     chrome.runtime.sendMessage({ type: "UPDATE_TAB", tabId: tabs[0].id });
-  //   });
 });
-
-// popup.js (add to your existing DOMContentLoaded)
-
-async function getActiveTabId() {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  return tab?.id;
-}
 
 // ----- UI helpers -----
 function applyPausedUI(isPaused, svg, blockedText, pauseBtn, resumeBtn) {
@@ -179,8 +161,12 @@ function setToggleVisual(button, enabled) {
 }
 
 async function reloadActiveTab() {
-  const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (tabs[0]) chrome.tabs.reload(tabs[0].id);
+  setTimeout(async () => {
+    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (tabs[0]) {
+      chrome.tabs.reload(tabs[0].id);
+    }
+  }, 1000);
 }
 
 // ----- DNR global rules -----
@@ -199,6 +185,7 @@ async function syncGlobalRulesWithState(state) {
   if (state.js) addRules.push(buildJsRule());
   if (state.images) addRules.push(buildImgRule());
   if (state.videos) addRules.push(buildVideoRule());
+  if (state.cookies) addRules.push(buildCookiesRule());
 
   if (addRules.length > 0) {
     await chrome.declarativeNetRequest.updateDynamicRules({ addRules });
@@ -210,17 +197,29 @@ async function applyGlobalToggle(kind, enabled) {
   const addRules = [];
 
   if (kind === "js") {
-    removeIds.push(GLOBAL_JS_RULE_ID);
-    if (enabled) addRules.push(buildJsRule());
+    if (enabled) {
+      addRules.push(buildJsRule());
+    } else {
+      removeIds.push(GLOBAL_JS_RULE_ID);
+    }
   } else if (kind === "images") {
-    removeIds.push(GLOBAL_IMG_RULE_ID);
-    if (enabled) addRules.push(buildImgRule());
+    if (enabled) {
+      addRules.push(buildImgRule());
+    } else {
+      removeIds.push(GLOBAL_IMG_RULE_ID);
+    }
   } else if (kind === "videos") {
-    removeIds.push(GLOBAL_VIDEO_RULE_ID);
-    if (enabled) addRules.push(buildVideoRule());
+    if (enabled) {
+      addRules.push(buildVideoRule());
+    } else {
+      removeIds.push(GLOBAL_VIDEO_RULE_ID);
+    }
   } else if (kind === "cookies") {
-    removeIds.push(GLOBAL_COOKIES_RULE_ID);
-    if (enabled) addRules.push(buildCookiesRule());
+    if (enabled) {
+      addRules.push(buildCookiesRule());
+    } else {
+      removeIds.push(GLOBAL_COOKIES_RULE_ID);
+    }
   }
 
   if (removeIds.length > 0) {
@@ -285,7 +284,8 @@ function buildCookiesRule() {
       ],
     },
     condition: {
-      resourceTypes: ["xmlhttprequest", "sub_frame"],
+      resourceTypes: ["main_frame", "sub_frame", "xmlhttprequest"],
+      // resourceTypes: ["xmlhttprequest", "sub_frame"],
     },
   };
 }

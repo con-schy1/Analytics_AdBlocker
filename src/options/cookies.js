@@ -9,7 +9,7 @@ let allCookies = [];
 
 export function initCookies() {
   if (els.refreshCookies) {
-    els.refreshCookies.addEventListener("click", loadCookies);
+    els.refreshCookies.addEventListener("click", refreshCookies);
   }
   if (els.domainFilter) {
     els.domainFilter.addEventListener("input", filterCookies);
@@ -18,42 +18,6 @@ export function initCookies() {
 
 export function refreshCookies() {
   loadCookies();
-}
-
-/* =========================
-   Helpers
-========================= */
-
-function formatExpires(cookie) {
-  if (!cookie.expirationDate) return "Session";
-  const date = new Date(cookie.expirationDate * 1000);
-  const diff = cookie.expirationDate * 1000 - Date.now();
-  return diff < 86400000
-    ? date.toLocaleTimeString()
-    : date.toLocaleDateString();
-}
-
-function isStrictBase64(str) {
-  const knownWords = ["false", "true", "True", "False"];
-  if (typeof str !== "string" || !str.length) return false;
-  if (/\s/.test(str)) return false;
-  if (str.length % 4 !== 0) return false;
-  if (knownWords.includes(str)) return false;
-
-  return /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$/.test(
-    str,
-  );
-}
-
-function truncateValue(s, n = 50) {
-  s = String(s ?? "");
-  return s.length > n ? s.slice(0, n) + "..." : s;
-}
-
-function decodeBase64Utf8(b64) {
-  const binary = atob(b64);
-  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
-  return new TextDecoder().decode(bytes);
 }
 
 /* =========================
@@ -208,4 +172,36 @@ function getActiveTabIdFromUrl() {
   const raw = new URLSearchParams(location.search).get("activeTabId");
   const n = Number(raw);
   return Number.isInteger(n) && n > 0 ? n : null;
+}
+
+function formatExpires(cookie) {
+  if (!cookie.expirationDate) return "Session";
+  const date = new Date(cookie.expirationDate * 1000);
+  const diff = cookie.expirationDate * 1000 - Date.now();
+  return diff < 86400000
+    ? date.toLocaleTimeString()
+    : date.toLocaleDateString();
+}
+
+function isStrictBase64(str) {
+  const knownWords = ["false", "true", "True", "False"];
+  if (typeof str !== "string" || !str.length) return false;
+  if (/\s/.test(str)) return false;
+  if (str.length % 4 !== 0) return false;
+  if (knownWords.includes(str)) return false;
+
+  return /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$/.test(
+    str,
+  );
+}
+
+function truncateValue(s, n = 50) {
+  s = String(s ?? "");
+  return s.length > n ? s.slice(0, n) + "..." : s;
+}
+
+function decodeBase64Utf8(b64) {
+  const binary = atob(b64);
+  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
 }

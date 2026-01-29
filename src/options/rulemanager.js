@@ -162,6 +162,7 @@ async function addBlockRule(pattern, type) {
 
 async function loadCustomRules() {
   const allRules = await chrome.declarativeNetRequest.getDynamicRules();
+  console.log(allRules, "allrules");
 
   const rules = allRules.filter((rule) => !RESERVED_IDS.includes(rule.id));
 

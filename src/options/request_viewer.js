@@ -4,7 +4,7 @@ import { escapeHtml, safeHost, fmtTime, countBy } from "./utils";
 let lastRendered = [];
 let timer = null;
 
-export function initDashboard() {
+export function initRequestViewer() {
   if (!els.refresh || !els.scope) return;
 
   applyScopeUI();
@@ -12,7 +12,7 @@ export function initDashboard() {
   loadDataAndRender();
 }
 
-export function refreshDashboard() {
+export function refreshRequestViewer() {
   loadDataAndRender();
 }
 

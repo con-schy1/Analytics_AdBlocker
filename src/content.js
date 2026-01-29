@@ -60,7 +60,6 @@ chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === "DNR_STATUS_UPDATE") {
     msg.useSimulatedMode ? startSimulation() : stopSimulation();
   }
-  console.log(msg);
   if (msg.type == "UNSAFE_TAB_URL") {
     const style = document.createElement("style");
     style.textContent = `

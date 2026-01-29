@@ -1,13 +1,12 @@
 //This code is protected under Apache-2.0 license
 const LOG_KEY = "dnrMatchLogByTab";
 const MAX_PER_TAB = 300;
-const MAXSITES = 100;
 // Cache: ruleId -> action.type (dynamic + session only)
-let actionTypeByRuleId = new Map();
+// let actionTypeByRuleId = new Map();
+
 const SAFE_BROWSING_API_KEY = "";
 const SAFE_BROWSING_ENDPOINT =
   "https://safebrowsing.googleapis.com/v4/threatMatches:find";
-
 const SAFE_CACHE_TTL = 23 * 60 * 60 * 1000; // 23 hours
 const safeCache = new Map(); // url -> { unsafe: boolean, ts }
 
@@ -66,32 +65,32 @@ async function checkUrlWithSafeBrowsing(url) {
   }
 }
 
-async function rebuildActionCache() {
-  const dyn = await chrome.declarativeNetRequest.getDynamicRules(); // includes your toggles + custom rules
-  const ses = chrome.declarativeNetRequest.getSessionRules
-    ? await chrome.declarativeNetRequest.getSessionRules()
-    : [];
+// async function rebuildActionCache() {
+//   const dyn = await chrome.declarativeNetRequest.getDynamicRules(); // includes your toggles + custom rules
+//   const ses = chrome.declarativeNetRequest.getSessionRules
+//     ? await chrome.declarativeNetRequest.getSessionRules()
+//     : [];
 
-  const map = new Map();
-  for (const r of [...dyn, ...ses]) {
-    if (r?.id != null && r?.action?.type) map.set(r.id, r.action.type);
-  }
-  actionTypeByRuleId = map;
-}
+//   const map = new Map();
+//   for (const r of [...dyn, ...ses]) {
+//     if (r?.id != null && r?.action?.type) map.set(r.id, r.action.type);
+//   }
+//   actionTypeByRuleId = map;
+// }
 
-async function resolveActionType(ruleId, rulesetId) {
-  // 1) dynamic/session lookup
-  if (actionTypeByRuleId.has(ruleId)) return actionTypeByRuleId.get(ruleId);
+// async function resolveActionType(ruleId, rulesetId) {
+//   // 1) dynamic/session lookup
+//   if (actionTypeByRuleId.has(ruleId)) return actionTypeByRuleId.get(ruleId);
 
-  // 2) maybe cache is stale (rules added/removed) -> rebuild once
-  await rebuildActionCache();
-  if (actionTypeByRuleId.has(ruleId)) return actionTypeByRuleId.get(ruleId);
+//   // 2) maybe cache is stale (rules added/removed) -> rebuild once
+//   await rebuildActionCache();
+//   if (actionTypeByRuleId.has(ruleId)) return actionTypeByRuleId.get(ruleId);
 
-  // 3) static rulesets: no direct lookup; choose a safe fallback
-  // If your packaged ruleset_1 is currently only "block", fallback to "block".
-  // Later, if you add redirect to static ruleset, add an index file.
-  return "block";
-}
+//   // 3) static rulesets: no direct lookup; choose a safe fallback
+//   // If your packaged ruleset_1 is currently only "block", fallback to "block".
+//   // Later, if you add redirect to static ruleset, add an index file.
+//   return "block";
+// }
 
 async function getLogMap() {
   const obj = await chrome.storage.session.get(LOG_KEY);
@@ -138,34 +137,40 @@ async function clearTabLog(tabId) {
 
 // ---- A) Best case: live event stream (debug/feedback) ----
 // NOTE: availability can depend on browser/channel/policy; guard it.
+// // Check if the Debug API is available (Developer Mode)
+let isDebugAvailable = false;
 if (
   chrome.declarativeNetRequest.onRuleMatchedDebug &&
   chrome.declarativeNetRequest?.onRuleMatchedDebug?.addListener
 ) {
-  chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(async (e) => {
-    const tabId = e?.request?.tabId ?? e?.tabId ?? -1;
-    if (tabId < 0) return;
+  try {
+    chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(async (e) => {
+      const tabId = e?.request?.tabId ?? e?.tabId ?? -1;
+      if (tabId < 0) return;
 
-    const ruleId = e?.rule?.ruleId;
-    const rulesetId = e?.rule?.rulesetId;
-    // const action =
-    //   ruleId != null ? await resolveActionType(ruleId, rulesetId) : "block";
+      const ruleId = e?.rule?.ruleId;
+      const rulesetId = e?.rule?.rulesetId;
+      // const action =
+      //   ruleId != null ? await resolveActionType(ruleId, rulesetId) : "block";
 
-    // e typically includes: tabId, request: { url, method, type, ... }, rule: { ruleId, rulesetId }, timeStamp...
-    await appendLog(tabId, {
-      ts: Date.now(),
-      source: "onRuleMatchedDebug",
-      tabId,
-      url: e.request?.url,
-      method: e.request?.method,
-      type: e.request?.type,
-      initiator: e.request?.initiator,
-      ruleId,
-      rulesetId,
-      action: "block", // since all your rules are block today
+      // e typically includes: tabId, request: { url, method, type, ... }, rule: { ruleId, rulesetId }, timeStamp...
+      await appendLog(tabId, {
+        ts: Date.now(),
+        source: "onRuleMatchedDebug",
+        tabId,
+        url: e.request?.url,
+        method: e.request?.method,
+        type: e.request?.type,
+        initiator: e.request?.initiator,
+        ruleId,
+        rulesetId,
+        action: "block", // since all your rules are block today
+      });
     });
-  });
-} else {
+    isDebugAvailable = true;
+  } catch {
+    isDebugAvailable = false;
+  }
 }
 
 // setTimeout(() => { //for testing
@@ -243,10 +248,11 @@ function findMatchingRule(url, initiatorType) {
     const typeMap = {
       script: "script",
       img: "image",
+      fetch: "fetch",
       xmlhttprequest: "xmlhttprequest",
-      fetch: "xmlhttprequest",
       sub_frame: "sub_frame",
       iframe: "sub_frame",
+      main_frame: "main_frame",
     };
     const reqType = typeMap[initiatorType] || "other";
 
@@ -284,11 +290,6 @@ chrome.tabs.onRemoved.addListener((tabId) => {
   clearTabLog(tabId);
 });
 
-// Check if the Debug API is available (Developer Mode)
-const isDebugAvailable = !!(
-  chrome.declarativeNetRequest.onRuleMatchedDebug &&
-  chrome.declarativeNetRequest.onRuleMatchedDebug.addListener
-);
 // Listen for new tabs or reloads to inform content script
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   console.log(changeInfo, tab, "changeInfo");
@@ -311,7 +312,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         type: "UNSAFE_TAB_URL",
       })
       .catch((e) => {
-        console.log(e);
+        console.log("err", e);
       });
   });
 });
@@ -360,13 +361,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     // }
     if (msg.type === "GET_DNR_STATUS") {
       sendResponse({ useSimulatedMode: !isDebugAvailable });
+      return;
     }
 
     if (
       msg.type === "DNR_MATCH_BATCH" &&
       !chrome.declarativeNetRequest.onRuleMatchedDebug
     ) {
-      console.log(1);
       const contentTabId = sender.tab ? sender.tab.id : tabId;
 
       msg.items.forEach(async (item) => {
@@ -396,7 +397,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
 chrome.runtime.onInstalled.addListener(async function (object) {
   // chrome.storage.local.clear();
-  rebuildActionCache().catch(() => {});
+  // rebuildActionCache().catch(() => {});
   chrome.storage.local.set({ paused: false });
 
   // chrome.tabs.create({ url: "options.html?tab=about" });
@@ -416,7 +417,12 @@ chrome.runtime.onInstalled.addListener(async function (object) {
     chrome.storage.local.clear();
 
     await chrome.storage.local.set({
-      globalToggles: { js: false, images: false, videos: false },
+      globalToggles: {
+        js: false,
+        images: false,
+        videos: false,
+        cookies: false,
+      },
     });
 
     // chrome.runtime.openOptionsPage();
