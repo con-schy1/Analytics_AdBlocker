@@ -22,6 +22,7 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
+    "jszip": "^3.10.1",
     "terser-webpack-plugin": "^5.3.10"
   }
 }

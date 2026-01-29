@@ -32,6 +32,10 @@
                         Cookies Viewer
                     </button>
 
+                    <button class="nav-item" data-view="ext-analysis">
+                        Extension Analysis
+                    </button>
+
                     <button class="nav-item" data-view="about">About</button>
                 </nav>
 
@@ -338,6 +342,36 @@
                             >Click Refresh to load cookies</span
                         >
                     </div>
+                </section>
+
+                <!-- Extension Analysis VIEW -->
+                <section id="view-ext-analysis" class="view-section">
+                    <header class="top-bar">
+                        <h1>Extension Analysis</h1>
+                    </header>
+
+                    <div class="form-grid">
+                        <div class="form-group form-grow">
+                            <label for="extension-id">Extension ID</label>
+                            <input
+                                id="extension-id-inp"
+                                class="input-text"
+                                type="text"
+                                placeholder="e.g. fapldghopmonkbgaaiinpeopokpkhbmk"
+                            />
+                        </div>
+                        <button id="ext-analyze-btn" class="btn btn-primary">
+                            Analyze
+                        </button>
+                        <button
+                            id="download-ext-code"
+                            disabled
+                            class="btn btn-primary"
+                        >
+                            Download Source Code
+                        </button>
+                    </div>
+                    <div id="output"></div>
                 </section>
 
                 <!-- ABOUT VIEW -->

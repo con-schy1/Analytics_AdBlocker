@@ -1,15 +1,17 @@
 export const $ = (id) => document.getElementById(id);
 
+// need to move the custom blocklist elements here
 export const els = {
-  scope: $("scope"),
   windowMs: $("windowMs"),
+  openSettings: $("open-settings"),
+
+  // request viewer
+  scope: $("scope"),
   search: $("search"),
   autoRefresh: $("autoRefresh"),
   refresh: $("refresh"),
   clear: $("clear"),
-  openSettings: $("open-settings"),
   exportJson: $("exportJson"),
-
   kpis: $("kpis"),
   byType: $("byType"),
   byInitiator: $("byInitiator"),
@@ -30,4 +32,10 @@ export const els = {
   cookieCount: $("cookieCount"),
   cookieTableBody: $("cookieTableBody"),
   statusText: $("statusText"),
+
+  // Extension Analysis
+  extensionIdInput: $("extension-id-inp"),
+  extAnalyzeBtn: $("ext-analyze-btn"),
+  downloadExtSourceCode: $("download-ext-code"),
+  extAnalysisOutput: $("output"),
 };

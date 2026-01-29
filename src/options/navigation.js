@@ -1,4 +1,4 @@
-import { refreshDashboard } from "./dashboard";
+import { refreshRequestViewer } from "./request_viewer";
 import { refreshCookies } from "./cookies";
 
 export function initOptionsNavigation() {
@@ -31,7 +31,7 @@ export function initOptionsNavigation() {
 
       // Lazy load
       if (view === "dashboard") {
-        refreshDashboard();
+        refreshRequestViewer();
       } else if (view === "cookies") {
         refreshCookies();
       }

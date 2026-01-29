@@ -267,6 +267,10 @@ h1 {
     font-weight: 500;
     font-size: 14px;
 }
+.btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
 
 .btn-primary {
     background: var(--primary);
