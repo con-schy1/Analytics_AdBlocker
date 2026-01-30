@@ -290,7 +290,7 @@
                                             <th class="colTab">Tab</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="tbody"></tbody>
+                                    <tbody></tbody>
                                 </table>
                             </div>
                         </div>
@@ -352,6 +352,15 @@
 
                     <div class="form-grid">
                         <div class="form-group form-grow">
+                            <label for="gemini-api-key">Gemini API Key</label>
+                            <input
+                                id="gemini-api-key-inp"
+                                class="input-text"
+                                type="password"
+                                placeholder="AIza..."
+                            />
+                        </div>
+                        <div class="form-group form-grow">
                             <label for="extension-id">Extension ID</label>
                             <input
                                 id="extension-id-inp"
@@ -370,8 +379,45 @@
                         >
                             Download Source Code
                         </button>
+                        <button class="btn btn-primary" id="copy-code-btn">
+                            Copy Code
+                        </button>
                     </div>
                     <div id="output"></div>
+                    <div class="directory-container">
+                        <div id="directory-tree">
+                            <template id="file-template">
+                                <span data-type="file">main</span>
+                            </template>
+                        </div>
+                        <div id="directory-file-viewer">
+                            <pre></pre>
+                        </div>
+                    </div>
+                    <div class="analysis-info-container">
+                        <div class="ai-header">
+                            <h2>Permissions analysis</h2>
+                            <div class="analysis-controls">
+                                <div
+                                    id="ai-spinner-wrapper"
+                                    style="display: none"
+                                >
+                                    <span class="ai-spinner"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="ai-summary"
+                            style="color: #444; font-size: 13px"
+                        >
+                            IDLE
+                        </div>
+                        <div
+                            class="analysis-permissions"
+                            id="ai-permissions-list"
+                            style="margin-top: 12px"
+                        ></div>
+                    </div>
                 </section>
 
                 <!-- ABOUT VIEW -->

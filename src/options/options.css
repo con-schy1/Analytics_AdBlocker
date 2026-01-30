@@ -351,140 +351,32 @@ h1 {
     text-align: center;
     color: var(--text-secondary);
 }
-/* =========================
-   ABOUT VIEW ONLY
-========================= */
 
-#view-about {
-    overflow-y: auto;
-    line-height: 1.6;
-}
-
-/* Title + intro */
-#view-about .about-title,
-#view-about h1 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-#view-about .about-intro {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-    line-height: 1.6;
-}
-
-/* Metadata badges row (Version / License) */
-#view-about .badges-container {
-    display: flex;
-    gap: 10px;
+/* Form spacing inside Add Rule */
+#view-blocklist .card-body .form-group {
     margin-bottom: 18px;
-    flex-wrap: wrap;
 }
 
-#view-about .badge-shield {
-    display: inline-flex;
-    font-size: 11px;
-    line-height: 20px;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+/* Inputs feel too tall after dashboard merge */
+#view-blocklist .input-text,
+#view-blocklist .input-select {
+    padding: 9px 12px;
 }
 
-#view-about .badge-label {
-    background: #374151;
-    color: #fff;
-    padding: 0 8px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-}
-
-#view-about .badge-value {
-    padding: 0 10px;
-    font-weight: 700;
-    color: #fff;
-}
-
-#view-about .badge-value-blue {
-    background: #2563eb;
-}
-
-#view-about .badge-value-green {
-    background: #84cc16;
-}
-
-/* GitHub button */
-#view-about .github-link-container {
-    margin: 16px 0 28px;
-}
-
-#view-about .github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    background: #f3f4f6;
-    border-radius: 8px;
-    color: #111827;
-    font-weight: 600;
-    text-decoration: none;
-    transition:
-        background 0.2s,
-        transform 0.15s;
-}
-
-#view-about .github-link:hover {
-    background: #e5e7eb;
-    transform: translateY(-1px);
-}
-
-/* Section headers */
-#view-about .section-heading {
-    margin-top: 28px;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    font-size: 18px;
-    font-weight: 700;
-    border-bottom: 1px solid var(--border-color);
-}
-
-/* Section intro text */
-#view-about .section-intro {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-/* Feature lists */
-#view-about .feature-list {
-    padding-left: 20px;
-    margin-bottom: 24px;
-}
-
-#view-about .feature-list li {
-    margin-bottom: 8px;
-    line-height: 1.7;
-    font-size: 14px;
-}
-
-#view-about .feature-list b {
-    font-weight: 700;
-}
-
-/* Footer */
-#view-about .about-footer {
-    margin-top: 40px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-color);
+/* Hints under inputs */
+#view-blocklist .input-hint {
+    margin-top: 6px;
     font-size: 12px;
     color: var(--text-secondary);
-    text-align: right;
 }
+
+/* Add Rule button alignment */
+#view-blocklist .btn-primary {
+    margin-top: 6px;
+}
+
 /* =========================
-   Dashboard + Cookies ONLY
+    Request view
 ========================= */
 
 .kpis {
@@ -616,29 +508,349 @@ body[data-scope="active"] td.colTabCell {
     font-size: 11px;
 }
 
+/* =======================
+    extension analysis
+===========================*/
+
+.directory-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    height: 500px;
+}
+
+#directory-tree {
+    width: 30%;
+    overflow: auto;
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+#directory-tree ul {
+    list-style: none;
+    padding-left: 9px;
+    margin: 0;
+}
+
+#directory-tree li > ul {
+    display: none;
+}
+
+#directory-tree li.open > ul {
+    display: block;
+}
+
+#directory-tree span {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    padding: 2px 4px;
+}
+
+#directory-tree span[data-type="folder"]::before {
+    content: "📁 ";
+}
+
+#directory-tree li.open > span[data-type="folder"]::before {
+    content: "📂 ";
+}
+
+#directory-tree span[data-type="file"]::before {
+    content: "📄 ";
+}
+
+#directory-tree span:hover {
+    background: #f0f0f0;
+}
+
+#directory-file-viewer {
+    width: 70%;
+    border: 1px solid #ddd;
+    overflow: auto;
+}
+
+#directory-file-viewer pre {
+    margin: 0;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 13px;
+    white-space: pre;
+}
+#directory-file-viewer pre {
+    tab-size: 2;
+    line-height: 1.5;
+}
+
+/*- -*/
+/* Analysis panel placed below the file viewer */
+.analysis-info-container {
+    margin-top: 12px;
+    border: 1px solid #e6e6e6;
+    padding: 12px;
+    background: #fff;
+    font-family:
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial;
+    font-size: 13px;
+    color: #222;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* Header row */
+.analysis-info-container .ai-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.analysis-info-container h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* permissions list */
+.analysis-permissions {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: 8px 12px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.permission-row {
+    display: contents;
+}
+
+.permission-name {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    font-family: monospace;
+    word-break: break-all;
+}
+
+/* status chips */
+.perm-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 86px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* normal ok */
+.perm-status.ok {
+    color: #155724;
+    background: #e6f4ea;
+    border: 1px solid rgba(21, 87, 38, 0.08);
+}
+
+/* suspicious marked orange */
+.perm-status.suspicious {
+    color: #7a4b00;
+    background: #fff4e5;
+    border-left: 4px solid #ff9900;
+}
+
+/* dangerous red */
+.perm-status.danger {
+    color: #7f1d1d;
+    background: #ffe9e9;
+    border: 1px solid rgba(127, 29, 29, 0.08);
+}
+
+/* small reason text */
+.permission-reason {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+    color: #444;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+/* controls and spinner */
+.analysis-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.analysis-controls .btn {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.ai-spinner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    border-top-color: #666;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* raw ai output */
+.ai-raw-output {
+    margin-top: 12px;
+    border-top: 1px dashed #eee;
+    padding-top: 8px;
+    font-size: 13px;
+    color: #333;
+    white-space: pre-wrap;
+}
+
 /* =========================
-Custom Blocklist Layout
+   ABOUT VIEW ONLY
 ========================= */
 
-/* Form spacing inside Add Rule */
-#view-blocklist .card-body .form-group {
+#view-about {
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+/* Title + intro */
+#view-about .about-title,
+#view-about h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#view-about .about-intro {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Metadata badges row (Version / License) */
+#view-about .badges-container {
+    display: flex;
+    gap: 10px;
     margin-bottom: 18px;
+    flex-wrap: wrap;
 }
 
-/* Inputs feel too tall after dashboard merge */
-#view-blocklist .input-text,
-#view-blocklist .input-select {
-    padding: 9px 12px;
+#view-about .badge-shield {
+    display: inline-flex;
+    font-size: 11px;
+    line-height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Hints under inputs */
-#view-blocklist .input-hint {
-    margin-top: 6px;
+#view-about .badge-label {
+    background: #374151;
+    color: #fff;
+    padding: 0 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+#view-about .badge-value {
+    padding: 0 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#view-about .badge-value-blue {
+    background: #2563eb;
+}
+
+#view-about .badge-value-green {
+    background: #84cc16;
+}
+
+/* GitHub button */
+#view-about .github-link-container {
+    margin: 16px 0 28px;
+}
+
+#view-about .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background 0.2s,
+        transform 0.15s;
+}
+
+#view-about .github-link:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+/* Section headers */
+#view-about .section-heading {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Section intro text */
+#view-about .section-intro {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Feature lists */
+#view-about .feature-list {
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+
+#view-about .feature-list li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+#view-about .feature-list b {
+    font-weight: 700;
+}
+
+/* Footer */
+#view-about .about-footer {
+    margin-top: 40px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
     font-size: 12px;
     color: var(--text-secondary);
-}
-
-/* Add Rule button alignment */
-#view-blocklist .btn-primary {
-    margin-top: 6px;
+    text-align: right;
 }
